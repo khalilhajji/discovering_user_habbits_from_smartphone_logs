@@ -1,0 +1,193 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 JUL 2015 09:20
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**first_latex.tex
+(./first_latex.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2015/04/10 v3.1e French support from the babel system
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\l@acadian = a dialect from \language\l@french 
+\l@canadien = a dialect from \language\l@french 
+\FBcolonskip=\skip43
+\FBthinskip=\skip44
+\FB@interchartokenstateORI=\count89
+Package babel Info: Making : an active character on input line 371.
+Package babel Info: Making ; an active character on input line 372.
+Package babel Info: Making ! an active character on input line 373.
+Package babel Info: Making ? an active character on input line 374.
+\FBguillskip=\skip45
+\FBguill@level=\count90
+\FB@Mht=\dimen104
+\std@mcc=\count91
+\dec@mcc=\count92
+\listindentFB=\skip46
+\labelwidthFB=\skip47
+\leftmarginFB=\skip48
+\parindentFFN=\dimen105
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/layout.sty
+Package: layout 2014/10/28 v1.2c Show layout parameters
+\oneinch=\count93
+\cnt@paperwidth=\count94
+\cnt@paperheight=\count95
+\cnt@hoffset=\count96
+\cnt@voffset=\count97
+\cnt@textheight=\count98
+\cnt@textwidth=\count99
+\cnt@topmargin=\count100
+\cnt@oddsidemargin=\count101
+\cnt@evensidemargin=\count102
+\cnt@headheight=\count103
+\cnt@headsep=\count104
+\cnt@marginparsep=\count105
+\cnt@marginparwidth=\count106
+\cnt@marginparpush=\count107
+\cnt@footskip=\count108
+\fheight=\count109
+\ref@top=\count110
+\ref@hoffset=\count111
+\ref@voffset=\count112
+\ref@head=\count113
+\ref@body=\count114
+\ref@foot=\count115
+\ref@margin=\count116
+\ref@marginwidth=\count117
+\ref@marginpar=\count118
+\Interval=\count119
+\ExtraYPos=\count120
+\PositionX=\count121
+\PositionY=\count122
+\ArrowLength=\count123
+)
+(./first_latex.aux)
+\openout1 = `first_latex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Info: Redefining \degres on input line 8.
+LaTeX Info: Redefining \dots on input line 8.
+LaTeX Info: Redefining \up on input line 8.
+
+Two-sided document style, odd page.
+
+Overfull \hbox (87.50002pt too wide) in paragraph at lines 11--11
+[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 11.
+
+Overfull \hbox (34.45027pt too wide) in paragraph at lines 11--11
+[][] 
+ []
+
+Two-sided document style, odd page.
+
+Overfull \hbox (87.50002pt too wide) in paragraph at lines 11--11
+[][] 
+ []
+
+
+Overfull \hbox (34.45027pt too wide) in paragraph at lines 11--11
+[][] 
+ []
+
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2
+
+] (./first_latex.aux) ) 
+Here is how much of TeX's memory you used:
+ 1681 strings out of 493089
+ 22238 string characters out of 6134842
+ 99747 words of memory out of 5000000
+ 5199 multiletter control sequences out of 15000+600000
+ 11207 words of font info for 28 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 28i,11n,30p,469b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-s
+uper/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/latxfont/lcircle1.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/latxfont/line10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm0500.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/c
+m-super/sftt0800.pfb>
+Output written on first_latex.pdf (2 pages, 125454 bytes).
+PDF statistics:
+ 44 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
