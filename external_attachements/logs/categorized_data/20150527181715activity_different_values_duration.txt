@@ -1,0 +1,143 @@
+
+
+User 1:
+Sony activities duration (in minutes) :
+{
+    "still": 33202.35035, 
+    "walk": 3517.4023, 
+    "bus": 748.3134833333334, 
+    "train": 336.0312666666667, 
+    "bicycle": 131.22656666666666, 
+    "car": 96.61835, 
+    "elevator-up": 16.63211666666667, 
+    "elevator-down": 4.48525, 
+    "run": 0.17241666666666666, 
+    "jump": 0.07525
+}
+Android activities duration (in minutes) : 
+{
+    "still": 42859.54985, 
+    "tilting": 5839.991083333333, 
+    "in_vehicle": 312.1481166666667, 
+    "on_foot": 155.55375, 
+    "on_bicycle": 12.135133333333334
+}
+
+
+User 2:
+Sony activities duration (in minutes) :
+{
+    "walk": 8859.45635, 
+    "still": 7117.644583333334, 
+    "train": 468.9776, 
+    "bus": 308.4848166666667, 
+    "bicycle": 144.7792, 
+    "car": 19.442516666666666, 
+    "elevator-up": 16.722016666666665, 
+    "elevator-down": 6.04685, 
+    "run": 0.44016666666666665, 
+    "jump": 0.24755
+}
+Android activities duration (in minutes) : 
+{
+    "still": 25204.136583333333, 
+    "tilting": 24102.5223, 
+    "in_vehicle": 241.25728333333333, 
+    "on_foot": 144.01566666666668, 
+    "on_bicycle": 11.845783333333333
+}
+
+
+User 3:
+Sony activities duration (in minutes) :
+{
+    "still": 1657.7675333333334, 
+    "walk": 302.14865, 
+    "bus": 201.44486666666666, 
+    "car": 60.33075, 
+    "train": 49.1128, 
+    "elevator-up": 12.166183333333333, 
+    "bicycle": 7.8014, 
+    "elevator-down": 2.1193333333333335, 
+    "jump": 0.0, 
+    "run": 0.0
+}
+Android activities duration (in minutes) : 
+{
+    "still": 2764.037766666667, 
+    "tilting": 795.1844333333333, 
+    "in_vehicle": 261.6000833333333, 
+    "on_foot": 24.238566666666667, 
+    "on_bicycle": 0.9181333333333334
+}
+
+
+User 4:
+Sony activities duration (in minutes) :
+{
+    "walk": 2630.6063833333333, 
+    "still": 1388.8189833333333, 
+    "train": 565.1540333333334, 
+    "run": 311.37416666666667, 
+    "bicycle": 236.8522, 
+    "bus": 81.07748333333333, 
+    "car": 61.264183333333335, 
+    "elevator-up": 4.6490833333333335, 
+    "elevator-down": 3.522483333333333, 
+    "jump": 0.006666666666666667
+}
+Android activities duration (in minutes) : 
+{
+    "still": 19498.44815, 
+    "tilting": 3204.5399333333335, 
+    "on_foot": 492.57281666666665, 
+    "in_vehicle": 322.3509666666667, 
+    "on_bicycle": 36.198166666666665
+}
+
+User 5:
+Sony activities duration (in minutes) :
+{
+    "still": 6233.27215, 
+    "walk": 5744.375416666667, 
+    "car": 301.21933333333334, 
+    "elevator-up": 160.2906, 
+    "train": 106.41823333333333, 
+    "bus": 68.67301666666667, 
+    "bicycle": 13.103233333333334, 
+    "elevator-down": 2.1835833333333334, 
+    "jump": 0.0013666666666666666, 
+    "run": 0.0
+}
+Android activities duration (in minutes) : 
+{
+    "still": 15551.728733333333, 
+    "tilting": 4636.2293666666665, 
+    "in_vehicle": 317.92226666666664, 
+    "on_foot": 129.48448333333334, 
+    "on_bicycle": 6.593883333333333
+}
+
+User 6:
+Sony activities duration (in minutes) :
+{
+    "still": 8343.567883333333, 
+    "walk": 1832.8167333333333, 
+    "train": 1422.8025166666666, 
+    "car": 281.99288333333334, 
+    "run": 261.08935, 
+    "bus": 101.32853333333334, 
+    "bicycle": 69.85391666666666, 
+    "elevator-up": 14.018966666666667, 
+    "jump": 5.501233333333333, 
+    "elevator-down": 1.6780166666666667
+}
+Android activities duration (in minutes) : 
+{
+    "still": 20249.078666666668, 
+    "tilting": 11679.305483333334, 
+    "in_vehicle": 275.3527, 
+    "on_foot": 41.39415, 
+    "on_bicycle": 4.934
+}
+

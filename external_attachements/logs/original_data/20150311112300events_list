@@ -1,0 +1,14 @@
+Date: 11/03/2015 11:23:00
+
+
+different events types and their number of occurrences in the dataset 
+
+{
+    "notification": 725511, 
+    "launcher_on": 74014, 
+    "launcher_off": 73767, 
+    "screen_on": 41361, 
+    "screen_off": 40432, 
+    "applaunch": 33811, 
+    "applaunch_from_launcher_prediction": 4221
+}

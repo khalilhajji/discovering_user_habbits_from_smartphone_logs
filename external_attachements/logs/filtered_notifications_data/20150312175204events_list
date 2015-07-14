@@ -1,0 +1,15 @@
+Date: 12/03/2015 17:52:04
+
+
+different events types and their number of occurrences in the dataset 
+
+{
+    "notification": 407132, 
+    "duplicated_notification": 153281, 
+    "launcher_on": 49998, 
+    "launcher_off": 40382, 
+    "screen_on": 35148, 
+    "screen_off": 34015, 
+    "applaunch": 18706, 
+    "applaunch_from_launcher_prediction": 1599
+}

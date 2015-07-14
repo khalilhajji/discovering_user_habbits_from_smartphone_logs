@@ -1,0 +1,598 @@
+Date: 12/03/2015 17:51:59
+
+
+different notifications types and their number of occurrences in the dataset 
+
+{
+    "com.sonymobile.genericuploader": {
+        "records": 200279, 
+        "default_priority": 200279
+    }, 
+    "com.sony.drbd.reader.other.jp": {
+        "records": 95947, 
+        "default_priority": 95947
+    }, 
+    "jp.co.yahoo.android.news": {
+        "records": 48725, 
+        "default_priority": 48725
+    }, 
+    "android": {
+        "records": 44273, 
+        "default_priority": 44273
+    }, 
+    "com.google.android.gms": {
+        "records": 30905, 
+        "high_priority": 3, 
+        "default_priority": 30902
+    }, 
+    "com.gunosy.android": {
+        "records": 21074, 
+        "default_priority": 21074
+    }, 
+    "com.amazon.kindle": {
+        "records": 20689, 
+        "default_priority": 20689
+    }, 
+    "com.android.phone": {
+        "records": 17643, 
+        "high_priority": 815, 
+        "default_priority": 16758
+    }, 
+    "com.sonymobile.lifelog": {
+        "records": 15734, 
+        "default_priority": 15734
+    }, 
+    "com.latedroid.juicedefender": {
+        "records": 14408, 
+        "default_priority": 14408
+    }, 
+    "com.sonyericsson.updatecenter": {
+        "records": 10656, 
+        "default_priority": 10656
+    }, 
+    "com.sonymobile.storagechecker": {
+        "records": 9507, 
+        "default_priority": 9507
+    }, 
+    "com.google.android.gm": {
+        "records": 8194, 
+        "default_priority": 8194
+    }, 
+    "jp.co.yahoo.android.weather.type1": {
+        "records": 8029, 
+        "default_priority": 8029
+    }, 
+    "com.facebook.katana": {
+        "records": 6773, 
+        "high_priority": 1, 
+        "default_priority": 1834
+    }, 
+    "mobi.infolife.ezweather": {
+        "records": 6543, 
+        "default_priority": 6543
+    }, 
+    "jp.co.yahoo.android.locationlog": {
+        "records": 5356, 
+        "default_priority": 5356
+    }, 
+    "wni.WeathernewsTouch.jp": {
+        "records": 4951, 
+        "default_priority": 4951
+    }, 
+    "com.android.providers.downloads": {
+        "records": 4525, 
+        "default_priority": 4525
+    }, 
+    "com.amazon.venezia": {
+        "records": 4203, 
+        "default_priority": 4203
+    }, 
+    "com.cleanmaster.mguard": {
+        "records": 3469, 
+        "default_priority": 1608
+    }, 
+    "jp.naver.line.android": {
+        "records": 3085, 
+        "default_priority": 3085
+    }, 
+    "com.android.calendar": {
+        "records": 2980, 
+        "high_priority": 2111, 
+        "default_priority": 848
+    }, 
+    "com.nike.plusgps": {
+        "records": 2761, 
+        "default_priority": 2761
+    }, 
+    "com.sonyericsson.extras.liveware": {
+        "records": 2538, 
+        "default_priority": 2538
+    }, 
+    "com.google.android.apps.maps": {
+        "records": 1517, 
+        "high_priority": 1517
+    }, 
+    "jp.co.fusioncom.smartalk.android": {
+        "records": 1332, 
+        "default_priority": 1332
+    }, 
+    "jp.gocro.smartnews.android": {
+        "records": 1324, 
+        "default_priority": 1324
+    }, 
+    "com.sonyericsson.organizer": {
+        "records": 1303, 
+        "high_priority": 93, 
+        "default_priority": 1210
+    }, 
+    "com.dictionary": {
+        "records": 1294, 
+        "default_priority": 1294
+    }, 
+    "com.sonymobile.runtimeskinning.core": {
+        "records": 1220, 
+        "default_priority": 1220
+    }, 
+    "com.moneyforward.android.app": {
+        "records": 1103, 
+        "default_priority": 1103
+    }, 
+    "com.sonyericsson.music": {
+        "records": 1066, 
+        "default_priority": 1066
+    }, 
+    "jp.co.nttdocomo.carriermail": {
+        "records": 1053, 
+        "default_priority": 1053
+    }, 
+    "com.nttdocomo.android.applicationmanager": {
+        "records": 995, 
+        "high_priority": 995
+    }, 
+    "com.access_company.android.sh_jumpplus": {
+        "records": 885, 
+        "default_priority": 885
+    }, 
+    "com.sonyericsson.usbux": {
+        "records": 748, 
+        "default_priority": 11
+    }, 
+    "com.newspicks": {
+        "records": 627, 
+        "default_priority": 627
+    }, 
+    "com.cleanmaster.security": {
+        "records": 561, 
+        "default_priority": 507
+    }, 
+    "jp.r246.twicca": {
+        "records": 530, 
+        "default_priority": 530
+    }, 
+    "com.nianticproject.ingress": {
+        "records": 518, 
+        "high_priority": 518
+    }, 
+    "com.sony.tvsideview.phone": {
+        "records": 356, 
+        "default_priority": 356
+    }, 
+    "com.news.rssfeedreader": {
+        "records": 325, 
+        "default_priority": 325
+    }, 
+    "jp.radiko.Player": {
+        "records": 284, 
+        "default_priority": 284
+    }, 
+    "com.gau.go.launcherex.gowidget.weatherwidget": {
+        "records": 264, 
+        "default_priority": 264
+    }, 
+    "com.drweb": {
+        "records": 228, 
+        "default_priority": 228
+    }, 
+    "jp.vviki.android.SysLoadLogger": {
+        "records": 226, 
+        "default_priority": 226
+    }, 
+    "com.boatbrowser.free": {
+        "records": 218, 
+        "default_priority": 218
+    }, 
+    "com.sony.sensing.has.activitypug": {
+        "records": 217, 
+        "default_priority": 217
+    }, 
+    "com.google.android.apps.inbox": {
+        "records": 199, 
+        "default_priority": 199
+    }, 
+    "jp.co.ejan.cachatto.securebrowser2": {
+        "records": 198, 
+        "default_priority": 198
+    }, 
+    "com.sonyericsson.android.omacp": {
+        "records": 183, 
+        "default_priority": 183
+    }, 
+    "com.android.systemui": {
+        "records": 181, 
+        "default_priority": 181
+    }, 
+    "com.a0soft.gphone.app2sd": {
+        "records": 143, 
+        "default_priority": 143
+    }, 
+    "com.otolatte": {
+        "records": 141, 
+        "default_priority": 141
+    }, 
+    "jp.co.yahoo.android.emg": {
+        "records": 140, 
+        "default_priority": 140
+    }, 
+    "com.foursquare.robin": {
+        "records": 133, 
+        "default_priority": 133
+    }, 
+    "com.sonymobile.playanywhere": {
+        "records": 105
+    }, 
+    "com.facebook.orca": {
+        "records": 100, 
+        "high_priority": 100
+    }, 
+    "com.sony.nfx.app.sfrc": {
+        "records": 89, 
+        "default_priority": 89
+    }, 
+    "jp.co.yahoo.android.apps.map": {
+        "records": 88, 
+        "default_priority": 88
+    }, 
+    "com.sonymobile.app.powerpredict": {
+        "records": 82, 
+        "default_priority": 82
+    }, 
+    "com.sonymobile.superstamina": {
+        "records": 82, 
+        "default_priority": 82
+    }, 
+    "com.agilebits.onepassword": {
+        "records": 75, 
+        "default_priority": 75
+    }, 
+    "com.sntown.snchat": {
+        "records": 74, 
+        "default_priority": 74
+    }, 
+    "jp.co.johospace.jorte": {
+        "records": 70, 
+        "default_priority": 70
+    }, 
+    "com.sonyericsson.conversations": {
+        "records": 66, 
+        "default_priority": 66
+    }, 
+    "com.calm.checky": {
+        "records": 63, 
+        "default_priority": 63
+    }, 
+    "com.google.android.GoogleCamera": {
+        "records": 60, 
+        "default_priority": 60
+    }, 
+    "com.google.android.apps.plus": {
+        "records": 48, 
+        "high_priority": 9, 
+        "default_priority": 39
+    }, 
+    "com.tonchidot.tab": {
+        "records": 44, 
+        "default_priority": 44
+    }, 
+    "com.sony.smallapp.managerservice": {
+        "records": 41, 
+        "default_priority": 41
+    }, 
+    "jp.co.fenrir.android.sleipnir": {
+        "records": 41, 
+        "default_priority": 41
+    }, 
+    "com.google.android.apps.fitness": {
+        "records": 39, 
+        "default_priority": 39
+    }, 
+    "com.twitter.android": {
+        "records": 36, 
+        "high_priority": 35, 
+        "default_priority": 1
+    }, 
+    "com.kohei.android.pcmrecorder": {
+        "records": 32, 
+        "default_priority": 32
+    }, 
+    "net.slideshare.mobile": {
+        "records": 32, 
+        "default_priority": 32
+    }, 
+    "jp.ne.biglobe.twipple": {
+        "records": 31, 
+        "default_priority": 31
+    }, 
+    "com.google.android.keep": {
+        "records": 31, 
+        "high_priority": 31
+    }, 
+    "jp.arismile.a1a111": {
+        "records": 29, 
+        "default_priority": 29
+    }, 
+    "com.sonyericsson.androidapp.appnavi": {
+        "records": 27, 
+        "default_priority": 27
+    }, 
+    "com.google.android.wearable.app": {
+        "records": 23, 
+        "default_priority": 23
+    }, 
+    "com.instagram.android": {
+        "records": 23, 
+        "default_priority": 23
+    }, 
+    "com.sony.activityengine.core": {
+        "records": 23, 
+        "default_priority": 23
+    }, 
+    "com.google.android.calendar": {
+        "records": 22, 
+        "high_priority": 22
+    }, 
+    "com.kiwiwearables.app": {
+        "records": 20, 
+        "default_priority": 20
+    }, 
+    "com.sony.snei.mu.phone": {
+        "records": 17, 
+        "default_priority": 17
+    }, 
+    "jp.syoboi.android.rotatecontrol": {
+        "records": 16, 
+        "default_priority": 16
+    }, 
+    "org.mozilla.firefox": {
+        "records": 16, 
+        "default_priority": 16
+    }, 
+    "jp.co.nohana": {
+        "records": 16, 
+        "default_priority": 16
+    }, 
+    "com.mobisystems.office.noprom": {
+        "records": 13, 
+        "default_priority": 13
+    }, 
+    "com.google.android.music": {
+        "records": 13, 
+        "default_priority": 13
+    }, 
+    "net.freecoin": {
+        "records": 13, 
+        "default_priority": 13
+    }, 
+    "com.android.settings": {
+        "records": 13, 
+        "default_priority": 13
+    }, 
+    "com.cookpad.android.activities": {
+        "records": 13, 
+        "default_priority": 13
+    }, 
+    "com.sonyericsson.androidapp.sehome": {
+        "records": 12, 
+        "default_priority": 12
+    }, 
+    "jp.edy.edyapp": {
+        "records": 12, 
+        "default_priority": 12
+    }, 
+    "com.joelapenna.foursquared": {
+        "records": 12, 
+        "default_priority": 12
+    }, 
+    "com.evernote": {
+        "records": 12, 
+        "default_priority": 12
+    }, 
+    "com.withings.wiscale2": {
+        "records": 11, 
+        "default_priority": 11
+    }, 
+    "com.android.chrome": {
+        "records": 11, 
+        "default_priority": 11
+    }, 
+    "com.sonyericsson.xhs": {
+        "records": 11, 
+        "default_priority": 11
+    }, 
+    "jp.sony.petamap.spot.sp": {
+        "records": 9, 
+        "default_priority": 9
+    }, 
+    "com.protogeo.moves": {
+        "records": 8, 
+        "default_priority": 8
+    }, 
+    "com.teamiwms.dwaittime": {
+        "records": 7, 
+        "default_priority": 7
+    }, 
+    "com.google.android.youtube": {
+        "records": 7, 
+        "default_priority": 7
+    }, 
+    "com.android.vending": {
+        "records": 7, 
+        "default_priority": 7
+    }, 
+    "com.kouzoh.mercari": {
+        "records": 7, 
+        "default_priority": 7
+    }, 
+    "com.nttdocomo.android.fota": {
+        "records": 7, 
+        "default_priority": 7
+    }, 
+    "com.rhmsoft.fm": {
+        "records": 6, 
+        "default_priority": 6
+    }, 
+    "com.android.email": {
+        "records": 6, 
+        "default_priority": 6
+    }, 
+    "com.google.android.deskclock": {
+        "records": 6, 
+        "high_priority": 2, 
+        "default_priority": 1
+    }, 
+    "jp.co.yahoo.android.ybuzzdetection": {
+        "records": 6, 
+        "default_priority": 4
+    }, 
+    "com.square_enix.Android_dqmsuperlight": {
+        "records": 6, 
+        "default_priority": 6
+    }, 
+    "com.android.shell": {
+        "records": 6, 
+        "default_priority": 6
+    }, 
+    "jp.co.recruit.android.suumo": {
+        "records": 5, 
+        "default_priority": 5
+    }, 
+    "com.runtastic.android": {
+        "records": 5, 
+        "default_priority": 5
+    }, 
+    "com.sony.voyagent.mixs.packager201502": {
+        "records": 4, 
+        "default_priority": 4
+    }, 
+    "com.sony.nfx.app.sfrc2": {
+        "records": 4, 
+        "default_priority": 4
+    }, 
+    "org.redidea.voicetube": {
+        "records": 3, 
+        "default_priority": 3
+    }, 
+    "net.zmap.nxcapp.drvplz": {
+        "records": 3, 
+        "default_priority": 3
+    }, 
+    "com.pinterest": {
+        "records": 3, 
+        "default_priority": 3
+    }, 
+    "com.sonymobile.sketch": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.box.android": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.nprpodcastplayer.app": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.nttdocomo.android.osv": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.sonyericsson.facebook.proxylogin": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.nttdocomo.android.idmanager": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.sony.voyagent.mixs.mixslockscreen.internal.test": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.sony.activityengine.app.fusedvehicledetectorapp": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.google.android.tts": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.android.bluetooth": {
+        "records": 2, 
+        "default_priority": 2
+    }, 
+    "com.square_enix.ffportal.googleplay": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "com.nttdocomo.android.areamail": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "jp.co.yahoo.android.apps.navi": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "com.nttdocomo.android.photoviewer": {
+        "records": 1, 
+        "high_priority": 1
+    }, 
+    "com.stitcher.app": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "com.teamviewer.teamviewer.market.mobile": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "com.echofon": {
+        "records": 1, 
+        "high_priority": 1
+    }, 
+    "com.roidapp.photogrid": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "jp.pizzahut.aorder": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "com.mobisystems.fileman.dcm": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "gov.bbg.voa": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "jp.co.fsi.fs1seg": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "com.sonyericsson.textinput.uxp": {
+        "records": 1, 
+        "default_priority": 1
+    }, 
+    "jp.co.rakuten.pointclub.android": {
+        "records": 1, 
+        "default_priority": 1
+    }
+}

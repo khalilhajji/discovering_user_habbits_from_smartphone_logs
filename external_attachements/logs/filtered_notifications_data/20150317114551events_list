@@ -1,0 +1,90 @@
+Date: 17/03/2015 11:45:51
+
+
+different events types and their number of occurrences in the dataset 
+
+
+
+ user 1 event list : 
+{
+    "applaunch_from_launcher_prediction": 908, 
+    "applaunch": 4912, 
+    "notification": 37759, 
+    "duplicated_notification": 339472, 
+    "launcher_on": 8654, 
+    "screen_off": 4795, 
+    "launcher_off": 8639, 
+    "screen_on": 4838
+}
+
+ user 2 event list : 
+{
+    "applaunch_from_launcher_prediction": 895, 
+    "applaunch": 6578, 
+    "notification": 10892, 
+    "duplicated_notification": 55456, 
+    "launcher_on": 15839, 
+    "screen_off": 14874, 
+    "launcher_off": 15824, 
+    "screen_on": 15018
+}
+
+ user 3 event list : 
+{
+    "applaunch_from_launcher_prediction": 668, 
+    "applaunch": 2902, 
+    "notification": 1091, 
+    "duplicated_notification": 9830, 
+    "launcher_on": 11080, 
+    "screen_off": 3051, 
+    "launcher_off": 11002, 
+    "screen_on": 3368
+}
+
+ user 4 event list : 
+{
+    "applaunch_from_launcher_prediction": 287, 
+    "applaunch": 1802, 
+    "notification": 29133, 
+    "duplicated_notification": 67650, 
+    "launcher_on": 3989, 
+    "screen_off": 4500, 
+    "launcher_off": 3985, 
+    "screen_on": 4605
+}
+
+ user 5 event list : 
+{
+    "applaunch_from_launcher_prediction": 488, 
+    "applaunch": 1625, 
+    "notification": 38091, 
+    "duplicated_notification": 40195, 
+    "launcher_on": 4264, 
+    "screen_off": 3205, 
+    "launcher_off": 4252, 
+    "screen_on": 3235
+}
+
+ user 6 event list : 
+{
+    "applaunch_from_launcher_prediction": 974, 
+    "applaunch": 15992, 
+    "notification": 50449, 
+    "duplicated_notification": 45489, 
+    "launcher_on": 30186, 
+    "screen_off": 10007, 
+    "launcher_off": 30065, 
+    "screen_on": 10297
+}
+
+ all users notification list : 
+{
+    "duplicated_notification": 558092, 
+    "notification": 167415, 
+    "launcher_on": 74012, 
+    "launcher_off": 73767, 
+    "screen_on": 41361, 
+    "screen_off": 40432, 
+    "applaunch": 33811, 
+    "applaunch_from_launcher_prediction": 4220
+}

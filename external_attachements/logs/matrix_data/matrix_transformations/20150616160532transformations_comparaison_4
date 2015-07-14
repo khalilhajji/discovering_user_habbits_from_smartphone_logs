@@ -1,0 +1,1532 @@
+Date: 16/06/2015 16:05:32
+
+
+{
+    "battery__health__Good": {
+        "idc_score": 13006.073868351876, 
+        "presence_count": 2001.0, 
+        "idf3_score": 1384.2369924034952, 
+        "idf_score": 573.15151426784018, 
+        "ldc_score": 3928.177101115441
+    }, 
+    "location__place__0": {
+        "idc_score": 8031.9535114244882, 
+        "presence_count": 1091.0, 
+        "idf3_score": 1416.0180790925697, 
+        "idf_score": 973.79206377728724, 
+        "ldc_score": 5081.4062311527396
+    }, 
+    "activity__id__still": {
+        "idc_score": 7649.0786277317548, 
+        "presence_count": 1034.0, 
+        "idf3_score": 1397.469471450946, 
+        "idf_score": 978.34784007050348, 
+        "ldc_score": 4990.437096506108
+    }, 
+    "time_hour_18_0": {
+        "idc_score": 7199.2157631314885, 
+        "presence_count": 968.0, 
+        "idf3_score": 1372.0528392289732, 
+        "idf_score": 979.68365240476328, 
+        "ldc_score": 4861.0674571162299
+    }, 
+    "battery__plugged__Is plugged": {
+        "idc_score": 6742.7559913831456, 
+        "presence_count": 902.0, 
+        "idf3_score": 1342.1327187521588, 
+        "idf_score": 976.51597648413542, 
+        "ldc_score": 4705.9020588147669
+    }, 
+    "time_hour_12_18": {
+        "idc_score": 6491.1393234036477, 
+        "presence_count": 866.0, 
+        "idf3_score": 1323.7984235305278, 
+        "idf_score": 972.7739237477075, 
+        "ldc_score": 4610.3937944147483
+    }, 
+    "activity__id__tilting": {
+        "idc_score": 5373.630088883805, 
+        "presence_count": 709.0, 
+        "idf3_score": 1225.4424062132277, 
+        "idf_score": 938.05629726862014, 
+        "ldc_score": 4104.1520257750062
+    }, 
+    "battery__type__USB port": {
+        "idc_score": 5337.530626648173, 
+        "presence_count": 704.0, 
+        "idf3_score": 1221.7756439396046, 
+        "idf_score": 936.41623534017083, 
+        "ldc_score": 4085.6313104406495
+    }, 
+    "activity__id__in_vehicle": {
+        "idc_score": 4748.6147725714363, 
+        "presence_count": 623.0, 
+        "idf3_score": 1157.2375774737675, 
+        "idf_score": 904.71071446602252, 
+        "ldc_score": 3764.9697743011543
+    }, 
+    "location__place__1": {
+        "idc_score": 4285.4255879085549, 
+        "presence_count": 560.0, 
+        "idf3_score": 1099.8140519795852, 
+        "idf_score": 872.82361332094365, 
+        "ldc_score": 3488.7046579412317
+    }, 
+    "location__place__20": {
+        "idc_score": 4204.1076438529881, 
+        "presence_count": 549.0, 
+        "idf3_score": 1089.0822040584424, 
+        "idf_score": 866.55050615916741, 
+        "ldc_score": 3438.0576817954266
+    }, 
+    "notification__id__com.gunosy.android": {
+        "idc_score": 3855.2162472631289, 
+        "presence_count": 502.0, 
+        "idf3_score": 1040.688368635449, 
+        "idf_score": 837.20765398073945, 
+        "ldc_score": 3213.5854275660763
+    }, 
+    "notification__id__com.google.android.gm": {
+        "idc_score": 3765.7693679081249, 
+        "presence_count": 490.0, 
+        "idf3_score": 1027.6429165689449, 
+        "idf_score": 829.02628274263338, 
+        "ldc_score": 3154.1770131029975
+    }, 
+    "time_hour_6_12": {
+        "idc_score": 3549.0005652131167, 
+        "presence_count": 461.0, 
+        "idf3_score": 994.88856187617375, 
+        "idf_score": 808.02679005183109, 
+        "ldc_score": 3007.0861137170068
+    }, 
+    "time_day_4": {
+        "idc_score": 3391.5030740075831, 
+        "presence_count": 440.0, 
+        "idf3_score": 970.03706550305264, 
+        "idf_score": 791.68743512840342, 
+        "ldc_score": 2897.4630211798853
+    }, 
+    "time_day_1": {
+        "idc_score": 3218.506476967018, 
+        "presence_count": 417.0, 
+        "idf3_score": 941.6665382320781, 
+        "idf_score": 772.63972944519753, 
+        "ldc_score": 2774.4031570701118
+    }, 
+    "time_day_2": {
+        "idc_score": 3180.8302181750637, 
+        "presence_count": 412.0, 
+        "idf3_score": 935.33351444610128, 
+        "idf_score": 768.33340600438612, 
+        "ldc_score": 2747.2364803008504
+    }, 
+    "time_day_3": {
+        "idc_score": 3075.2081586093527, 
+        "presence_count": 398.0, 
+        "idf3_score": 917.27583484706565, 
+        "idf_score": 755.95048737181719, 
+        "ldc_score": 2670.3821737915737
+    }, 
+    "time_day_0": {
+        "idc_score": 2984.5252586721231, 
+        "presence_count": 386.0, 
+        "idf3_score": 901.40645242247979, 
+        "idf_score": 744.94518577563008, 
+        "ldc_score": 2603.5832388689937
+    }, 
+    "time_hour_0_6": {
+        "idc_score": 2863.4017902525752, 
+        "presence_count": 370.0, 
+        "idf3_score": 879.66482765086505, 
+        "idf_score": 729.68900210854895, 
+        "ldc_score": 2513.1914886333702
+    }, 
+    "time_day_5": {
+        "idc_score": 2673.6649251646977, 
+        "presence_count": 345.0, 
+        "idf3_score": 844.29634917640135, 
+        "idf_score": 704.45402535991798, 
+        "ldc_score": 2368.9194095508533
+    }, 
+    "notification__id__com.news.rssfeedreader": {
+        "idc_score": 2490.9730585626107, 
+        "presence_count": 321.0, 
+        "idf3_score": 808.63849077703583, 
+        "idf_score": 678.52432861735213, 
+        "ldc_score": 2226.9361414920591
+    }, 
+    "notification__id__com.newspicks": {
+        "idc_score": 2345.9693343148397, 
+        "presence_count": 302.0, 
+        "idf3_score": 779.14241280729675, 
+        "idf_score": 656.72971195924401, 
+        "ldc_score": 2112.1136283111177
+    }, 
+    "time_day_6": {
+        "idc_score": 2078.0095391781979, 
+        "presence_count": 267.0, 
+        "idf3_score": 721.61758633271199, 
+        "idf_score": 613.39178790082258, 
+        "ldc_score": 1895.002285084315
+    }, 
+    "appLaunch__id__jp.gocro.smartnews.android": {
+        "idc_score": 1847.4706781735129, 
+        "presence_count": 237.0, 
+        "idf3_score": 668.67272337581414, 
+        "idf_score": 572.60712701492469, 
+        "ldc_score": 1703.1330039237882
+    }, 
+    "notification__id__com.facebook.katana": {
+        "idc_score": 1670.1970895700063, 
+        "presence_count": 214.0, 
+        "idf3_score": 625.52981991187721, 
+        "idf_score": 538.78704513874925, 
+        "ldc_score": 1552.4238288961576
+    }, 
+    "battery__type__AC charger": {
+        "idc_score": 1546.6103502350056, 
+        "presence_count": 198.0, 
+        "idf3_score": 594.07320951939732, 
+        "idf_score": 513.81587585080513, 
+        "ldc_score": 1445.7350335446622
+    }, 
+    "activity__id__in_bicycle": {
+        "idc_score": 1461.5191694905789, 
+        "presence_count": 187.0, 
+        "idf3_score": 571.7024974981548, 
+        "idf_score": 495.90390458892574, 
+        "ldc_score": 1371.5070858685253
+    }, 
+    "appLaunch__id__com.sony.tvsideview.phone": {
+        "idc_score": 1345.3226177132756, 
+        "presence_count": 172.0, 
+        "idf3_score": 540.14587174715814, 
+        "idf_score": 470.42737987343139, 
+        "ldc_score": 1269.1323883974501
+    }, 
+    "appLaunch__id__com.gunosy.android": {
+        "idc_score": 1314.30527603517, 
+        "presence_count": 168.0, 
+        "idf3_score": 531.51434361461156, 
+        "idf_score": 463.41721201701938, 
+        "ldc_score": 1241.6074371988723
+    }, 
+    "activity__id__on_foot": {
+        "idc_score": 1236.7040624769418, 
+        "presence_count": 158.0, 
+        "idf3_score": 509.51371807317287, 
+        "idf_score": 445.46998716590934, 
+        "ldc_score": 1172.380526804835
+    }, 
+    "bluetoothSeen__device__other": {
+        "idc_score": 1120.1481646556742, 
+        "presence_count": 143.0, 
+        "idf3_score": 475.31216163802048, 
+        "idf_score": 417.34853176626012, 
+        "ldc_score": 1067.4298065774346
+    }, 
+    "notification__id__com.otolatte": {
+        "idc_score": 1104.593484181037, 
+        "presence_count": 141.0, 
+        "idf3_score": 470.6364992160677, 
+        "idf_score": 413.48354948237295, 
+        "ldc_score": 1053.3357050600878
+    }, 
+    "notification__id__jp.co.yahoo.android.locationlog": {
+        "idc_score": 1018.984631022427, 
+        "presence_count": 130.0, 
+        "idf3_score": 444.4020420542023, 
+        "idf_score": 391.70783307987517, 
+        "ldc_score": 975.39473148001116
+    }, 
+    "appLaunch__id__com.sony.sensing.has.activitypug": {
+        "idc_score": 894.28812146897462, 
+        "presence_count": 114.0, 
+        "idf3_score": 404.55663832059196, 
+        "idf_score": 358.34787045079605, 
+        "ldc_score": 860.74691409519482
+    }, 
+    "appLaunch__id__other": {
+        "idc_score": 847.47394607099045, 
+        "presence_count": 108.0, 
+        "idf3_score": 389.05128225462335, 
+        "idf_score": 345.27455479902716, 
+        "ldc_score": 817.36313774389555
+    }, 
+    "notification__id__com.sony.tvsideview.phone": {
+        "idc_score": 847.47394607099045, 
+        "presence_count": 108.0, 
+        "idf3_score": 389.05128225462335, 
+        "idf_score": 345.27455479902716, 
+        "ldc_score": 817.36313774389555
+    }, 
+    "appLaunch__id__com.nike.plusgps": {
+        "idc_score": 769.38650115136613, 
+        "presence_count": 98.0, 
+        "idf3_score": 362.45836252446009, 
+        "idf_score": 322.73503575919801, 
+        "ldc_score": 744.58309251355672
+    }, 
+    "appLaunch__id__com.sony.nfx.app.sfrc": {
+        "idc_score": 691.21968814792285, 
+        "presence_count": 88.0, 
+        "idf3_score": 334.84336160350273, 
+        "idf_score": 299.17343552857341, 
+        "ldc_score": 671.21085814383162
+    }, 
+    "appLaunch__id__com.sony.activityengine.app.fusedvehicledetectorapp": {
+        "idc_score": 628.62940474654374, 
+        "presence_count": 80.0, 
+        "idf3_score": 311.93803320796036, 
+        "idf_score": 279.51082768529716, 
+        "ldc_score": 612.08669446769534
+    }, 
+    "notification__id__com.sonymobile.lifelog": {
+        "idc_score": 573.82166734432212, 
+        "presence_count": 73.0, 
+        "idf3_score": 291.24149178944754, 
+        "idf_score": 261.65166675001751, 
+        "ldc_score": 560.04215195289942
+    }, 
+    "appLaunch__id__com.google.android.gm": {
+        "idc_score": 565.98885827110098, 
+        "presence_count": 72.0, 
+        "idf3_score": 288.23148926089607, 
+        "idf_score": 259.04700429049859, 
+        "ldc_score": 552.58352974235311
+    }, 
+    "notification__id__com.nike.plusgps": {
+        "idc_score": 440.55790801773674, 
+        "presence_count": 56.0, 
+        "idf3_score": 238.0349049084941, 
+        "idf_score": 215.33586104262997, 
+        "ldc_score": 432.44019714404959
+    }, 
+    "location__place__2": {
+        "idc_score": 432.71187127845161, 
+        "presence_count": 55.0, 
+        "idf3_score": 234.75775834702344, 
+        "idf_score": 212.4640545501926, 
+        "ldc_score": 424.88090277980825
+    }, 
+    "appLaunch__id__com.sonymobile.lifelog": {
+        "idc_score": 432.71187127845161, 
+        "presence_count": 55.0, 
+        "idf3_score": 234.75775834702344, 
+        "idf_score": 212.4640545501926, 
+        "ldc_score": 424.88090277980825
+    }, 
+    "bluetoothSeen__device__GNSS_Receiver_JPC00119879": {
+        "idc_score": 377.76796543055281, 
+        "presence_count": 48.0, 
+        "idf3_score": 211.28900503974313, 
+        "idf_score": 191.8326817261451, 
+        "ldc_score": 371.80002927108944
+    }, 
+    "notification__id__wni.WeathernewsTouch.jp": {
+        "idc_score": 314.92868219450958, 
+        "presence_count": 40.0, 
+        "idf3_score": 183.20410012270563, 
+        "idf_score": 166.9904973613738, 
+        "ldc_score": 310.78086034892289
+    }, 
+    "location__place__3": {
+        "idc_score": 307.07031379773605, 
+        "presence_count": 39.0, 
+        "idf3_score": 179.58700951066245, 
+        "idf_score": 163.77874681836394, 
+        "ldc_score": 303.12681572237972
+    }, 
+    "appLaunch__id__com.google.android.GoogleCamera": {
+        "idc_score": 299.21117842497102, 
+        "presence_count": 38.0, 
+        "idf3_score": 175.94429109840726, 
+        "idf_score": 160.54136847514212, 
+        "ldc_score": 295.46684920444238
+    }, 
+    "notification__id__com.sonymobile.app.powerpredict": {
+        "idc_score": 275.6291748364103, 
+        "presence_count": 35.0, 
+        "idf3_score": 164.85544709605418, 
+        "idf_score": 150.66854467988907, 
+        "ldc_score": 272.45141830226851
+    }, 
+    "bluetoothSeen__device__ ": {
+        "idc_score": 267.76697594313697, 
+        "presence_count": 34.0, 
+        "idf3_score": 161.10310128160606, 
+        "idf_score": 147.32153893447423, 
+        "ldc_score": 264.76776421875655
+    }, 
+    "bluetoothSeen__device__JPC20113779": {
+        "idc_score": 228.44451840424523, 
+        "presence_count": 29.0, 
+        "idf3_score": 141.88183845518392, 
+        "idf_score": 130.12697645321842, 
+        "ldc_score": 226.26066543028696
+    }, 
+    "bluetoothSeen__device__Xperia Z1 Compact_JPC20113787": {
+        "idc_score": 228.44451840424523, 
+        "presence_count": 29.0, 
+        "idf3_score": 141.88183845518392, 
+        "idf_score": 130.12697645321842, 
+        "ldc_score": 226.26066543028696
+    }, 
+    "bluetoothSeen__device__JPC20315716": {
+        "idc_score": 212.71019408558965, 
+        "presence_count": 27.0, 
+        "idf3_score": 133.95969160911193, 
+        "idf_score": 123.01550974521312, 
+        "ldc_score": 210.81637267514242
+    }, 
+    "bluetoothSeen__device__JPC20113787": {
+        "idc_score": 181.23240803589863, 
+        "presence_count": 23.0, 
+        "idf3_score": 117.65927700675203, 
+        "idf_score": 108.33645541898623, 
+        "ldc_score": 179.85672446812703
+    }, 
+    "location__place__4": {
+        "idc_score": 173.36106042137465, 
+        "presence_count": 22.0, 
+        "idf3_score": 113.47996778454149, 
+        "idf_score": 104.56248626580911, 
+        "ldc_score": 172.1020076878886
+    }, 
+    "bluetoothSeen__device__takamatsu Nexus 5": {
+        "idc_score": 173.36106042137465, 
+        "presence_count": 22.0, 
+        "idf3_score": 113.47996778454149, 
+        "idf_score": 104.56248626580911, 
+        "ldc_score": 172.1020076878886
+    }, 
+    "bluetoothSeen__device__GL07S\u3000takamatsu": {
+        "idc_score": 165.48895323014042, 
+        "presence_count": 21.0, 
+        "idf3_score": 109.25527444468615, 
+        "idf_score": 100.74313299498711, 
+        "ldc_score": 164.34136901625629
+    }, 
+    "bluetoothSeen__device__MATSUZAWA-DEV_dev-ubuntu-0": {
+        "idc_score": 165.48895323014042, 
+        "presence_count": 21.0, 
+        "idf3_score": 109.25527444468615, 
+        "idf_score": 100.74313299498711, 
+        "ldc_score": 164.34136901625629
+    }, 
+    "bluetoothSeen__device__JPC20146151": {
+        "idc_score": 157.61608689349805, 
+        "presence_count": 20.0, 
+        "idf3_score": 104.98304264097044, 
+        "idf_score": 96.876241260304639, 
+        "ldc_score": 156.57480845323013
+    }, 
+    "bluetoothSeen__device__JPC00133580": {
+        "idc_score": 157.61608689349805, 
+        "presence_count": 20.0, 
+        "idf3_score": 104.98304264097044, 
+        "idf_score": 96.876241260304639, 
+        "ldc_score": 156.57480845323013
+    }, 
+    "bluetoothSeen__device__JPC20119436": {
+        "idc_score": 157.61608689349805, 
+        "presence_count": 20.0, 
+        "idf3_score": 104.98304264097044, 
+        "idf_score": 96.876241260304639, 
+        "ldc_score": 156.57480845323013
+    }, 
+    "appLaunch__id__com.google.android.gallery3d": {
+        "idc_score": 149.74246184231501, 
+        "presence_count": 19.0, 
+        "idf3_score": 100.66090362814113, 
+        "idf_score": 92.959442316508614, 
+        "ldc_score": 148.80232599881015
+    }, 
+    "bluetoothSeen__device__JPC20121443": {
+        "idc_score": 149.74246184231501, 
+        "presence_count": 19.0, 
+        "idf3_score": 100.66090362814113, 
+        "idf_score": 92.959442316508614, 
+        "ldc_score": 148.80232599881015
+    }, 
+    "appLaunch__id__com.taxaly.noteme": {
+        "idc_score": 141.86807850702422, 
+        "presence_count": 18.0, 
+        "idf3_score": 96.286240630899059, 
+        "idf_score": 88.99011938829986, 
+        "ldc_score": 141.02392165299631
+    }, 
+    "appLaunch__id__com.sonymobile.app.powerpredict": {
+        "idc_score": 141.86807850702422, 
+        "presence_count": 18.0, 
+        "idf3_score": 96.286240630899059, 
+        "idf_score": 88.99011938829986, 
+        "ldc_score": 141.02392165299631
+    }, 
+    "bluetoothSeen__device__Nexus 5": {
+        "idc_score": 141.86807850702422, 
+        "presence_count": 18.0, 
+        "idf3_score": 96.286240630899059, 
+        "idf_score": 88.99011938829986, 
+        "ldc_score": 141.02392165299631
+    }, 
+    "appLaunch__id__com.google.android.wearable.app": {
+        "idc_score": 133.99293731762523, 
+        "presence_count": 17.0, 
+        "idf3_score": 91.856147801888255, 
+        "idf_score": 84.965366628322315, 
+        "ldc_score": 133.23959541578867
+    }, 
+    "bluetoothSeen__device__GNSS_Receiver": {
+        "idc_score": 133.99293731762523, 
+        "presence_count": 17.0, 
+        "idf3_score": 91.856147801888255, 
+        "idf_score": 84.965366628322315, 
+        "ldc_score": 133.23959541578867
+    }, 
+    "bluetoothSeen__device__Nike+ FuelBand SE": {
+        "idc_score": 133.99293731762523, 
+        "presence_count": 17.0, 
+        "idf3_score": 91.856147801888255, 
+        "idf_score": 84.965366628322315, 
+        "ldc_score": 133.23959541578867
+    }, 
+    "appLaunch__id__com.news.rssfeedreader": {
+        "idc_score": 133.99293731762523, 
+        "presence_count": 17.0, 
+        "idf3_score": 91.856147801888255, 
+        "idf_score": 84.965366628322315, 
+        "ldc_score": 133.23959541578867
+    }, 
+    "bluetoothSeen__device__JPC20138346": {
+        "idc_score": 110.36297091828051, 
+        "presence_count": 14.0, 
+        "idf3_score": 78.198741161376304, 
+        "idf_score": 72.523980194910195, 
+        "ldc_score": 109.85108535580255
+    }, 
+    "appLaunch__id__com.metago.astro": {
+        "idc_score": 110.36297091828051, 
+        "presence_count": 14.0, 
+        "idf3_score": 78.198741161376304, 
+        "idf_score": 72.523980194910195, 
+        "ldc_score": 109.85108535580255
+    }, 
+    "appLaunch__id__com.android.vending": {
+        "idc_score": 102.48480260379064, 
+        "presence_count": 13.0, 
+        "idf3_score": 73.510024122036896, 
+        "idf_score": 68.240603224604143, 
+        "ldc_score": 102.04307155301944
+    }, 
+    "battery__health__Overheat": {
+        "idc_score": 86.726199270436439, 
+        "presence_count": 11.0, 
+        "idf3_score": 63.896447119823378, 
+        "idf_score": 59.437706360457206, 
+        "ldc_score": 86.409278273271852
+    }, 
+    "bluetoothSeen__device__JPC00134294": {
+        "idc_score": 78.845765105963238, 
+        "presence_count": 10.0, 
+        "idf3_score": 58.957792969735728, 
+        "idf_score": 54.904392279402849, 
+        "ldc_score": 78.583498796307239
+    }, 
+    "appLaunch__id__com.kohei.android.pcmrecorder": {
+        "idc_score": 78.845765105963238, 
+        "presence_count": 10.0, 
+        "idf3_score": 58.957792969735728, 
+        "idf_score": 54.904392279402849, 
+        "ldc_score": 78.583498796307239
+    }, 
+    "appLaunch__id__com.nianticproject.ingress": {
+        "idc_score": 70.964576511838317, 
+        "presence_count": 9.0, 
+        "idf3_score": 53.919805291001097, 
+        "idf_score": 50.271744669701476, 
+        "ldc_score": 70.75179742794883
+    }, 
+    "notification__id__other": {
+        "idc_score": 70.964576511838317, 
+        "presence_count": 9.0, 
+        "idf3_score": 53.919805291001097, 
+        "idf_score": 50.271744669701476, 
+        "ldc_score": 70.75179742794883
+    }, 
+    "notification__id__com.joelapenna.foursquared": {
+        "idc_score": 63.082633914185529, 
+        "presence_count": 8.0, 
+        "idf3_score": 48.771599939485796, 
+        "idf_score": 45.528879387219483, 
+        "ldc_score": 62.91417416819656
+    }, 
+    "bluetoothSeen__device__Xperia Z1": {
+        "idc_score": 55.199937738701145, 
+        "presence_count": 7.0, 
+        "idf3_score": 43.499631196644764, 
+        "idf_score": 40.662250713411723, 
+        "ldc_score": 55.070629017050436
+    }, 
+    "notification__id__com.kohei.android.pcmrecorder": {
+        "idc_score": 55.199937738701145, 
+        "presence_count": 7.0, 
+        "idf3_score": 43.499631196644764, 
+        "idf_score": 40.662250713411723, 
+        "ldc_score": 55.070629017050436
+    }, 
+    "location__place__5": {
+        "idc_score": 47.316488410654472, 
+        "presence_count": 6.0, 
+        "idf3_score": 38.086586524299783, 
+        "idf_score": 35.65454611010005, 
+        "ldc_score": 47.22116197451048
+    }, 
+    "appLaunch__id__com.sony.voyagent.mixs.mixswidget": {
+        "idc_score": 39.432286354888447, 
+        "presence_count": 5.0, 
+        "idf3_score": 32.509575502719443, 
+        "idf_score": 30.482875157552996, 
+        "ldc_score": 39.365773040576677
+    }, 
+    "notification__id__com.sony.nfx.app.sfrc": {
+        "idc_score": 31.547331995820226, 
+        "presence_count": 4.0, 
+        "idf3_score": 26.736946629351376, 
+        "idf_score": 25.115586353218216, 
+        "ldc_score": 31.504462215249028
+    }, 
+    "notification__id__com.twitter.android": {
+        "idc_score": 23.661625757441797, 
+        "presence_count": 3.0, 
+        "idf3_score": 20.722140625956161, 
+        "idf_score": 19.506120418856291, 
+        "ldc_score": 23.637229498527539
+    }, 
+    "notification__id__com.google.android.deskclock": {
+        "idc_score": 23.661625757441797, 
+        "presence_count": 3.0, 
+        "idf3_score": 20.722140625956161, 
+        "idf_score": 19.506120418856291, 
+        "ldc_score": 23.637229498527539
+    }, 
+    "notification__id__com.google.android.apps.maps": {
+        "idc_score": 23.661625757441797, 
+        "presence_count": 3.0, 
+        "idf3_score": 20.722140625956161, 
+        "idf_score": 19.506120418856291, 
+        "ldc_score": 23.637229498527539
+    }, 
+    "headset__plugged__Is plugged": {
+        "idc_score": 23.661625757441797, 
+        "presence_count": 3.0, 
+        "idf3_score": 20.722140625956161, 
+        "idf_score": 19.506120418856291, 
+        "ldc_score": 23.637229498527539
+    }, 
+    "notification__id__org.redidea.voicetube": {
+        "idc_score": 23.661625757441797, 
+        "presence_count": 3.0, 
+        "idf3_score": 20.722140625956161, 
+        "idf_score": 19.506120418856291, 
+        "ldc_score": 23.637229498527539
+    }, 
+    "location__place__13": {
+        "idc_score": 15.77516806332056, 
+        "presence_count": 2.0, 
+        "idf3_score": 14.390124562207669, 
+        "idf_score": 13.579444424141089, 
+        "ldc_score": 15.764074890412202
+    }, 
+    "location__place__11": {
+        "idc_score": 15.77516806332056, 
+        "presence_count": 2.0, 
+        "idf3_score": 14.390124562207669, 
+        "idf_score": 13.579444424141089, 
+        "ldc_score": 15.764074890412202
+    }, 
+    "notification__id__net.zmap.nxcapp.drvplz": {
+        "idc_score": 15.77516806332056, 
+        "presence_count": 2.0, 
+        "idf3_score": 14.390124562207669, 
+        "idf_score": 13.579444424141089, 
+        "ldc_score": 15.764074890412202
+    }, 
+    "location__place__6": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__7": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__8": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__9": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__18": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__19": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__12": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__10": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__16": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__17": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__14": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "location__place__15": {
+        "idc_score": 7.8879593365999447, 
+        "presence_count": 1.0, 
+        "idf3_score": 7.6005273892119991, 
+        "idf_score": 7.1951873201787091, 
+        "ldc_score": 7.8849983909030232
+    }, 
+    "headset__microphone__Is plugged": {
+        "idc_score": 0.0, 
+        "presence_count": 0.0, 
+        "idf3_score": 0.0, 
+        "idf_score": 0.0, 
+        "ldc_score": 0.0
+    }, 
+    "battery__type__wireless plugging": {
+        "idc_score": 0.0, 
+        "presence_count": 0.0, 
+        "idf3_score": 0.0, 
+        "idf_score": 0.0, 
+        "ldc_score": 0.0
+    }, 
+    "battery__health__Dead": {
+        "idc_score": 0.0, 
+        "presence_count": 0.0, 
+        "idf3_score": 0.0, 
+        "idf_score": 0.0, 
+        "ldc_score": 0.0
+    }, 
+    "battery__health__Cold": {
+        "idc_score": 0.0, 
+        "presence_count": 0.0, 
+        "idf3_score": 0.0, 
+        "idf_score": 0.0, 
+        "ldc_score": 0.0
+    }
+}{
+    "battery__health__Good": {
+        "idc_score": 0, 
+        "presence_count": 0, 
+        "idf3_score": 2, 
+        "idf_score": 23, 
+        "ldc_score": 7
+    }, 
+    "location__place__0": {
+        "idc_score": 1, 
+        "presence_count": 1, 
+        "idf3_score": 0, 
+        "idf_score": 3, 
+        "ldc_score": 0
+    }, 
+    "activity__id__still": {
+        "idc_score": 2, 
+        "presence_count": 2, 
+        "idf3_score": 1, 
+        "idf_score": 1, 
+        "ldc_score": 1
+    }, 
+    "time_hour_18_0": {
+        "idc_score": 3, 
+        "presence_count": 3, 
+        "idf3_score": 3, 
+        "idf_score": 0, 
+        "ldc_score": 2
+    }, 
+    "battery__plugged__Is plugged": {
+        "idc_score": 4, 
+        "presence_count": 4, 
+        "idf3_score": 4, 
+        "idf_score": 2, 
+        "ldc_score": 3
+    }, 
+    "time_hour_12_18": {
+        "idc_score": 5, 
+        "presence_count": 5, 
+        "idf3_score": 5, 
+        "idf_score": 4, 
+        "ldc_score": 4
+    }, 
+    "activity__id__tilting": {
+        "idc_score": 6, 
+        "presence_count": 6, 
+        "idf3_score": 6, 
+        "idf_score": 5, 
+        "ldc_score": 5
+    }, 
+    "battery__type__USB port": {
+        "idc_score": 7, 
+        "presence_count": 7, 
+        "idf3_score": 7, 
+        "idf_score": 6, 
+        "ldc_score": 6
+    }, 
+    "activity__id__in_vehicle": {
+        "idc_score": 8, 
+        "presence_count": 8, 
+        "idf3_score": 8, 
+        "idf_score": 7, 
+        "ldc_score": 8
+    }, 
+    "location__place__1": {
+        "idc_score": 9, 
+        "presence_count": 9, 
+        "idf3_score": 9, 
+        "idf_score": 8, 
+        "ldc_score": 9
+    }, 
+    "location__place__20": {
+        "idc_score": 10, 
+        "presence_count": 10, 
+        "idf3_score": 10, 
+        "idf_score": 9, 
+        "ldc_score": 10
+    }, 
+    "notification__id__com.gunosy.android": {
+        "idc_score": 11, 
+        "presence_count": 11, 
+        "idf3_score": 11, 
+        "idf_score": 10, 
+        "ldc_score": 11
+    }, 
+    "notification__id__com.google.android.gm": {
+        "idc_score": 12, 
+        "presence_count": 12, 
+        "idf3_score": 12, 
+        "idf_score": 11, 
+        "ldc_score": 12
+    }, 
+    "time_hour_6_12": {
+        "idc_score": 13, 
+        "presence_count": 13, 
+        "idf3_score": 13, 
+        "idf_score": 12, 
+        "ldc_score": 13
+    }, 
+    "time_day_4": {
+        "idc_score": 14, 
+        "presence_count": 14, 
+        "idf3_score": 14, 
+        "idf_score": 13, 
+        "ldc_score": 14
+    }, 
+    "time_day_1": {
+        "idc_score": 15, 
+        "presence_count": 15, 
+        "idf3_score": 15, 
+        "idf_score": 14, 
+        "ldc_score": 15
+    }, 
+    "time_day_2": {
+        "idc_score": 16, 
+        "presence_count": 16, 
+        "idf3_score": 16, 
+        "idf_score": 15, 
+        "ldc_score": 16
+    }, 
+    "time_day_3": {
+        "idc_score": 17, 
+        "presence_count": 17, 
+        "idf3_score": 17, 
+        "idf_score": 16, 
+        "ldc_score": 17
+    }, 
+    "time_day_0": {
+        "idc_score": 18, 
+        "presence_count": 18, 
+        "idf3_score": 18, 
+        "idf_score": 17, 
+        "ldc_score": 18
+    }, 
+    "time_hour_0_6": {
+        "idc_score": 19, 
+        "presence_count": 19, 
+        "idf3_score": 19, 
+        "idf_score": 18, 
+        "ldc_score": 19
+    }, 
+    "time_day_5": {
+        "idc_score": 20, 
+        "presence_count": 20, 
+        "idf3_score": 20, 
+        "idf_score": 19, 
+        "ldc_score": 20
+    }, 
+    "notification__id__com.news.rssfeedreader": {
+        "idc_score": 21, 
+        "presence_count": 21, 
+        "idf3_score": 21, 
+        "idf_score": 20, 
+        "ldc_score": 21
+    }, 
+    "notification__id__com.newspicks": {
+        "idc_score": 22, 
+        "presence_count": 22, 
+        "idf3_score": 22, 
+        "idf_score": 21, 
+        "ldc_score": 22
+    }, 
+    "time_day_6": {
+        "idc_score": 23, 
+        "presence_count": 23, 
+        "idf3_score": 23, 
+        "idf_score": 22, 
+        "ldc_score": 23
+    }, 
+    "appLaunch__id__jp.gocro.smartnews.android": {
+        "idc_score": 24, 
+        "presence_count": 24, 
+        "idf3_score": 24, 
+        "idf_score": 24, 
+        "ldc_score": 24
+    }, 
+    "notification__id__com.facebook.katana": {
+        "idc_score": 25, 
+        "presence_count": 25, 
+        "idf3_score": 25, 
+        "idf_score": 25, 
+        "ldc_score": 25
+    }, 
+    "battery__type__AC charger": {
+        "idc_score": 26, 
+        "presence_count": 26, 
+        "idf3_score": 26, 
+        "idf_score": 26, 
+        "ldc_score": 26
+    }, 
+    "activity__id__in_bicycle": {
+        "idc_score": 27, 
+        "presence_count": 27, 
+        "idf3_score": 27, 
+        "idf_score": 27, 
+        "ldc_score": 27
+    }, 
+    "appLaunch__id__com.sony.tvsideview.phone": {
+        "idc_score": 28, 
+        "presence_count": 28, 
+        "idf3_score": 28, 
+        "idf_score": 28, 
+        "ldc_score": 28
+    }, 
+    "appLaunch__id__com.gunosy.android": {
+        "idc_score": 29, 
+        "presence_count": 29, 
+        "idf3_score": 29, 
+        "idf_score": 29, 
+        "ldc_score": 29
+    }, 
+    "activity__id__on_foot": {
+        "idc_score": 30, 
+        "presence_count": 30, 
+        "idf3_score": 30, 
+        "idf_score": 30, 
+        "ldc_score": 30
+    }, 
+    "bluetoothSeen__device__other": {
+        "idc_score": 31, 
+        "presence_count": 31, 
+        "idf3_score": 31, 
+        "idf_score": 31, 
+        "ldc_score": 31
+    }, 
+    "notification__id__com.otolatte": {
+        "idc_score": 32, 
+        "presence_count": 32, 
+        "idf3_score": 32, 
+        "idf_score": 32, 
+        "ldc_score": 32
+    }, 
+    "notification__id__jp.co.yahoo.android.locationlog": {
+        "idc_score": 33, 
+        "presence_count": 33, 
+        "idf3_score": 33, 
+        "idf_score": 33, 
+        "ldc_score": 33
+    }, 
+    "appLaunch__id__com.sony.sensing.has.activitypug": {
+        "idc_score": 34, 
+        "presence_count": 34, 
+        "idf3_score": 34, 
+        "idf_score": 34, 
+        "ldc_score": 34
+    }, 
+    "notification__id__com.sony.tvsideview.phone": {
+        "idc_score": 35, 
+        "presence_count": 35, 
+        "idf3_score": 35, 
+        "idf_score": 35, 
+        "ldc_score": 35
+    }, 
+    "appLaunch__id__other": {
+        "idc_score": 36, 
+        "presence_count": 36, 
+        "idf3_score": 36, 
+        "idf_score": 36, 
+        "ldc_score": 36
+    }, 
+    "appLaunch__id__com.nike.plusgps": {
+        "idc_score": 37, 
+        "presence_count": 37, 
+        "idf3_score": 37, 
+        "idf_score": 37, 
+        "ldc_score": 37
+    }, 
+    "appLaunch__id__com.sony.nfx.app.sfrc": {
+        "idc_score": 38, 
+        "presence_count": 38, 
+        "idf3_score": 38, 
+        "idf_score": 38, 
+        "ldc_score": 38
+    }, 
+    "appLaunch__id__com.sony.activityengine.app.fusedvehicledetectorapp": {
+        "idc_score": 39, 
+        "presence_count": 39, 
+        "idf3_score": 39, 
+        "idf_score": 39, 
+        "ldc_score": 39
+    }, 
+    "notification__id__com.sonymobile.lifelog": {
+        "idc_score": 40, 
+        "presence_count": 40, 
+        "idf3_score": 40, 
+        "idf_score": 40, 
+        "ldc_score": 40
+    }, 
+    "appLaunch__id__com.google.android.gm": {
+        "idc_score": 41, 
+        "presence_count": 41, 
+        "idf3_score": 41, 
+        "idf_score": 41, 
+        "ldc_score": 41
+    }, 
+    "notification__id__com.nike.plusgps": {
+        "idc_score": 42, 
+        "presence_count": 42, 
+        "idf3_score": 42, 
+        "idf_score": 42, 
+        "ldc_score": 42
+    }, 
+    "appLaunch__id__com.sonymobile.lifelog": {
+        "idc_score": 43, 
+        "presence_count": 43, 
+        "idf3_score": 43, 
+        "idf_score": 43, 
+        "ldc_score": 43
+    }, 
+    "location__place__2": {
+        "idc_score": 44, 
+        "presence_count": 44, 
+        "idf3_score": 44, 
+        "idf_score": 44, 
+        "ldc_score": 44
+    }, 
+    "bluetoothSeen__device__GNSS_Receiver_JPC00119879": {
+        "idc_score": 45, 
+        "presence_count": 45, 
+        "idf3_score": 45, 
+        "idf_score": 45, 
+        "ldc_score": 45
+    }, 
+    "notification__id__wni.WeathernewsTouch.jp": {
+        "idc_score": 46, 
+        "presence_count": 46, 
+        "idf3_score": 46, 
+        "idf_score": 46, 
+        "ldc_score": 46
+    }, 
+    "location__place__3": {
+        "idc_score": 47, 
+        "presence_count": 47, 
+        "idf3_score": 47, 
+        "idf_score": 47, 
+        "ldc_score": 47
+    }, 
+    "appLaunch__id__com.google.android.GoogleCamera": {
+        "idc_score": 48, 
+        "presence_count": 48, 
+        "idf3_score": 48, 
+        "idf_score": 48, 
+        "ldc_score": 48
+    }, 
+    "notification__id__com.sonymobile.app.powerpredict": {
+        "idc_score": 49, 
+        "presence_count": 49, 
+        "idf3_score": 49, 
+        "idf_score": 49, 
+        "ldc_score": 49
+    }, 
+    "bluetoothSeen__device__ ": {
+        "idc_score": 50, 
+        "presence_count": 50, 
+        "idf3_score": 50, 
+        "idf_score": 50, 
+        "ldc_score": 50
+    }, 
+    "bluetoothSeen__device__Xperia Z1 Compact_JPC20113787": {
+        "idc_score": 51, 
+        "presence_count": 51, 
+        "idf3_score": 51, 
+        "idf_score": 51, 
+        "ldc_score": 51
+    }, 
+    "bluetoothSeen__device__JPC20113779": {
+        "idc_score": 52, 
+        "presence_count": 52, 
+        "idf3_score": 52, 
+        "idf_score": 52, 
+        "ldc_score": 52
+    }, 
+    "bluetoothSeen__device__JPC20315716": {
+        "idc_score": 53, 
+        "presence_count": 53, 
+        "idf3_score": 53, 
+        "idf_score": 53, 
+        "ldc_score": 53
+    }, 
+    "bluetoothSeen__device__JPC20113787": {
+        "idc_score": 54, 
+        "presence_count": 54, 
+        "idf3_score": 54, 
+        "idf_score": 54, 
+        "ldc_score": 54
+    }, 
+    "bluetoothSeen__device__takamatsu Nexus 5": {
+        "idc_score": 55, 
+        "presence_count": 55, 
+        "idf3_score": 55, 
+        "idf_score": 55, 
+        "ldc_score": 55
+    }, 
+    "location__place__4": {
+        "idc_score": 56, 
+        "presence_count": 56, 
+        "idf3_score": 56, 
+        "idf_score": 56, 
+        "ldc_score": 56
+    }, 
+    "bluetoothSeen__device__MATSUZAWA-DEV_dev-ubuntu-0": {
+        "idc_score": 57, 
+        "presence_count": 57, 
+        "idf3_score": 57, 
+        "idf_score": 57, 
+        "ldc_score": 57
+    }, 
+    "bluetoothSeen__device__GL07S\u3000takamatsu": {
+        "idc_score": 58, 
+        "presence_count": 58, 
+        "idf3_score": 58, 
+        "idf_score": 58, 
+        "ldc_score": 58
+    }, 
+    "bluetoothSeen__device__JPC20146151": {
+        "idc_score": 59, 
+        "presence_count": 59, 
+        "idf3_score": 59, 
+        "idf_score": 59, 
+        "ldc_score": 59
+    }, 
+    "bluetoothSeen__device__JPC00133580": {
+        "idc_score": 60, 
+        "presence_count": 60, 
+        "idf3_score": 60, 
+        "idf_score": 60, 
+        "ldc_score": 60
+    }, 
+    "bluetoothSeen__device__JPC20119436": {
+        "idc_score": 61, 
+        "presence_count": 61, 
+        "idf3_score": 61, 
+        "idf_score": 61, 
+        "ldc_score": 61
+    }, 
+    "bluetoothSeen__device__JPC20121443": {
+        "idc_score": 62, 
+        "presence_count": 62, 
+        "idf3_score": 62, 
+        "idf_score": 62, 
+        "ldc_score": 62
+    }, 
+    "appLaunch__id__com.google.android.gallery3d": {
+        "idc_score": 63, 
+        "presence_count": 63, 
+        "idf3_score": 63, 
+        "idf_score": 63, 
+        "ldc_score": 63
+    }, 
+    "bluetoothSeen__device__Nexus 5": {
+        "idc_score": 64, 
+        "presence_count": 64, 
+        "idf3_score": 64, 
+        "idf_score": 64, 
+        "ldc_score": 64
+    }, 
+    "appLaunch__id__com.sonymobile.app.powerpredict": {
+        "idc_score": 65, 
+        "presence_count": 65, 
+        "idf3_score": 65, 
+        "idf_score": 65, 
+        "ldc_score": 65
+    }, 
+    "appLaunch__id__com.taxaly.noteme": {
+        "idc_score": 66, 
+        "presence_count": 66, 
+        "idf3_score": 66, 
+        "idf_score": 66, 
+        "ldc_score": 66
+    }, 
+    "bluetoothSeen__device__Nike+ FuelBand SE": {
+        "idc_score": 67, 
+        "presence_count": 67, 
+        "idf3_score": 67, 
+        "idf_score": 67, 
+        "ldc_score": 67
+    }, 
+    "appLaunch__id__com.news.rssfeedreader": {
+        "idc_score": 68, 
+        "presence_count": 68, 
+        "idf3_score": 68, 
+        "idf_score": 68, 
+        "ldc_score": 68
+    }, 
+    "appLaunch__id__com.google.android.wearable.app": {
+        "idc_score": 69, 
+        "presence_count": 69, 
+        "idf3_score": 69, 
+        "idf_score": 69, 
+        "ldc_score": 69
+    }, 
+    "bluetoothSeen__device__GNSS_Receiver": {
+        "idc_score": 70, 
+        "presence_count": 70, 
+        "idf3_score": 70, 
+        "idf_score": 70, 
+        "ldc_score": 70
+    }, 
+    "bluetoothSeen__device__JPC20138346": {
+        "idc_score": 72, 
+        "presence_count": 72, 
+        "idf3_score": 72, 
+        "idf_score": 72, 
+        "ldc_score": 72
+    }, 
+    "appLaunch__id__com.metago.astro": {
+        "idc_score": 73, 
+        "presence_count": 73, 
+        "idf3_score": 73, 
+        "idf_score": 73, 
+        "ldc_score": 73
+    }, 
+    "appLaunch__id__com.android.vending": {
+        "idc_score": 74, 
+        "presence_count": 74, 
+        "idf3_score": 74, 
+        "idf_score": 74, 
+        "ldc_score": 74
+    }, 
+    "battery__health__Overheat": {
+        "idc_score": 75, 
+        "presence_count": 75, 
+        "idf3_score": 75, 
+        "idf_score": 75, 
+        "ldc_score": 75
+    }, 
+    "appLaunch__id__com.kohei.android.pcmrecorder": {
+        "idc_score": 76, 
+        "presence_count": 76, 
+        "idf3_score": 76, 
+        "idf_score": 76, 
+        "ldc_score": 76
+    }, 
+    "bluetoothSeen__device__JPC00134294": {
+        "idc_score": 77, 
+        "presence_count": 77, 
+        "idf3_score": 77, 
+        "idf_score": 77, 
+        "ldc_score": 77
+    }, 
+    "notification__id__other": {
+        "idc_score": 78, 
+        "presence_count": 78, 
+        "idf3_score": 78, 
+        "idf_score": 78, 
+        "ldc_score": 78
+    }, 
+    "appLaunch__id__com.nianticproject.ingress": {
+        "idc_score": 79, 
+        "presence_count": 79, 
+        "idf3_score": 79, 
+        "idf_score": 79, 
+        "ldc_score": 79
+    }, 
+    "notification__id__com.joelapenna.foursquared": {
+        "idc_score": 80, 
+        "presence_count": 80, 
+        "idf3_score": 80, 
+        "idf_score": 80, 
+        "ldc_score": 80
+    }, 
+    "notification__id__com.kohei.android.pcmrecorder": {
+        "idc_score": 81, 
+        "presence_count": 81, 
+        "idf3_score": 81, 
+        "idf_score": 81, 
+        "ldc_score": 81
+    }, 
+    "bluetoothSeen__device__Xperia Z1": {
+        "idc_score": 82, 
+        "presence_count": 82, 
+        "idf3_score": 82, 
+        "idf_score": 82, 
+        "ldc_score": 82
+    }, 
+    "location__place__5": {
+        "idc_score": 83, 
+        "presence_count": 83, 
+        "idf3_score": 83, 
+        "idf_score": 83, 
+        "ldc_score": 83
+    }, 
+    "appLaunch__id__com.sony.voyagent.mixs.mixswidget": {
+        "idc_score": 84, 
+        "presence_count": 84, 
+        "idf3_score": 84, 
+        "idf_score": 84, 
+        "ldc_score": 84
+    }, 
+    "notification__id__com.sony.nfx.app.sfrc": {
+        "idc_score": 85, 
+        "presence_count": 85, 
+        "idf3_score": 85, 
+        "idf_score": 85, 
+        "ldc_score": 85
+    }, 
+    "notification__id__com.twitter.android": {
+        "idc_score": 86, 
+        "presence_count": 86, 
+        "idf3_score": 86, 
+        "idf_score": 86, 
+        "ldc_score": 86
+    }, 
+    "notification__id__com.google.android.apps.maps": {
+        "idc_score": 87, 
+        "presence_count": 87, 
+        "idf3_score": 87, 
+        "idf_score": 87, 
+        "ldc_score": 87
+    }, 
+    "notification__id__org.redidea.voicetube": {
+        "idc_score": 88, 
+        "presence_count": 88, 
+        "idf3_score": 88, 
+        "idf_score": 88, 
+        "ldc_score": 88
+    }, 
+    "headset__plugged__Is plugged": {
+        "idc_score": 89, 
+        "presence_count": 89, 
+        "idf3_score": 89, 
+        "idf_score": 89, 
+        "ldc_score": 89
+    }, 
+    "notification__id__com.google.android.deskclock": {
+        "idc_score": 90, 
+        "presence_count": 90, 
+        "idf3_score": 90, 
+        "idf_score": 90, 
+        "ldc_score": 90
+    }, 
+    "location__place__13": {
+        "idc_score": 91, 
+        "presence_count": 91, 
+        "idf3_score": 91, 
+        "idf_score": 91, 
+        "ldc_score": 91
+    }, 
+    "notification__id__net.zmap.nxcapp.drvplz": {
+        "idc_score": 92, 
+        "presence_count": 92, 
+        "idf3_score": 92, 
+        "idf_score": 92, 
+        "ldc_score": 92
+    }, 
+    "location__place__11": {
+        "idc_score": 93, 
+        "presence_count": 93, 
+        "idf3_score": 93, 
+        "idf_score": 93, 
+        "ldc_score": 93
+    }, 
+    "location__place__17": {
+        "idc_score": 94, 
+        "presence_count": 94, 
+        "idf3_score": 94, 
+        "idf_score": 94, 
+        "ldc_score": 94
+    }, 
+    "location__place__16": {
+        "idc_score": 95, 
+        "presence_count": 95, 
+        "idf3_score": 95, 
+        "idf_score": 95, 
+        "ldc_score": 95
+    }, 
+    "location__place__15": {
+        "idc_score": 96, 
+        "presence_count": 96, 
+        "idf3_score": 96, 
+        "idf_score": 96, 
+        "ldc_score": 96
+    }, 
+    "location__place__18": {
+        "idc_score": 97, 
+        "presence_count": 97, 
+        "idf3_score": 97, 
+        "idf_score": 97, 
+        "ldc_score": 97
+    }, 
+    "location__place__14": {
+        "idc_score": 98, 
+        "presence_count": 98, 
+        "idf3_score": 98, 
+        "idf_score": 98, 
+        "ldc_score": 98
+    }, 
+    "location__place__19": {
+        "idc_score": 99, 
+        "presence_count": 99, 
+        "idf3_score": 99, 
+        "idf_score": 99, 
+        "ldc_score": 99
+    }, 
+    "location__place__12": {
+        "idc_score": 100, 
+        "presence_count": 100, 
+        "idf3_score": 100, 
+        "idf_score": 100, 
+        "ldc_score": 100
+    }, 
+    "location__place__10": {
+        "idc_score": 101, 
+        "presence_count": 101, 
+        "idf3_score": 101, 
+        "idf_score": 101, 
+        "ldc_score": 101
+    }, 
+    "location__place__9": {
+        "idc_score": 102, 
+        "presence_count": 102, 
+        "idf3_score": 102, 
+        "idf_score": 102, 
+        "ldc_score": 102
+    }, 
+    "location__place__7": {
+        "idc_score": 103, 
+        "presence_count": 103, 
+        "idf3_score": 103, 
+        "idf_score": 103, 
+        "ldc_score": 103
+    }, 
+    "location__place__6": {
+        "idc_score": 104, 
+        "presence_count": 104, 
+        "idf3_score": 104, 
+        "idf_score": 104, 
+        "ldc_score": 104
+    }, 
+    "location__place__8": {
+        "idc_score": 105, 
+        "presence_count": 105, 
+        "idf3_score": 105, 
+        "idf_score": 105, 
+        "ldc_score": 105
+    }, 
+    "headset__microphone__Is plugged": {
+        "idc_score": 106, 
+        "presence_count": 106, 
+        "idf3_score": 106, 
+        "idf_score": 106, 
+        "ldc_score": 106
+    }, 
+    "battery__health__Cold": {
+        "idc_score": 107, 
+        "presence_count": 107, 
+        "idf3_score": 107, 
+        "idf_score": 107, 
+        "ldc_score": 107
+    }, 
+    "battery__health__Dead": {
+        "idc_score": 108, 
+        "presence_count": 108, 
+        "idf3_score": 108, 
+        "idf_score": 108, 
+        "ldc_score": 108
+    }, 
+    "battery__type__wireless plugging": {
+        "idc_score": 109, 
+        "presence_count": 109, 
+        "idf3_score": 109, 
+        "idf_score": 109, 
+        "ldc_score": 109
+    }
+}

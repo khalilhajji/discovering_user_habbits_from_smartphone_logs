@@ -1,0 +1,7 @@
+Date: 08/05/2015 11:36:33
+
+
+took user 2 gps points as a test for comparing the accuracies of the two methods of computing the baricenter  
+For testing, we used 3825 points belonging to 5 different clusters : 
+Average distance for the angle based method (in meters) : 32.021965973
+Average distance for the cartesian based method (in meters) : 32.0219679176

@@ -1,0 +1,112 @@
+Date: 02/03/2015 19:13:54
+
+
+
+ 
+ 
+ user 4
+{'activityRecognitionResult_activity': 11.911556661300551,
+ 'activityRecognitionResult_carrying': 10.25342699643885,
+ 'activityRecognitionResult_motion': 11.911556661300551,
+ 'activityRecognitionResult_posture': 4.452168398458461,
+ 'androidActivityRecognitionResult_activity': 11.875213425045123,
+ 'appLaunch': 1.4193375286599346,
+ 'battery_health': 16.076393970437582,
+ 'bluetooth': 2.1120542465486123,
+ 'headsetPlug': 8.938728718474072,
+ 'location': 15.151958632128396,
+ 'networkInfo_state': 16.10029757549149,
+ 'notifications': 97.26962290843456,
+ 'telephony': 0.08146738865310503,
+ 'wifiAps': 13.16820332699156,
+ 'wifiConnectedAp': 9.72754768525294}
+ 
+ 
+ user 5
+{'activityRecognitionResult_activity': 45.734103533861244,
+ 'activityRecognitionResult_carrying': 35.65993972343694,
+ 'activityRecognitionResult_motion': 45.734103533861244,
+ 'activityRecognitionResult_posture': 28.216227396288858,
+ 'androidActivityRecognitionResult_activity': 44.326173029192766,
+ 'appLaunch': 5.520180829689162,
+ 'battery_health': 58.62929913721783,
+ 'bluetooth': 4.556199030847417,
+ 'headsetPlug': 45.94241224441555,
+ 'location': 55.99884765394162,
+ 'networkInfo_state': 58.98238978844108,
+ 'notifications': 75.03841153527951,
+ 'telephony': 1.0452369696253399,
+ 'wifiAps': 50.265187330102826,
+ 'wifiConnectedAp': 32.66605602174684}
+ 
+ 
+ user 6
+{'activityRecognitionResult_activity': 29.517119464086345,
+ 'activityRecognitionResult_carrying': 27.426032750279123,
+ 'activityRecognitionResult_motion': 29.517119464086345,
+ 'activityRecognitionResult_posture': 17.738183848157796,
+ 'androidActivityRecognitionResult_activity': 26.695664309639,
+ 'appLaunch': 8.303870487532564,
+ 'battery_health': 98.5834573874209,
+ 'bluetooth': 1.7794008187569779,
+ 'headsetPlug': 81.18254558987718,
+ 'location': 67.91263490882025,
+ 'networkInfo_state': 99.36034611090435,
+ 'notifications': 26.84220320059546,
+ 'telephony': 63.144305917379974,
+ 'wifiAps': 64.98650911797543,
+ 'wifiConnectedAp': 61.06717528842576}
+ 
+ 
+ user 7
+{'activityRecognitionResult_activity': 33.26060146096196,
+ 'activityRecognitionResult_carrying': 30.89580943674483,
+ 'activityRecognitionResult_motion': 33.26060146096196,
+ 'activityRecognitionResult_posture': 16.943364007209944,
+ 'androidActivityRecognitionResult_activity': 34.94320876922148,
+ 'appLaunch': 1.8016230994126832,
+ 'battery_health': 44.49551965916637,
+ 'bluetooth': 1.6420729446059112,
+ 'headsetPlug': 38.31101068554821,
+ 'location': 43.619287457632964,
+ 'networkInfo_state': 44.183318815706635,
+ 'notifications': 91.75082577985528,
+ 'telephony': 6.488947917654872,
+ 'wifiAps': 38.82157118092987,
+ 'wifiConnectedAp': 23.789359298324293}
+ 
+ 
+ user 10
+{'activityRecognitionResult_activity': 31.38797126527188,
+ 'activityRecognitionResult_carrying': 21.693671018824393,
+ 'activityRecognitionResult_motion': 31.38797126527188,
+ 'activityRecognitionResult_posture': 15.208431650149443,
+ 'androidActivityRecognitionResult_activity': 34.82565151276808,
+ 'appLaunch': 2.2159299459912956,
+ 'battery_health': 46.059462010382255,
+ 'bluetooth': 1.9097058360862043,
+ 'headsetPlug': 38.83068533375282,
+ 'location': 40.800167794032824,
+ 'networkInfo_state': 27.930365476377744,
+ 'notifications': 89.31256882177128,
+ 'telephony': 7.124954118819149,
+ 'wifiAps': 44.6132871899743,
+ 'wifiConnectedAp': 29.843217450579413}
+ 
+ 
+ user 11
+{'activityRecognitionResult_activity': 18.912660301969886,
+ 'activityRecognitionResult_carrying': 15.77924461008048,
+ 'activityRecognitionResult_motion': 18.912660301969886,
+ 'activityRecognitionResult_posture': 8.90092679220316,
+ 'androidActivityRecognitionResult_activity': 21.05570574218326,
+ 'appLaunch': 8.770152432248027,
+ 'battery_health': 56.7627918516719,
+ 'bluetooth': 0.4486646025338178,
+ 'headsetPlug': 41.41773879243059,
+ 'location': 36.955903712854656,
+ 'networkInfo_state': 51.59126034435525,
+ 'notifications': 79.37021549340184,
+ 'telephony': 15.352806479792003,
+ 'wifiAps': 18.81703478184459,
+ 'wifiConnectedAp': 16.79856096514579}

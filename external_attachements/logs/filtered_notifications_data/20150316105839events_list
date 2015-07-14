@@ -1,0 +1,90 @@
+Date: 16/03/2015 10:58:39
+
+
+different events types and their number of occurrences in the dataset 
+
+
+
+ user 1 event list : 
+{
+    "applaunch_from_launcher_prediction": 310, 
+    "applaunch": 2412, 
+    "notification": 35345, 
+    "duplicated_notification": 244602, 
+    "launcher_on": 6120, 
+    "screen_off": 3825, 
+    "launcher_off": 4770, 
+    "screen_on": 3995
+}
+
+ user 2 event list : 
+{
+    "applaunch_from_launcher_prediction": 290, 
+    "applaunch": 2982, 
+    "notification": 10592, 
+    "duplicated_notification": 32042, 
+    "launcher_on": 10205, 
+    "screen_off": 12391, 
+    "launcher_off": 7743, 
+    "screen_on": 12737
+}
+
+ user 3 event list : 
+{
+    "applaunch_from_launcher_prediction": 269, 
+    "applaunch": 1557, 
+    "notification": 1086, 
+    "duplicated_notification": 9296, 
+    "launcher_on": 5525, 
+    "screen_off": 2702, 
+    "launcher_off": 4979, 
+    "screen_on": 2845
+}
+
+ user 4 event list : 
+{
+    "applaunch_from_launcher_prediction": 104, 
+    "applaunch": 955, 
+    "notification": 28653, 
+    "duplicated_notification": 38535, 
+    "launcher_on": 3073, 
+    "screen_off": 4019, 
+    "launcher_off": 2373, 
+    "screen_on": 4191
+}
+
+ user 5 event list : 
+{
+    "applaunch_from_launcher_prediction": 211, 
+    "applaunch": 814, 
+    "notification": 37460, 
+    "duplicated_notification": 35417, 
+    "launcher_on": 2996, 
+    "screen_off": 2537, 
+    "launcher_off": 2281, 
+    "screen_on": 2575
+}
+
+ user 6 event list : 
+{
+    "applaunch_from_launcher_prediction": 413, 
+    "applaunch": 9947, 
+    "notification": 48635, 
+    "duplicated_notification": 30094, 
+    "launcher_on": 21971, 
+    "screen_off": 8506, 
+    "launcher_off": 18100, 
+    "screen_on": 8773
+}
+
+ all users notification list : 
+{
+    "duplicated_notification": 389986, 
+    "notification": 161771, 
+    "launcher_on": 49890, 
+    "launcher_off": 40246, 
+    "screen_on": 35116, 
+    "screen_off": 33980, 
+    "applaunch": 18667, 
+    "applaunch_from_launcher_prediction": 1597
+}

@@ -1,0 +1,42 @@
+HEADSET VALUES COUNT FOR ALL USERS
+
+User1:
+plugs count: 
+{0: 939, 1: 4}
+micro count: 
+{0: 943, 1: 0}
+
+
+User2:
+plugs count: 
+{0: 4296, 1: 320}
+micro count: 
+{0: 3404, 1: 1212}
+
+
+User3:
+plugs count: 
+{0: 1268, 1: 128}
+micro count: 
+{0: 543, 1: 853}
+
+
+User4:
+plugs count: 
+{0: 786, 1: 3}
+micro count: 
+{0: 789, 1: 0}
+
+
+User5:
+plugs count: 
+{0: 594, 1: 0}
+micro count: 
+{0: 594, 1: 0}
+
+
+User6:
+plugs count: 
+{0: 1117, 1: 18}
+micro count: 
+{0: 1135, 1: 0}
