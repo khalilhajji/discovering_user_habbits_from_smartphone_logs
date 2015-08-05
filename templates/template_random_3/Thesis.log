@@ -450,4 +450,38 @@ Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bskip=\skip66
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\ca
+\calc@Ccount=\count123
+\calc@Cskip=\skip67
+)
+\c@ALC@line=\count124
+\c@ALC@rem=\count125
+\ALC@tlm=\skip68
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen132
+)
+
+! LaTeX Error: File `slashbox.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+./formatAndDefs.tex:183: Emergency stop.
+<read *> 
+         
+l.183 ^^M
+         
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 8448 strings out of 493089
+ 118932 string characters out of 6134842
+ 229774 words of memory out of 5000000
+ 11651 multiletter control sequences out of 15000+600000
+ 4709 words of font info for 16 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,1n,45p,276b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+./formatAndDefs.tex:183:  ==> Fatal error occurred, no output PDF file produced
+!

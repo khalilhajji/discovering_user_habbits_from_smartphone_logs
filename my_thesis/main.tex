@@ -93,52 +93,6 @@
 
 \end{titlepage}
 
-%----------------------------------------------------------------------------------------
-%	DECLARATION PAGE
-%	Your institution may give you a different text to place here
-%----------------------------------------------------------------------------------------
-
-\Declaration{
-
-\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
-
-I, \authornames, declare that this thesis titled, '\ttitle' and the work presented in it are my own. I confirm that:
-
-\begin{itemize} 
-\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
-\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
-\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
-\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
-\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
-\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
-\end{itemize}
- 
-Signed:\\
-\rule[1em]{25em}{0.5pt} % This prints a line for the signature
- 
-Date:\\
-\rule[1em]{25em}{0.5pt} % This prints a line to write the date
-}
-
-\clearpage % Start a new page
-
-%----------------------------------------------------------------------------------------
-%	QUOTATION PAGE
-%----------------------------------------------------------------------------------------
-
-\pagestyle{empty} % No headers or footers for the following pages
-
-\null\vfill % Add some space to move the quote down the page a bit
-
-\textit{``Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism."}
-
-\begin{flushright}
-Dave Barry
-\end{flushright}
-
-\vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
-
-\clearpage % Start a new page
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
@@ -181,34 +135,6 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 \lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
 \listoftables % Write out the List of Tables
 
-%----------------------------------------------------------------------------------------
-%	ABBREVIATIONS
-%----------------------------------------------------------------------------------------
-
-\clearpage % Start a new page
-
-\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
-
-\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
-\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
-{
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
-%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
-}
-
-%----------------------------------------------------------------------------------------
-%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
-%----------------------------------------------------------------------------------------
-
-\clearpage % Start a new page
-
-\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
-
-\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
-{
-Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
-% Constant Name & Symbol & = & Constant Value (with units) \\
-}
 
 %----------------------------------------------------------------------------------------
 %	SYMBOLS
@@ -254,10 +180,12 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 % Uncomment the lines as you write the chapters
 
 \input{Chapters/1introduction}
-\input{Chapters/2discovering_user_habbits_model} 
-\input{Chapters/3evaluation_strategy}
-\input{Chapters/4results} 
-\input{Chapters/5conclusion} 
+\input{Chapters/2preliminaries} 
+\input{Chapters/3generative_hidden_class_model_for_multiple_data_types} 
+\input{Chapters/4baseline_models}
+\input{Chapters/5evaluation_metrics}
+\input{Chapters/6results_and_discussion} 
+\input{Chapters/7conclusion} 
 %\input{Chapters/Chapter6} 
 %\input{Chapters/Chapter7} 
 
@@ -290,6 +218,6 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 \bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 
-\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\bibliography{./Bibliography.bib} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \end{document}  

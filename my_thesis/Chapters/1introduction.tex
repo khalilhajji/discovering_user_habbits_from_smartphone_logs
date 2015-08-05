@@ -4,49 +4,31 @@
 
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\lhead{Chapter 1. \emph{Introduction}} % This is for the header on each page - perhaps a shortened title
+\lhead{Chapter 1 \emph{Introduction}} % This is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 
-\section{Problem statement}
-Welcome to this \LaTeX{} Thesis Template, a beautiful and easy to use template for writing a thesis using the \LaTeX{} typesetting system.
 
-If you are writing a thesis (or will be in the future) and its subject is technical or mathematical (though it doesn't have to be), then creating it in \LaTeX{} is highly recommended as a way to make sure you can just get down to the essential writing without having to worry over formatting or wasting time arguing with your word processor.
+With the rapid and large deployment of the internet, the emergence of the cloud and the entrance to the internet of things area, the recent years were (and are still) marked by the exponential increase of the data stored and available of any kind. Nowadays, data streams for daily life; from computers, credit cards, TVs, trains, sensor equipped buildings and factories. The availability of this huge quantity of data is changing the way companies lead their business and are changing the rules of competitiveness. In a publication that zooms in the challenges and the power of big data, Mc Kinsey affirms that "the use of big data will become a key basis of competition and growth for individual firms" and they estimate that a retailer using big data to the full has the potential to increase its operating margin by more than 60 percent.\par
 
-\LaTeX{} is easily able to professionally typeset documents that run to hundreds or thousands of pages long. With simple mark-up commands, it automatically sets out the table of contents, margins, page headers and footers and keeps the formatting consistent and beautiful. One of its main strengths is the way it can easily typeset mathematics, even \emph{heavy} mathematics. Even if those equations are the most horribly twisted and most difficult mathematical problems that can only be solved on a super-computer, you can at least count on \LaTeX{} to make them look stunning.
+In this work, we are interested in the data collected from a gadget that shares the life of the user; his smartphone. Smartphone data contains the locations a user visits, the activities he does, the notification he receives, the applications he launches and many other information. This kind of data is unique in the sense that it represents a complete snapshot of a user's life. In a world driven by the power of data and the ability to anticipate and understand the needs of users, companies shows a big interest in studying this emerging kind of dataset. In the other hand, the richness  and the diversity of this data attracts the curiosity of researchers.\par
 
-%----------------------------------------------------------------------------------------
+In this context, many work have been done with this kind of logs, many paths have been explored and multiple questions answered. Those researches are discussed later with more details.
+In this work, we tackle an important question that escaped to the interest of previous researches: Having the smartphone logs of one user, can we find a model that exhibits his particular behaviors and habits? More practically, let's imagine the following example. Let's imagine that Bob has some particular habits: he does running while listening music on Saturdays, he visits his parents on Sundays, he reads news when he is in his office in the mornings, and he puts an alarm clock at 7am during his working days. The question we are answering in this work is the following: Can we find a model that discovers those particular behaviors by analyzing Bob smartphone's logs? How precise can this model be in doing this task?
+It is important to note that we are interested in discovering the individual behaviors of a user, and thus we aim to find a method that takes as input the logs of a unique user. \par
 
-\section{Related work}
+In the recent few years, key innovations allowed smartphones to drastically evolve from cell-phone devices used for calling to powerful "pocket-computers" devices that can be used as cell-phone, camera, calendar, clock, game consol, web browser and many other roles at the same time. As an important company in the smartphone industry, Sony is one of the actors of the smartphones evolution and is aiming on keeping innovating this sector. 
+\\Our work is a part of this continuous research for innovation. Indeed, it aims to allow smartphones building a personal relationship with their owner by adapting to their specific needs and answering heir specific requests. Let's keep the parallel with Bob to understand what does building a personal relationship with a user concretely means. Let's suppose that Bob's smartphone is able to learn the specific habits of Bob. When Bob forgets to put his alarm clock on a working day, his smartphone can remind him to do it. When an unusual traffic congestion appears in Sunday in the rode that Bob use to take to reach his parents place, his smartphone can inform him. Finally, when his smartphone does not have enough power to play music on Saturday morning, Bob's smartphone can remind him to recharge it because he will probably need it for running. Our work is a start in making it possible for a smartphone to adapt to it's owner's behaviors and to react interactively in some contexts. In other words, it is a start is making smartphones behaves smarter. \par
 
-\LaTeX{} is not a WYSIWYG (What You See is What You Get) program, unlike word processors such as Microsoft Word or Apple's Pages. Instead, a document written for \LaTeX{} is actually a simple, plain text file that contains \emph{no formatting}. You tell \LaTeX{} how you want the formatting in the finished document by writing in simple commands amongst the text, for example, if I want to use \textit{italic text for emphasis}, I write the `$\backslash$\texttt{textit}\{\}' command and put the text I want in italics in between the curly braces. This means that \LaTeX{} is a ``mark-up'' language, very much like HTML.
+Scientifically speaking, this problem can be seen as a clustering problem: our goal is to find different clusters of data points where each cluster represents a particular behavior of the user. Coming back to Bob, running while listening to music on Saturdays morning can be represented by a cluster that contains the running activity, the application launch music, the day Saturday and the time frame 8am-12am. Putting an alarm clock at 7 pm during the working days can be represented as a cluster containing all the days of the week, the notification alarm and the time frame 7pm-8am. 
+\\Clustering is a widely addressed problem in machine learning and data analysis, and it has been applied to many contexts and topics. It as been used for example in corpus-text modeling, recommender systems and image recognition. Different approaches have been developed to answer those challenges; the probabilistic latent topic modeling and the matrix factorization are examples of these different approaches. A parallel between our methods and these approaches is made multiple times in this thesis and it will be shown that it is of a strong benefit. 
+\\Our problem sits at the interface between an emerging area of research that takes profit of the existence of a new kind of data and an area that constitutes one of the basis of the emergence of the machine learning and data analysis techniques. From a scientifically point fo view, addressing the clustering problem in a new emerging context makes our problem particularly challenging. \par
 
-\subsection{Problems addressed by previous research}
-
-If you are new to \LaTeX{}, there is a very good eBook -- freely available online as a PDF file -- called, ``The Not So Short Introduction to \LaTeX{}''. The book's title is typically shortened to just ``lshort''. You can download the latest version (as it is occasionally updated) from here:\\
-\href{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}{\texttt{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}}
-
-It is also available in several other languages. Find yours from the list on this page:\\
-\href{http://www.ctan.org/tex-archive/info/lshort/}{\texttt{http://www.ctan.org/tex-archive/info/lshort/}}
-
-It is recommended to take a little time out to learn how to use \LaTeX{} by creating several, small `test' documents. Making the effort now means you're not stuck learning the system when what you \emph{really} need to be doing is writing your thesis.
-
-\subsection{Methods used in previous research}
-
-If you are writing a technical or mathematical thesis, then you may want to read the document by the AMS (American Mathematical Society) called, ``A Short Math Guide for \LaTeX{}''. It can be found online here:\\
-\href{http://www.ams.org/tex/amslatex.html}{\texttt{http://www.ams.org/tex/amslatex.html}}\\
-under the ``Additional Documentation'' section towards the bottom of the page.
-
-\subsection{Critics on previous research}
-There are a multitude of mathematical symbols available for \LaTeX{} and it would take a great effort to learn the commands for them all. The most common ones you are likely to use are shown on this page:\\
-\href{http://www.sunilpatel.co.uk/latexsymbols.html}{\texttt{http://www.sunilpatel.co.uk/latexsymbols.html}}
-
-You can use this page as a reference or crib sheet, the symbols are rendered as large, high quality images so you can quickly find the \LaTeX{} command for the symbol you need.
-
-\subsection{\LaTeX{} on a Mac}
- 
-The \LaTeX{} package is available for many systems including Windows, Linux and Mac OS X. The package for OS X is called MacTeX and it contains all the applications you need -- bundled together and pre-customised -- for a fully working \LaTeX{} environment and workflow.
- 
-MacTeX includes a dedicated \LaTeX{} IDE (Integrated Development Environment) called ``TeXShop'' for writing your `\texttt{.tex}' files and ``BibDesk'': a program to manage your references and create your bibliography section just as easily as managing songs and creating playlists in iTunes.
+The thesis is organized as follows: In chapter 2, we introduce some notations and definitions, state the problem in a mathematical way and go through the researches done in this field. 
+\\In chapter 3, we describe in details the Generative Hidden Class Model for Mixed Data Types (GHCM-MDT). It is model that we developed specifically to answer our needs and that shows to perform better than the other existing methods.
+\\In chapter 4, we introduce other known and widely used models that has been shown to perform very well in doing tasks similar to ours. We use those models as baselines to evaluate the performances of GHCM-MDT. To have a complete overview, we both use some models based on the matrix factorization approach using some sophisticated techniques and others based on advanced methods of probabilistic latent topic modeling.
+\\In chapter 5, we detail the metrics used to test the performance of the different models in performing the task needed.
+\\In chapter 6, we present the results obtained with the different models and compare the performances of the different models to GHCM-MDT.
+\\Finally, chapter 7 presents our conclusions.
 
 %----------------------------------------------------------------------------------------
