@@ -1,0 +1,69 @@
+Date: 03/08/2015 18:08:35
+
+
+perplexity 
+Total scores :
+{
+    "GHCM_MDT k=8 chains number=5": {
+        "average perplexity": 3.1798188242573544
+    }, 
+    "GHCM_MDT k=8 chains number=10": {
+        "average perplexity": 3.2323740854527245
+    }, 
+    "GHCM_MDT k=8 chains number=15": {
+        "average perplexity": 3.193407060524811
+    }
+}detailed scores :
+{
+    "GHCM_MDT k=8 chains number=5": {
+        "user 6": {
+            "perplexity": 4.1345702004493683
+        }, 
+        "user 5": {
+            "perplexity": 2.8419145219460082
+        }, 
+        "user 4": {
+            "perplexity": 3.2079669162184112
+        }, 
+        "user 2": {
+            "perplexity": 2.8473474652731579
+        }, 
+        "user 1": {
+            "perplexity": 2.8672950173998282
+        }
+    }, 
+    "GHCM_MDT k=8 chains number=10": {
+        "user 6": {
+            "perplexity": 4.2232144682326211
+        }, 
+        "user 5": {
+            "perplexity": 2.9435671641074896
+        }, 
+        "user 4": {
+            "perplexity": 3.2765722073096937
+        }, 
+        "user 2": {
+            "perplexity": 2.8970057111739722
+        }, 
+        "user 1": {
+            "perplexity": 2.8215108764398451
+        }
+    }, 
+    "GHCM_MDT k=8 chains number=15": {
+        "user 6": {
+            "perplexity": 4.1750948138802144
+        }, 
+        "user 5": {
+            "perplexity": 2.9004579327907942
+        }, 
+        "user 4": {
+            "perplexity": 3.2170515156007795
+        }, 
+        "user 2": {
+            "perplexity": 2.8328319297219005
+        }, 
+        "user 1": {
+            "perplexity": 2.8415991106303662
+        }
+    }
+}
