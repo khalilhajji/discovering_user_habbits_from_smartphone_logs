@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 AUG 2015 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 AUG 2015 09:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -677,32 +677,45 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count133
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 33.
- (./main.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
+Package: luainputenc 2010/11/19 v0.973 inputenc package for LuaTeX
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+
+(./main.aux
+
+LaTeX Warning: Label `li2' multiply defined.
+
+
+LaTeX Warning: Label `li4' multiply defined.
+
+
+LaTeX Warning: Label `li22' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -732,7 +745,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
 )
-Package hyperref Info: Link coloring ON on input line 36.
+Package hyperref Info: Link coloring ON on input line 37.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -742,20 +755,20 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+LaTeX Font Info:    Try loading font information for U+msa on input line 77.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 77.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -777,7 +790,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(./main.toc [3
+(./main.toc
+Overfull \hbox (7.4928pt too wide) in paragraph at lines 26--26
+ [][] [][][]\OT1/cmr/m/n/10.95 Relationship be-tween GHCM-MDT, HCMC-MDT, pLSI a
+nd La-tent Dirich- 
+ []
+
+[3
 
 
 ])
@@ -834,99 +853,349 @@ Chapter 2.
 ------------------------------------------------------------------------------
  2 Preliminaries
 ------------------------------------------------------------------------------
-) (./Chapters/3generative_hidden_class_model_for_multiple_data_types.tex
 [4
 
-]
+] [5]
+
+Package natbib Warning: Citation `1' on page 6 undefined on input line 59.
+
+) (./Chapters/3generative_hidden_class_model_for_multiple_data_types.tex
+[6]
 Chapter 3.
 ------------------------------------------------------------------------------
  3 Generative Hidden Class Model for Mixed Data Types (GHCM-MDT)
 ------------------------------------------------------------------------------
-[5
 
-] [6]
-Overfull \hbox (1.91467pt too wide) in paragraph at lines 76--76
-[]\OT1/cmr/bx/n/14.4 Relationship be-tween GHCM-MDT and La-tent Dirich-
+Package natbib Warning: Citation `plsi' on page 7 undefined on input line 18.
+
+[7
+
+]
+Overfull \hbox (4.40869pt too wide) in paragraph at lines 42--44
+\OT1/cmr/m/n/10.95 range of the ob-ser-va-tion. Ex-am-ples are $"\OML/cmm/m/it/
+10.95 Applicationlaunches\OT1/cmr/m/n/10.95 "$, $"\OML/cmm/m/it/10.95 Notificat
+ionsreceived\OT1/cmr/m/n/10.95 "$
  []
 
-[7]) (./Chapters/4baseline_models.tex [8]
+[8]
+Overfull \hbox (21.7839pt too wide) in paragraph at lines 46--47
+[]\OT1/cmr/m/n/10.95 Using this model, the prob-a-bil-ity of ob-tain-ing a se-q
+uence of re-al-iza-tions $[(\OML/cmm/m/it/10.95 y[]; w[]\OT1/cmr/m/n/10.95 )\OM
+L/cmm/m/it/10.95 ; :::; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y[]; w[]\OT1/cm
+r/m/n/10.95 )]$
+ []
+
+[9] [10]
+
+Package natbib Warning: Citation `plsi' on page 11 undefined on input line 86.
+
+
+Overfull \hbox (18.87091pt too wide) in paragraph at lines 86--88
+$\OML/cmm/m/it/10.95 Probabilistic$ $Latent$ $Semantic$ $Indexing\OT1/cmr/m/n/1
+0.95 (\OML/cmm/m/it/10.95 pLSI\OT1/cmr/m/n/10.95 )$ was in-tro-duced in 1991 by
+ C. J. Hawthorn[\OT1/cmr/bx/n/10.95 ?
+ []
+
+[11] [12]
+
+Package natbib Warning: Citation `dirichlet_into' on page 13 undefined on input
+ line 128.
+
+
+Package natbib Warning: Citation `dirichlet_into' on page 13 undefined on input
+ line 129.
+
+[13] [14]
+Overfull \hbox (44.74791pt too wide) in paragraph at lines 168--169
+[]\OT1/cmr/m/n/10.95 Following the steps of the gen-er-a-tive pro-cess, we it-e
+r-a-tively de-rive the like-li-hood $\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\
+OML/cmm/m/it/10.95 R\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/
+10.95 f[][]g[]\OT1/cmr/m/n/10.95 )$
+ []
+
+[15]
+
+Package natbib Warning: Citation `dirinf' on page 16 undefined on input line 20
+0.
+
+
+Overfull \hbox (14.5238pt too wide) in paragraph at lines 199--200
+[]\OT1/cmr/m/n/10.95 We con-clude this sec-tion by ex-pos-ing other nice prop-e
+r-ties and ad-van-tages of $\OML/cmm/m/it/10.95 GHCM[]MDT$
+ []
+
+
+Package natbib Warning: Citation `lda' on page 16 undefined on input line 202.
+
+
+Overfull \hbox (15.75821pt too wide) in paragraph at lines 207--207
+[]\OT1/cmr/bx/n/14.4 Relationship be-tween GHCM-MDT, HCMC-MDT, pLSI
+ []
+
+
+Package natbib Warning: Citation `lda' on page 16 undefined on input line 208.
+
+
+Package natbib Warning: Citation `lda' on page 16 undefined on input line 208.
+
+
+Package natbib Warning: Citation `ldaex1' on page 16 undefined on input line 20
+8.
+
+
+Package natbib Warning: Citation `ldaex2' on page 16 undefined on input line 20
+8.
+
+
+Package natbib Warning: Citation `ldaex3' on page 16 undefined on input line 20
+8.
+
+
+Package natbib Warning: Citation `daex4' on page 16 undefined on input line 208
+.
+
+
+Package natbib Warning: Citation `ldaex5' on page 16 undefined on input line 20
+8.
+
+
+Package natbib Warning: Citation `ldaex6' on page 16 undefined on input line 20
+8.
+
+
+Package natbib Warning: Citation `ldaex7' on page 16 undefined on input line 20
+8.
+
+[16]
+Overfull \hbox (20.84264pt too wide) in paragraph at lines 230--233
+\OT1/cmr/m/n/10.95 In other terms, $\OML/cmm/m/it/10.95 GHCM[]MDT$ \OT1/cmr/m/n
+/10.95 com-bines the ad-van-tages of $\OML/cmm/m/it/10.95 LDA$ \OT1/cmr/m/n/10.
+95 over $\OML/cmm/m/it/10.95 pLSI$ \OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 
+HCM[]MDT$
+ []
+
+[17]
+Overfull \hbox (12.10709pt too wide) in paragraph at lines 249--250
+[]\OT1/cmr/m/n/10.95 We sim-plify the no-ta-tions by set-ting $[] = \OMS/cmsy/m
+/n/10.95 f[][]g[]$ \OT1/cmr/m/n/10.95 and $[] = \OMS/cmsy/m/n/10.95 ff[][]g[]$\
+OT1/cmr/m/n/10.95 .
+ []
+
+[18]
+
+Package natbib Warning: Citation `varinf' on page 19 undefined on input line 25
+7.
+
+
+Package natbib Warning: Citation `expprop' on page 19 undefined on input line 2
+57.
+
+
+Package natbib Warning: Citation `gibbs' on page 19 undefined on input line 257
+.
+
+
+Package natbib Warning: Citation `inferencecomp' on page 19 undefined on input 
+line 257.
+
+
+Package natbib Warning: Citation `gibbsdef' on page 19 undefined on input line 
+258.
+
+
+Package natbib Warning: Citation `gibbs' on page 19 undefined on input line 258
+.
+
+
+Package natbib Warning: Citation `gibbs' on page 19 undefined on input line 262
+.
+
+
+Package natbib Warning: Citation `montecarlo' on page 19 undefined on input lin
+e 264.
+
+
+Package natbib Warning: Citation `gibbs' on page 19 undefined on input line 265
+.
+
+[19]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 273.
+
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
+
+
+Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 279
+.
+
+
+Package natbib Warning: Citation `inferencecomp' on page 20 undefined on input 
+line 280.
+
+
+Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 281
+.
+
+
+Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 288
+.
+
+[20]
+
+Package natbib Warning: Citation `diring' on page 21 undefined on input line 30
+6.
+
+[21]) (./Chapters/4baseline_models.tex [22]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Baseline Models
 ------------------------------------------------------------------------------
-[9
+[23
 
-] [10]) (./Chapters/5evaluation_metrics.tex [11]
+]) (./Chapters/5evaluation_metrics.tex [24]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 Evaluation metrics
 ------------------------------------------------------------------------------
-) (./Chapters/6results_and_discussion.tex [12
+LaTeX Font Info:    Try loading font information for U+euf on input line 15.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
 
-]
+Package natbib Warning: Citation `plsi' on page 25 undefined on input line 15.
+
+
+Package natbib Warning: Citation `lsi' on page 25 undefined on input line 15.
+
+
+Package natbib Warning: Citation `lda' on page 25 undefined on input line 15.
+
+
+Package natbib Warning: Citation `inferencecomp' on page 25 undefined on input 
+line 15.
+
+
+Package natbib Warning: Citation `gibbsaverage' on page 25 undefined on input l
+ine 15.
+
+
+Package natbib Warning: Citation `gibbsunseen' on page 25 undefined on input li
+ne 15.
+
+[25
+
+] [26]
+Overfull \hbox (0.39131pt too wide) in paragraph at lines 37--37
+\OT1/cmr/m/n/10.95 Note that naive clas-si-fier de-scribed above would have a s
+core of $\OML/cmm/m/it/10.95 Average[]Accuracy[] \OT1/cmr/m/n/10.95 =
+ []
+
+[27]
+
+Package natbib Warning: Citation `plsi' on page 28 undefined on input line 52.
+
+
+Package natbib Warning: Citation `gibbsunseen' on page 28 undefined on input li
+ne 58.
+
+
+Package natbib Warning: Citation `gibbsaverage' on page 28 undefined on input l
+ine 58.
+
+
+Package natbib Warning: Citation `gibbsunseen' on page 28 undefined on input li
+ne 64.
+
+
+Package natbib Warning: Citation `gibbsaverage' on page 28 undefined on input l
+ine 64.
+
+[28]
+Overfull \hbox (29.95116pt too wide) in paragraph at lines 82--83
+[]\OT1/cmr/m/n/10.95 do the in-verse $\OML/cmm/m/it/10.95 tf[]idf$ \OT1/cmr/m/n
+/10.95 trans-for-ma-tion to ob-tain an ap-prox-i-ma-tion of $\OT1/cmr/bx/n/10.9
+5 r$\OT1/cmr/m/n/10.95 , $[] = \OML/cmm/m/it/10.95 tf[]idf[]\OT1/cmr/m/n/10.95 
+([])$ 
+ []
+
+[29]) (./Chapters/6results_and_discussion.tex [30]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Results and Discussion
 ------------------------------------------------------------------------------
-) (./Chapters/7conclusion.tex [13
+) (./Chapters/7conclusion.tex [31
 
 ]
 Chapter 7.
 ------------------------------------------------------------------------------
  7 Conclusion
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [14
+) (./Appendices/AppendixA.tex [32
 
 ]
 Appendix A.
 ------------------------------------------------------------------------------
  A Appendix Title Here
 ------------------------------------------------------------------------------
-) [15
+) [33
 
 ]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
- [16
+No file main.bbl.
 
+Package natbib Warning: There were undefined citations.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+(./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 706ABC00CCE221F3EED6D510A254FB88;9357.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
+(rerunfilecheck)             Checksum: A8492C3CDB245A0141ADA1B83D6CFC24;8879.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 13097 strings out of 493089
- 183809 string characters out of 6134842
- 255510 words of memory out of 5000000
- 16295 multiletter control sequences out of 15000+600000
- 16244 words of font info for 58 fonts, out of 8000000 for 9000
+ 13243 strings out of 493089
+ 185604 string characters out of 6134842
+ 261753 words of memory out of 5000000
+ 16360 multiletter control sequences out of 15000+600000
+ 17485 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,11n,45p,1108b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,20n,45p,2032b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (25 pages, 196342 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on main.pdf (42 pages, 350394 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 369 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 546 compressed objects within 6 object streams
+ 149 named destinations out of 1000 (max. 500000)
+ 353 words of extra memory for PDF output out of 10000 (max. 10000000)
 
