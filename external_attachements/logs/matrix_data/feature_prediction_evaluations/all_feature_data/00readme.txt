@@ -1,0 +1,10 @@
+The current folder contains tests done in the version of data containing all the features:
+
+LocationTransformer.transformed_feature_name,
+NotificationTransformer.transformed_feature_name,
+ApplaunchTransformer.transformed_feature_name,
+BatteryTransformer.transformed_feature_name,
+HeadsetTransformer.transformed_feature_name,
+BluetoothPairedTransformer.transformed_feature_name,
+BluetoothSeenTransformer.transformed_feature_name,
+ActivityTransformer.transformed_feature_name

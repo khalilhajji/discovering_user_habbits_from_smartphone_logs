@@ -1,0 +1,366 @@
+Date: 08/08/2015 11:26:17
+
+
+predictions on the classes [
+    "week_day", 
+    "week_end"
+]
+Total scores :
+{
+    "GHCM_MDT k=30": {
+        "total predictions": 3225.0, 
+        "accuracy": 0.7032558139534884, 
+        "average accuracy": 0.7039839725079994, 
+        "average macro_accuracy": 0.6553793456136809, 
+        "correct predictions": 2268
+    }, 
+    "HCM_MDT k=30": {
+        "total predictions": 3225.0, 
+        "accuracy": 0.6834108527131783, 
+        "average accuracy": 0.6841920200949999, 
+        "average macro_accuracy": 0.5796718112882598, 
+        "correct predictions": 2204
+    }, 
+    "SVD k=30": {
+        "total predictions": 3225.0, 
+        "accuracy": 0.7066666666666667, 
+        "average accuracy": 0.7120059655158241, 
+        "average macro_accuracy": 0.5240720792539498, 
+        "correct predictions": 2279
+    }, 
+    "LCBMF k=30": {
+        "total predictions": 3225.0, 
+        "accuracy": 0.5634108527131783, 
+        "average accuracy": 0.5576362987856972, 
+        "average macro_accuracy": 0.5704906201339434, 
+        "correct predictions": 1817
+    }, 
+    "LDA k=30": {
+        "total predictions": 3225.0, 
+        "accuracy": 0.47069767441860466, 
+        "average accuracy": 0.47544174819628254, 
+        "average macro_accuracy": 0.5, 
+        "correct predictions": 1518
+    }, 
+    "Most Frequent ": {
+        "total predictions": 3225.0, 
+        "accuracy": 0.6272868217054264, 
+        "average accuracy": 0.6467982237738623, 
+        "average macro_accuracy": 0.5, 
+        "correct predictions": 2023
+    }
+}detailed scores :
+{
+    "GHCM_MDT k=30": {
+        "user 6": {
+            "total predictions": 785.0, 
+            "accuracy by class": [
+                0.6756756756756757, 
+                0.6782608695652174
+            ], 
+            "accuracy": 0.6764331210191082, 
+            "macro_accuracy": 0.6769682726204465, 
+            "correct predictions": 531
+        }, 
+        "user 5": {
+            "total predictions": 538.0, 
+            "accuracy by class": [
+                0.7122905027932961, 
+                0.49444444444444446
+            ], 
+            "accuracy": 0.6394052044609665, 
+            "macro_accuracy": 0.6033674736188703, 
+            "correct predictions": 344
+        }, 
+        "user 4": {
+            "total predictions": 506.0, 
+            "accuracy by class": [
+                0.830423940149626, 
+                0.4666666666666667
+            ], 
+            "accuracy": 0.7549407114624506, 
+            "macro_accuracy": 0.6485453034081463, 
+            "correct predictions": 382
+        }, 
+        "user 2": {
+            "total predictions": 664.0, 
+            "accuracy by class": [
+                0.7876984126984127, 
+                0.55625
+            ], 
+            "accuracy": 0.7319277108433735, 
+            "macro_accuracy": 0.6719742063492063, 
+            "correct predictions": 486
+        }, 
+        "user 1": {
+            "total predictions": 732.0, 
+            "accuracy by class": [
+                0.7679245283018868, 
+                0.5841584158415841
+            ], 
+            "accuracy": 0.7172131147540983, 
+            "macro_accuracy": 0.6760414720717355, 
+            "correct predictions": 525
+        }
+    }, 
+    "HCM_MDT k=30": {
+        "user 6": {
+            "total predictions": 785.0, 
+            "accuracy by class": [
+                0.7297297297297297, 
+                0.48695652173913045
+            ], 
+            "accuracy": 0.6585987261146496, 
+            "macro_accuracy": 0.6083431257344301, 
+            "correct predictions": 517
+        }, 
+        "user 5": {
+            "total predictions": 538.0, 
+            "accuracy by class": [
+                0.776536312849162, 
+                0.35555555555555557
+            ], 
+            "accuracy": 0.6356877323420075, 
+            "macro_accuracy": 0.5660459342023588, 
+            "correct predictions": 342
+        }, 
+        "user 4": {
+            "total predictions": 506.0, 
+            "accuracy by class": [
+                0.8104738154613467, 
+                0.34285714285714286
+            ], 
+            "accuracy": 0.7134387351778656, 
+            "macro_accuracy": 0.5766654791592447, 
+            "correct predictions": 361
+        }, 
+        "user 2": {
+            "total predictions": 664.0, 
+            "accuracy by class": [
+                0.9007936507936508, 
+                0.24375
+            ], 
+            "accuracy": 0.7424698795180723, 
+            "macro_accuracy": 0.5722718253968254, 
+            "correct predictions": 493
+        }, 
+        "user 1": {
+            "total predictions": 732.0, 
+            "accuracy by class": [
+                0.7886792452830189, 
+                0.3613861386138614
+            ], 
+            "accuracy": 0.6707650273224044, 
+            "macro_accuracy": 0.5750326919484401, 
+            "correct predictions": 491
+        }
+    }, 
+    "SVD k=30": {
+        "user 6": {
+            "total predictions": 785.0, 
+            "accuracy by class": [
+                0.6558558558558558, 
+                0.5173913043478261
+            ], 
+            "accuracy": 0.6152866242038216, 
+            "macro_accuracy": 0.5866235801018409, 
+            "correct predictions": 483
+        }, 
+        "user 5": {
+            "total predictions": 538.0, 
+            "accuracy by class": [
+                0.9972067039106145, 
+                0.022222222222222223
+            ], 
+            "accuracy": 0.671003717472119, 
+            "macro_accuracy": 0.5097144630664183, 
+            "correct predictions": 361
+        }, 
+        "user 4": {
+            "total predictions": 506.0, 
+            "accuracy by class": [
+                0.9850374064837906, 
+                0.02857142857142857
+            ], 
+            "accuracy": 0.7865612648221344, 
+            "macro_accuracy": 0.5068044175276095, 
+            "correct predictions": 398
+        }, 
+        "user 2": {
+            "total predictions": 664.0, 
+            "accuracy by class": [
+                0.998015873015873, 
+                0.00625
+            ], 
+            "accuracy": 0.7590361445783133, 
+            "macro_accuracy": 0.5021329365079366, 
+            "correct predictions": 504
+        }, 
+        "user 1": {
+            "total predictions": 732.0, 
+            "accuracy by class": [
+                0.9905660377358491, 
+                0.039603960396039604
+            ], 
+            "accuracy": 0.7281420765027322, 
+            "macro_accuracy": 0.5150849990659443, 
+            "correct predictions": 533
+        }
+    }, 
+    "LCBMF k=30": {
+        "user 6": {
+            "total predictions": 785.0, 
+            "accuracy by class": [
+                0.4918918918918919, 
+                0.7217391304347827
+            ], 
+            "accuracy": 0.5592356687898089, 
+            "macro_accuracy": 0.6068155111633373, 
+            "correct predictions": 439
+        }, 
+        "user 5": {
+            "total predictions": 538.0, 
+            "accuracy by class": [
+                0.6927374301675978, 
+                0.4
+            ], 
+            "accuracy": 0.5947955390334573, 
+            "macro_accuracy": 0.5463687150837989, 
+            "correct predictions": 320
+        }, 
+        "user 4": {
+            "total predictions": 506.0, 
+            "accuracy by class": [
+                0.3765586034912718, 
+                0.7619047619047619
+            ], 
+            "accuracy": 0.45652173913043476, 
+            "macro_accuracy": 0.5692316826980168, 
+            "correct predictions": 231
+        }, 
+        "user 2": {
+            "total predictions": 664.0, 
+            "accuracy by class": [
+                0.44841269841269843, 
+                0.725
+            ], 
+            "accuracy": 0.5150602409638554, 
+            "macro_accuracy": 0.5867063492063492, 
+            "correct predictions": 342
+        }, 
+        "user 1": {
+            "total predictions": 732.0, 
+            "accuracy by class": [
+                0.809433962264151, 
+                0.27722772277227725
+            ], 
+            "accuracy": 0.662568306010929, 
+            "macro_accuracy": 0.5433308425182142, 
+            "correct predictions": 485
+        }
+    }, 
+    "LDA k=30": {
+        "user 6": {
+            "total predictions": 785.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.4178343949044586, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 328
+        }, 
+        "user 5": {
+            "total predictions": 538.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.4312267657992565, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 232
+        }, 
+        "user 4": {
+            "total predictions": 506.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.5592885375494071, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 283
+        }, 
+        "user 2": {
+            "total predictions": 664.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.5030120481927711, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 334
+        }, 
+        "user 1": {
+            "total predictions": 732.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.46584699453551914, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 341
+        }
+    }, 
+    "Most Frequent ": {
+        "user 6": {
+            "total predictions": 785.0, 
+            "accuracy by class": [
+                0.0, 
+                1.0
+            ], 
+            "accuracy": 0.2929936305732484, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 230
+        }, 
+        "user 5": {
+            "total predictions": 538.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.6654275092936803, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 358
+        }, 
+        "user 4": {
+            "total predictions": 506.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.7924901185770751, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 401
+        }, 
+        "user 2": {
+            "total predictions": 664.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.7590361445783133, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 504
+        }, 
+        "user 1": {
+            "total predictions": 732.0, 
+            "accuracy by class": [
+                1.0, 
+                0.0
+            ], 
+            "accuracy": 0.7240437158469946, 
+            "macro_accuracy": 0.5, 
+            "correct predictions": 530
+        }
+    }
+}

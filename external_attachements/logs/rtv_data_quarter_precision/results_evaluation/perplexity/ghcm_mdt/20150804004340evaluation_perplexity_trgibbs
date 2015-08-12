@@ -1,0 +1,109 @@
+Date: 04/08/2015 00:43:40
+
+
+perplexity 
+Total scores :
+{
+    "GHCM_MDT k=8 gibbs number=20": {
+        "average perplexity": 3.205382493925478
+    }, 
+    "GHCM_MDT k=8 gibbs number=10": {
+        "average perplexity": 3.2861894659103514
+    }, 
+    "GHCM_MDT k=8 gibbs number=40": {
+        "average perplexity": 3.1374451403028738
+    }, 
+    "GHCM_MDT k=8 gibbs number=30": {
+        "average perplexity": 3.1812667559115027
+    }, 
+    "GHCM_MDT k=8 gibbs number=1": {
+        "average perplexity": 3.4327136891500785
+    }
+}detailed scores :
+{
+    "GHCM_MDT k=8 gibbs number=20": {
+        "user 6": {
+            "perplexity": 4.0887126847969775
+        }, 
+        "user 5": {
+            "perplexity": 2.7913070150175532
+        }, 
+        "user 4": {
+            "perplexity": 3.2799902733351431
+        }, 
+        "user 2": {
+            "perplexity": 2.9520451249117925
+        }, 
+        "user 1": {
+            "perplexity": 2.9148573715659234
+        }
+    }, 
+    "GHCM_MDT k=8 gibbs number=10": {
+        "user 6": {
+            "perplexity": 4.2852364879863964
+        }, 
+        "user 5": {
+            "perplexity": 2.8107304184267226
+        }, 
+        "user 4": {
+            "perplexity": 3.366987193164952
+        }, 
+        "user 2": {
+            "perplexity": 2.98350299528206
+        }, 
+        "user 1": {
+            "perplexity": 2.9844902346916244
+        }
+    }, 
+    "GHCM_MDT k=8 gibbs number=40": {
+        "user 6": {
+            "perplexity": 4.034237178382309
+        }, 
+        "user 5": {
+            "perplexity": 2.7390567403837487
+        }, 
+        "user 4": {
+            "perplexity": 3.2287778012880732
+        }, 
+        "user 2": {
+            "perplexity": 2.8122278836261998
+        }, 
+        "user 1": {
+            "perplexity": 2.872926097834037
+        }
+    }, 
+    "GHCM_MDT k=8 gibbs number=30": {
+        "user 6": {
+            "perplexity": 4.0921418328085579
+        }, 
+        "user 5": {
+            "perplexity": 2.7331364788690986
+        }, 
+        "user 4": {
+            "perplexity": 3.2821665726677791
+        }, 
+        "user 2": {
+            "perplexity": 2.8549957954882212
+        }, 
+        "user 1": {
+            "perplexity": 2.9438930997238555
+        }
+    }, 
+    "GHCM_MDT k=8 gibbs number=1": {
+        "user 6": {
+            "perplexity": 4.4584181097804612
+        }, 
+        "user 5": {
+            "perplexity": 3.0474155415771107
+        }, 
+        "user 4": {
+            "perplexity": 3.6086197090002603
+        }, 
+        "user 2": {
+            "perplexity": 3.0676288924705091
+        }, 
+        "user 1": {
+            "perplexity": 2.9814861929220502
+        }
+    }
+}

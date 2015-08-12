@@ -1,0 +1,249 @@
+Date: 09/08/2015 08:08:26
+
+
+perplexity 
+Total scores :
+{
+    "GHCM_MDT k=30": {
+        "average perplexity": 4.5298760260454669
+    }, 
+    "GHCM_MDT k=1": {
+        "average perplexity": 4.4010142762072224
+    }, 
+    "GHCM_MDT k=10": {
+        "average perplexity": 4.5041537823590101
+    }, 
+    "HCM_MDT k=20": {
+        "average perplexity": 4.4866809892374269
+    }, 
+    "HCM_MDT k=10": {
+        "average perplexity": 4.4653235019062665
+    }, 
+    "HCM_MDT k=50": {
+        "average perplexity": 4.5118267719454961
+    }, 
+    "HCM_MDT k=70": {
+        "average perplexity": 4.5251682221972969
+    }, 
+    "GHCM_MDT k=70": {
+        "average perplexity": 4.5275003990176499
+    }, 
+    "GHCM_MDT k=50": {
+        "average perplexity": 4.5318549852853911
+    }, 
+    "HCM_MDT k=1": {
+        "average perplexity": 4.3832115023305267
+    }, 
+    "GHCM_MDT k=20": {
+        "average perplexity": 4.5231005378422298
+    }, 
+    "HCM_MDT k=30": {
+        "average perplexity": 4.500766495759299
+    }
+}detailed scores :
+{
+    "GHCM_MDT k=30": {
+        "user 6": {
+            "perplexity": 5.6779300118970202
+        }, 
+        "user 5": {
+            "perplexity": 3.9695361051924731
+        }, 
+        "user 4": {
+            "perplexity": 4.8718495652544602
+        }, 
+        "user 2": {
+            "perplexity": 4.1942781696186486
+        }, 
+        "user 1": {
+            "perplexity": 3.9357862782647319
+        }
+    }, 
+    "GHCM_MDT k=1": {
+        "user 6": {
+            "perplexity": 5.4353749706756886
+        }, 
+        "user 5": {
+            "perplexity": 3.8662500815859535
+        }, 
+        "user 4": {
+            "perplexity": 4.8016189179702966
+        }, 
+        "user 2": {
+            "perplexity": 4.0509124069411966
+        }, 
+        "user 1": {
+            "perplexity": 3.8509150038629745
+        }
+    }, 
+    "GHCM_MDT k=10": {
+        "user 6": {
+            "perplexity": 5.6379258764147826
+        }, 
+        "user 5": {
+            "perplexity": 3.9366334065596065
+        }, 
+        "user 4": {
+            "perplexity": 4.858629108598846
+        }, 
+        "user 2": {
+            "perplexity": 4.1828733910769387
+        }, 
+        "user 1": {
+            "perplexity": 3.9047071291448732
+        }
+    }, 
+    "HCM_MDT k=20": {
+        "user 6": {
+            "perplexity": 5.5467067990598879
+        }, 
+        "user 5": {
+            "perplexity": 3.9555662567962715
+        }, 
+        "user 4": {
+            "perplexity": 4.8329882943103977
+        }, 
+        "user 2": {
+            "perplexity": 4.1895480720162457
+        }, 
+        "user 1": {
+            "perplexity": 3.9085955240043329
+        }
+    }, 
+    "HCM_MDT k=10": {
+        "user 6": {
+            "perplexity": 5.5404362880208682
+        }, 
+        "user 5": {
+            "perplexity": 3.8980094780955161
+        }, 
+        "user 4": {
+            "perplexity": 4.8533361835032398
+        }, 
+        "user 2": {
+            "perplexity": 4.1355886115074583
+        }, 
+        "user 1": {
+            "perplexity": 3.89924694840425
+        }
+    }, 
+    "HCM_MDT k=50": {
+        "user 6": {
+            "perplexity": 5.6002144450110372
+        }, 
+        "user 5": {
+            "perplexity": 3.9653550913598403
+        }, 
+        "user 4": {
+            "perplexity": 4.8771251967328588
+        }, 
+        "user 2": {
+            "perplexity": 4.2171019669317849
+        }, 
+        "user 1": {
+            "perplexity": 3.899337159691961
+        }
+    }, 
+    "HCM_MDT k=70": {
+        "user 6": {
+            "perplexity": 5.610563363865106
+        }, 
+        "user 5": {
+            "perplexity": 3.9943593254929177
+        }, 
+        "user 4": {
+            "perplexity": 4.9068398241008726
+        }, 
+        "user 2": {
+            "perplexity": 4.1845153706695521
+        }, 
+        "user 1": {
+            "perplexity": 3.9295632268580309
+        }
+    }, 
+    "GHCM_MDT k=70": {
+        "user 6": {
+            "perplexity": 5.67764595581209
+        }, 
+        "user 5": {
+            "perplexity": 3.9772566613948386
+        }, 
+        "user 4": {
+            "perplexity": 4.8625284658041243
+        }, 
+        "user 2": {
+            "perplexity": 4.1961182992372787
+        }, 
+        "user 1": {
+            "perplexity": 3.9239526128399187
+        }
+    }, 
+    "GHCM_MDT k=50": {
+        "user 6": {
+            "perplexity": 5.6881516034143997
+        }, 
+        "user 5": {
+            "perplexity": 3.9716668610059722
+        }, 
+        "user 4": {
+            "perplexity": 4.8708392755795575
+        }, 
+        "user 2": {
+            "perplexity": 4.1913363677806048
+        }, 
+        "user 1": {
+            "perplexity": 3.9372808186464217
+        }
+    }, 
+    "HCM_MDT k=1": {
+        "user 6": {
+            "perplexity": 5.4352454378194421
+        }, 
+        "user 5": {
+            "perplexity": 3.8661977092284885
+        }, 
+        "user 4": {
+            "perplexity": 4.7450528538636902
+        }, 
+        "user 2": {
+            "perplexity": 4.0445591172114197
+        }, 
+        "user 1": {
+            "perplexity": 3.8250023935295916
+        }
+    }, 
+    "GHCM_MDT k=20": {
+        "user 6": {
+            "perplexity": 5.6660068661232064
+        }, 
+        "user 5": {
+            "perplexity": 3.9725850249890362
+        }, 
+        "user 4": {
+            "perplexity": 4.87102310235068
+        }, 
+        "user 2": {
+            "perplexity": 4.1915863253808716
+        }, 
+        "user 1": {
+            "perplexity": 3.9143013703673546
+        }
+    }, 
+    "HCM_MDT k=30": {
+        "user 6": {
+            "perplexity": 5.5776820861837315
+        }, 
+        "user 5": {
+            "perplexity": 3.9640918636670386
+        }, 
+        "user 4": {
+            "perplexity": 4.8733139598798614
+        }, 
+        "user 2": {
+            "perplexity": 4.1861488894281367
+        }, 
+        "user 1": {
+            "perplexity": 3.9025956796377272
+        }
+    }
+}

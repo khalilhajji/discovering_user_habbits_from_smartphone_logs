@@ -1,0 +1,241 @@
+Date: 25/06/2015 14:39:34
+
+
+predictions on the classes [
+    "most_frequent", 
+    "second_most_frequent", 
+    "others"
+]
+Total scores :
+{
+    "Random ": {
+        "total predictions": 3614.0, 
+        "accuracy": 0.16740453790813503, 
+        "average accuracy": 0.1679419706788896, 
+        "correct predictions": 605
+    }, 
+    "SVD decomposition using none": {
+        "total predictions": 3614.0, 
+        "accuracy": 0.3857221914775872, 
+        "average accuracy": 0.3889261700433409, 
+        "correct predictions": 1394
+    }, 
+    "SVD decomposition using idf3": {
+        "total predictions": 3614.0, 
+        "accuracy": 0.3959601549529607, 
+        "average accuracy": 0.39601740158702814, 
+        "correct predictions": 1431
+    }, 
+    "SVD decomposition using ldc": {
+        "total predictions": 3614.0, 
+        "accuracy": 0.4286109573879358, 
+        "average accuracy": 0.43587416303292786, 
+        "correct predictions": 1549
+    }, 
+    "SVD decomposition using idf": {
+        "total predictions": 3614.0, 
+        "accuracy": 0.41228555617044826, 
+        "average accuracy": 0.41623969591985316, 
+        "correct predictions": 1490
+    }, 
+    "SVD decomposition using idc": {
+        "total predictions": 3614.0, 
+        "accuracy": 0.4133923630326508, 
+        "average accuracy": 0.41706158110678665, 
+        "correct predictions": 1494
+    }
+}detailed scores :
+{
+    "Random ": {
+        "user 6": {
+            "total predictions": 836.0, 
+            "accuracy": 0.16028708133971292, 
+            "correct predictions": 134
+        }, 
+        "user 5": {
+            "total predictions": 574.0, 
+            "accuracy": 0.10452961672473868, 
+            "correct predictions": 60
+        }, 
+        "user 4": {
+            "total predictions": 533.0, 
+            "accuracy": 0.19887429643527205, 
+            "correct predictions": 106
+        }, 
+        "user 3": {
+            "total predictions": 235.0, 
+            "accuracy": 0.17446808510638298, 
+            "correct predictions": 41
+        }, 
+        "user 2": {
+            "total predictions": 685.0, 
+            "accuracy": 0.20437956204379562, 
+            "correct predictions": 140
+        }, 
+        "user 1": {
+            "total predictions": 751.0, 
+            "accuracy": 0.16511318242343542, 
+            "correct predictions": 124
+        }
+    }, 
+    "SVD decomposition using none": {
+        "user 6": {
+            "total predictions": 836.0, 
+            "accuracy": 0.284688995215311, 
+            "correct predictions": 238
+        }, 
+        "user 5": {
+            "total predictions": 574.0, 
+            "accuracy": 0.31010452961672474, 
+            "correct predictions": 178
+        }, 
+        "user 4": {
+            "total predictions": 533.0, 
+            "accuracy": 0.48405253283302063, 
+            "correct predictions": 258
+        }, 
+        "user 3": {
+            "total predictions": 235.0, 
+            "accuracy": 0.3617021276595745, 
+            "correct predictions": 85
+        }, 
+        "user 2": {
+            "total predictions": 685.0, 
+            "accuracy": 0.5401459854014599, 
+            "correct predictions": 370
+        }, 
+        "user 1": {
+            "total predictions": 751.0, 
+            "accuracy": 0.35286284953395475, 
+            "correct predictions": 265
+        }
+    }, 
+    "SVD decomposition using idf3": {
+        "user 6": {
+            "total predictions": 836.0, 
+            "accuracy": 0.28588516746411485, 
+            "correct predictions": 239
+        }, 
+        "user 5": {
+            "total predictions": 574.0, 
+            "accuracy": 0.3205574912891986, 
+            "correct predictions": 184
+        }, 
+        "user 4": {
+            "total predictions": 533.0, 
+            "accuracy": 0.549718574108818, 
+            "correct predictions": 293
+        }, 
+        "user 3": {
+            "total predictions": 235.0, 
+            "accuracy": 0.32340425531914896, 
+            "correct predictions": 76
+        }, 
+        "user 2": {
+            "total predictions": 685.0, 
+            "accuracy": 0.5197080291970803, 
+            "correct predictions": 356
+        }, 
+        "user 1": {
+            "total predictions": 751.0, 
+            "accuracy": 0.37683089214380827, 
+            "correct predictions": 283
+        }
+    }, 
+    "SVD decomposition using ldc": {
+        "user 6": {
+            "total predictions": 836.0, 
+            "accuracy": 0.31698564593301437, 
+            "correct predictions": 265
+        }, 
+        "user 5": {
+            "total predictions": 574.0, 
+            "accuracy": 0.29965156794425085, 
+            "correct predictions": 172
+        }, 
+        "user 4": {
+            "total predictions": 533.0, 
+            "accuracy": 0.5909943714821764, 
+            "correct predictions": 315
+        }, 
+        "user 3": {
+            "total predictions": 235.0, 
+            "accuracy": 0.4297872340425532, 
+            "correct predictions": 101
+        }, 
+        "user 2": {
+            "total predictions": 685.0, 
+            "accuracy": 0.581021897810219, 
+            "correct predictions": 398
+        }, 
+        "user 1": {
+            "total predictions": 751.0, 
+            "accuracy": 0.3968042609853529, 
+            "correct predictions": 298
+        }
+    }, 
+    "SVD decomposition using idf": {
+        "user 6": {
+            "total predictions": 836.0, 
+            "accuracy": 0.319377990430622, 
+            "correct predictions": 267
+        }, 
+        "user 5": {
+            "total predictions": 574.0, 
+            "accuracy": 0.3240418118466899, 
+            "correct predictions": 186
+        }, 
+        "user 4": {
+            "total predictions": 533.0, 
+            "accuracy": 0.5215759849906192, 
+            "correct predictions": 278
+        }, 
+        "user 3": {
+            "total predictions": 235.0, 
+            "accuracy": 0.4, 
+            "correct predictions": 94
+        }, 
+        "user 2": {
+            "total predictions": 685.0, 
+            "accuracy": 0.5343065693430656, 
+            "correct predictions": 366
+        }, 
+        "user 1": {
+            "total predictions": 751.0, 
+            "accuracy": 0.3981358189081225, 
+            "correct predictions": 299
+        }
+    }, 
+    "SVD decomposition using idc": {
+        "user 6": {
+            "total predictions": 836.0, 
+            "accuracy": 0.2834928229665072, 
+            "correct predictions": 237
+        }, 
+        "user 5": {
+            "total predictions": 574.0, 
+            "accuracy": 0.33797909407665505, 
+            "correct predictions": 194
+        }, 
+        "user 4": {
+            "total predictions": 533.0, 
+            "accuracy": 0.5459662288930581, 
+            "correct predictions": 291
+        }, 
+        "user 3": {
+            "total predictions": 235.0, 
+            "accuracy": 0.3702127659574468, 
+            "correct predictions": 87
+        }, 
+        "user 2": {
+            "total predictions": 685.0, 
+            "accuracy": 0.5985401459854015, 
+            "correct predictions": 410
+        }, 
+        "user 1": {
+            "total predictions": 751.0, 
+            "accuracy": 0.36617842876165113, 
+            "correct predictions": 275
+        }
+    }
+}

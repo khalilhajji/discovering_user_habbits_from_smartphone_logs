@@ -1,0 +1,203 @@
+Date: 17/07/2015 13:14:48
+
+
+predictions on the classes [
+    "most_frequent", 
+    "second_most_frequent", 
+    "others"
+]
+Total scores :
+{
+    "Random ": {
+        "total predictions": 2047.0, 
+        "accuracy": 0.3063019052271617, 
+        "average accuracy": 0.3092732332103515, 
+        "correct predictions": 627
+    }, 
+    "LCBMF decomposition using idf and 15 hidden topics": {
+        "total predictions": 2047.0, 
+        "accuracy": 0.6722032242305813, 
+        "average accuracy": 0.6677049677603625, 
+        "correct predictions": 1376
+    }, 
+    "LCBMF decomposition using idf and 10 hidden topics": {
+        "total predictions": 2047.0, 
+        "accuracy": 0.6702491450903761, 
+        "average accuracy": 0.6634553727798201, 
+        "correct predictions": 1372
+    }, 
+    "LCBMF decomposition using idf and 20 hidden topics": {
+        "total predictions": 2047.0, 
+        "accuracy": 0.6414264777723497, 
+        "average accuracy": 0.6336655605281656, 
+        "correct predictions": 1313
+    }, 
+    "LCBMF decomposition using idf and 5 hidden topics": {
+        "total predictions": 2047.0, 
+        "accuracy": 0.6389838788470933, 
+        "average accuracy": 0.6251577334677862, 
+        "correct predictions": 1308
+    }
+}detailed scores :
+{
+    "Random ": {
+        "user 6": {
+            "total predictions": 376.0, 
+            "accuracy": 0.35904255319148937, 
+            "correct predictions": 135
+        }, 
+        "user 5": {
+            "total predictions": 274.0, 
+            "accuracy": 0.22627737226277372, 
+            "correct predictions": 62
+        }, 
+        "user 4": {
+            "total predictions": 396.0, 
+            "accuracy": 0.29545454545454547, 
+            "correct predictions": 117
+        }, 
+        "user 3": {
+            "total predictions": 132.0, 
+            "accuracy": 0.36363636363636365, 
+            "correct predictions": 48
+        }, 
+        "user 2": {
+            "total predictions": 473.0, 
+            "accuracy": 0.29809725158562367, 
+            "correct predictions": 141
+        }, 
+        "user 1": {
+            "total predictions": 396.0, 
+            "accuracy": 0.31313131313131315, 
+            "correct predictions": 124
+        }
+    }, 
+    "LCBMF decomposition using idf and 15 hidden topics": {
+        "user 6": {
+            "total predictions": 376.0, 
+            "accuracy": 0.6675531914893617, 
+            "correct predictions": 251
+        }, 
+        "user 5": {
+            "total predictions": 274.0, 
+            "accuracy": 0.6496350364963503, 
+            "correct predictions": 178
+        }, 
+        "user 4": {
+            "total predictions": 396.0, 
+            "accuracy": 0.6691919191919192, 
+            "correct predictions": 265
+        }, 
+        "user 3": {
+            "total predictions": 132.0, 
+            "accuracy": 0.6363636363636364, 
+            "correct predictions": 84
+        }, 
+        "user 2": {
+            "total predictions": 473.0, 
+            "accuracy": 0.6511627906976745, 
+            "correct predictions": 308
+        }, 
+        "user 1": {
+            "total predictions": 396.0, 
+            "accuracy": 0.7323232323232324, 
+            "correct predictions": 290
+        }
+    }, 
+    "LCBMF decomposition using idf and 10 hidden topics": {
+        "user 6": {
+            "total predictions": 376.0, 
+            "accuracy": 0.6702127659574468, 
+            "correct predictions": 252
+        }, 
+        "user 5": {
+            "total predictions": 274.0, 
+            "accuracy": 0.6131386861313869, 
+            "correct predictions": 168
+        }, 
+        "user 4": {
+            "total predictions": 396.0, 
+            "accuracy": 0.6868686868686869, 
+            "correct predictions": 272
+        }, 
+        "user 3": {
+            "total predictions": 132.0, 
+            "accuracy": 0.6515151515151515, 
+            "correct predictions": 86
+        }, 
+        "user 2": {
+            "total predictions": 473.0, 
+            "accuracy": 0.7251585623678647, 
+            "correct predictions": 343
+        }, 
+        "user 1": {
+            "total predictions": 396.0, 
+            "accuracy": 0.6338383838383839, 
+            "correct predictions": 251
+        }
+    }, 
+    "LCBMF decomposition using idf and 20 hidden topics": {
+        "user 6": {
+            "total predictions": 376.0, 
+            "accuracy": 0.598404255319149, 
+            "correct predictions": 225
+        }, 
+        "user 5": {
+            "total predictions": 274.0, 
+            "accuracy": 0.6678832116788321, 
+            "correct predictions": 183
+        }, 
+        "user 4": {
+            "total predictions": 396.0, 
+            "accuracy": 0.6414141414141414, 
+            "correct predictions": 254
+        }, 
+        "user 3": {
+            "total predictions": 132.0, 
+            "accuracy": 0.5833333333333334, 
+            "correct predictions": 77
+        }, 
+        "user 2": {
+            "total predictions": 473.0, 
+            "accuracy": 0.7124735729386892, 
+            "correct predictions": 337
+        }, 
+        "user 1": {
+            "total predictions": 396.0, 
+            "accuracy": 0.5984848484848485, 
+            "correct predictions": 237
+        }
+    }, 
+    "LCBMF decomposition using idf and 5 hidden topics": {
+        "user 6": {
+            "total predictions": 376.0, 
+            "accuracy": 0.6196808510638298, 
+            "correct predictions": 233
+        }, 
+        "user 5": {
+            "total predictions": 274.0, 
+            "accuracy": 0.5547445255474452, 
+            "correct predictions": 152
+        }, 
+        "user 4": {
+            "total predictions": 396.0, 
+            "accuracy": 0.6792929292929293, 
+            "correct predictions": 269
+        }, 
+        "user 3": {
+            "total predictions": 132.0, 
+            "accuracy": 0.5757575757575758, 
+            "correct predictions": 76
+        }, 
+        "user 2": {
+            "total predictions": 473.0, 
+            "accuracy": 0.7103594080338267, 
+            "correct predictions": 336
+        }, 
+        "user 1": {
+            "total predictions": 396.0, 
+            "accuracy": 0.6111111111111112, 
+            "correct predictions": 242
+        }
+    }
+}
