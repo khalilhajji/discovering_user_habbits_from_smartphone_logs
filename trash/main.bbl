@@ -1,0 +1,24 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Hawthorn(2001)]{1}
+C.~J. Hawthorn.
+\newblock Littrow configuration tunable external cavity diode laser with fixed
+  direction output beam.
+\newblock \emph{Review of Scientific Instruments}, 72\penalty0 (12):\penalty0
+  4477--4479, December 2001.
+\newblock URL \url{http://link.aip.org/link/?RSI/72/4477/1}.
+
+\bibitem[Hofmann(1999)]{2}
+Thomas Hofmann.
+\newblock Probabilistic latent semantic indexing.
+\newblock \emph{Proceedings of the Twenty􏰂Second Annual International SIGIR
+  Conference on Research and Development in Information Retrieval}, 1\penalty0
+  (1):\penalty0 1, December 1999.
+\newblock URL \url{http://cs.brown.edu/{\sim}th/papers/Hofmann-SIGIR99.pdf}.
+
+\end{thebibliography}

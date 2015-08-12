@@ -5,19 +5,87 @@
 \label{Chapter5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 \lhead{Chapter 5. \emph{Evaluation metrics}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
-
-%----------------------------------------------------------------------------------------
-%	SECTION 1
-%----------------------------------------------------------------------------------------
-
-\section{Perplexity of unseen data}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultricies lacinia euismod. Nam tempus risus in dolor rhoncus in interdum enim tincidunt. Donec vel nunc neque. In condimentum ullamcorper quam non consequat. Fusce sagittis tempor feugiat. Fusce magna erat, molestie eu convallis ut, tempus sed arcu. Quisque molestie, ante a tincidunt ullamcorper, sapien enim dignissim lacus, in semper nibh erat lobortis purus. Integer dapibus ligula ac risus convallis pellentesque.
+Our goal is to find clusters that represent behaviors of a user from his smartphone logs. Thus, the clusters found by the different models must be really representative of the behavior of the user and not just some random realizations clustered together. For this reason, a way to verify this point is needed. So far, we presented different models that are able to complete the task of finding clusters from smartphone logs. Some of them use a probabilistic approach ($GLMR$, $LMR$, $LDA$, $pLSI$) whereas the others rely on matrix factorization techniques ($SVD$, $LCBMF$). We develop in this chapter metrics we use to evaluate how much the hidden classes found by a given model are representative of the life of the user. Recalling that smartphone logs are a subsample of a user's life, the common idea that drives those metrics is the following: If the clusters found by analyzing smartphone logs are able to well describe future coming logs (i.e unseen data) from the same user, then those clusters correspond to behaviors that the user use to follow.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
+\section{Features prediction}
 
-\section{Missing Features prediction}
+To see how well the clusters resulting from a model $\mathfrak{M}$ describe an unseen data, the ability of the model to guess the values of a missing feature from a new given record is a good indicator. In other terms, if the realization of a feature $f$ is removed from new a record $\mathbf{r}$, the ability of $\mathfrak{M}$ in guessing this feature by observing the context present in $\mathbf{r}$ indicates how well it generalizes in the data. Indeed, making a good guess means that the clusters produced by $\mathfrak{M}$ were able to represent the context described by a record $\mathbf{r}$ that was not previously seen. For example, if $\mathfrak{M}$ is able to learn that Bob loves listening to music from his smartphone while driving (i.e one of the clusters $z$ of $\mathfrak{M}$ represents the behavior $z="listening\_to\_music\_in\_car"$), and if a record of Bob listening to music (from which the activity of Bob is removed) is given to $\mathfrak{M}$, then $\mathfrak{M}$ would guess that Bob is probably driving (i.e feature $Activity="in_vehicle"$). In the same way, if $\mathfrak{M}$ is able to learn that Bob goes to the gym on Saturdays morning, and if a record showing that Bob is in the Gym is given to $\mathfrak{M}$, then $\mathfrak{M}$ could guess that this record is probably happening a Saturday morning. Because it is a criterion representative of clustering quality, predicting (i.e guessing) missing entries from new data inputs is a common criterion used to compare and evaluate the performance of latent class models. It is used by T. Hofmann [Probabilistic Latent Semantic Indexing]\cite{plsi} to proof that $pLSI$ performs better than it's ancestor $LSI$\cite{lsi} and used again by D. M. Blei, A. Y. Ng and M. I.Jordan [Latent Dirichlet Allocation]\cite{lda} to show that $LDA$ performs better than $pLSI$. It is also used in \cite{inferencecomp, gibbsaverage, gibbsunseen}.\par
 
-Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
+Concretely, this is done by splitting the corpus of smartphone logs $R$ in two parts: a train corpus $R_{train}$ and a test corpus $R_{test}$. $R_{train}$ is used to fit the parameters of the model $\mathfrak{M}$ and find the clusters. Then, the ability of $\mathfrak{M}$ to correctly guess missing the feature $f$ is evaluated in the records belonging to $R_{test}$  from which the realizations belonging to $f$ are removed. We note those vectors $[ \mathbf{r}_{1}^{-f},...,\mathbf{r}_{M_{test}}^{-f}]$ where $M_{test}$ is the number of records in $R_{test}$.
+We spread the values $V_{f}$ in different target categories that we want to guess (for example we divide the dictionary of feature $Location$ in $3$ categories $most\_frequent\_location$, $second\_most\_frequent$, $others$). Then for each record $\mathbf{r}_{m}^{-f}, m \in \{1,...,M_{test}\}$, the model $\mathfrak{M}$ makes a prediction $v_{m}^{pred}=\mathfrak{M}(\mathbf{r}_{m}^{-f}), v_{m}^{pred} \in V_{f}$. We say that $\mathfrak{M}$ made a good guess for $\mathbf{r}_{m}^{-f}$ if $v_{m}^{pred}$ belongs to the right category. 
+\\We define $Accuracy_{\mathfrak{M}}$ as the rate of good guesses made by model $\mathfrak{M}$. In other terms,
+\begin{equation}
+Accuracy_{\mathfrak{M}}=\frac{n_{good\_guesses}}{n_{tries}}
+\end{equation}
+where 
+\begin{itemize} 
+	\item $n_{good\_guesses}$  represents the number of good guesses made by $\mathfrak{M}$.
+	\item $n_{tries}$ represents the attempts made by $\mathfrak{M}$. Note that $n_{tries}=M_{test}$.
+\end{itemize}
+However, while $Accuracy_{\mathfrak{M}}$ seems to be a nice indicator for clustering and generalization performance, it suffers from a problem when dealing with unbalanced categories' sizes. Indeed, if Bob is $80\%$ of the time at home, and leaves sometimes his home to go at work or to the gym, then a naive classifier that would always guess the most frequent location of Bob would make a high score of $0.8$ of good guesses. For this reason, we combine $Accuracy_{\mathfrak{M}}$ with another indicator that computes the rate of good predictions for each category separately and average them. We call this indicator $Average\_Accuracy_{\mathfrak{M}}$. Noting $C=\{C_{1},C_{2},...\}$ the set of the different target categories, we can express $Average\_Accuracy_{\mathfrak{M}}$ as follows:
+\begin{equation}
+Average\_Accuracy_{\mathfrak{M}}=\frac{1}{|C|}\sum_{C_{i}\in C}\frac{n_{good\_guesses,C_{i}}}{n_{(.,C_{i})}}
+\end{equation}
+where 
+\begin{itemize} 
+	\item $n_{good\_guesses,C_{i}}$  represents the number of times $\mathfrak{M}$ guessed class $C_{i}$ and the guess was correct.
+	\item $n_{(.,C_{i})}$ represents the number of times $\mathfrak{M}$ should have guessed class $C_{i}$. Note that $n_{(.,C_{i})}$ is equal to the number of records containing a value belonging to $C_{i}$ (before removal of 				values).
+\end{itemize}
+Note that naive classifier described above would have a score of $Average\_Accuracy_{naive}=\frac{1}{3}(Accuracy_{Home}+Accuracy_{Work}+Accuracy_{Others})=0.33$, which represents a low score. To evaluate the generalization performances of a model, one should always look at the scores of both$Accuracy$ and $Average\_Accuracy$.\par
+
+To make the guesses $v_{m}^{pred}=\mathfrak{M}(\mathbf{r}_{m}^{-f})$, probabilistic models use maximum likelihood while matrix factorization models use projection space techniques. In the next sections, we explain each of the two techniques. We conclude this section by the following observation: in the process described above a value $v^{pred}$ is guessed from a record and then we check if this value belongs to the right category. Note that this is different from guessing a category from a record and then verifying if it is the right category. Guessing a category would require combining the guesses of all the values belonging to the same category. While combining guesses of different values is possible in probabilistic models, it is not clear how this can be done in matrix factorization models. Thus, to have a fair test that applies the same conditions for all the models, we decide to use the described approach.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+\section{Maximum Likelihood}
+
+We presented in chapter 3 methods that model a corpus of records as a probability distribution and provide ways to compute the likelihood $\mathit{L}$, which is the probability of having some observed samples. In this section, we take profit from this characteristic to make guesses by selecting the most probable guess (i.e the guess that has the maximum likelihood). \par
+
+In $LMR$, the probability of a value $v \in V_{f}$ given a record $\mathbf{r}^{-f}$ is obtained from the posterior distribution over behaviors (i.e clusters):
+\begin{equation}
+p(v|\mathbf{r}^{-f})=\sum_{k=1}^{K}p(v|Z=z_{k}, F=f)p(Z=z_{k}|\mathbf{r}^{-f})
+\end{equation}
+$p(v|Z=z_{k}, F=f)$ are the values distributions in behaviors already estimated during training, while $p(Z=z_{k}|\mathbf{r}^{-f})$ is estimated using the $Expectation$ $Maximization$ ($EM$) algorithm described in \cite{plsi}. \par
+
+In $GLMR$ and $LDA$, the probability of a value $v \in V_{f}$ given a record $\mathbf{r}^{-f}$ is obtained by integrating over the posteriors. For $GLMR$ this gives:
+\begin{equation}
+p(v|\mathbf{r}^{-f})=\int_{\boldsymbol{\theta}_{test} }p(\boldsymbol{\theta}_{test}|\mathbf{r}^{-f},\boldsymbol{\alpha })\sum_{k=1}^{K}p(w_{n}|\boldsymbol{\widehat{\phi}  }_{y_{n},k})p(Z=z_{k}|\boldsymbol{\theta }_{test})
+\end{equation}
+where $\boldsymbol{\widehat{\Phi }}=\{\boldsymbol{\widehat{\phi} }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ are the vocabularies distributions estimated on $R_{train}$. As seen in ~\ref{gibbs_sampling}, integrating over $\boldsymbol{\theta}_{test}$ is not possible. Thus, one could estimate a behavior distribution $\boldsymbol{\widehat{\theta}}_{test}$ for record $\mathbf{r}^{-f}$ by proceeding as behaviors distributions are estimated for training set ~\ref{gibbs_sampling}. In our work, we use a variant of Collapsed Gibbs Sampling, a technique developed by Y. Papanikolaou, T. N. Rubin and G. Tsoumakas in \cite{gibbsunseen} for treating unseen records. Indeed, it is shown that this estimation technique for unseen records performs better than the traditional ones. This technique was initially developed for $LDA$, but thanks to the similarities between $LDA$ and $GLMR$, it is easily adapted to $GLMR$. Moreover, to obtain the final estimation $\boldsymbol{\widehat{\theta}}_{test}$, we average multiple intermediate samples using the method described in \cite{gibbsaverage}.
+
+Similarly for $LDA$, the probability of a value $v \in V_{f}$ given a record $\mathbf{r}^{-f}$ is expressed as
+\begin{equation}
+p(v|\mathbf{r}^{-f})=\int_{\boldsymbol{\theta}_{test} }p(\boldsymbol{\theta}_{test}|\mathbf{r}^{-f},\boldsymbol{\alpha })\sum_{k=1}^{K}p((y_{n},w_{n})|\boldsymbol{\widehat{\phi}  }_{k})p(Z=z_{k}|\boldsymbol{\theta }_{test})
+\end{equation}
+where $\boldsymbol{\widehat{\Phi }}=\{\boldsymbol{\widehat{\phi} }_{k}\}_{\forall k\in\{1,...,K\}}$ are the language distributions estimated on $R_{train}$. Here again, we use \cite{gibbsunseen} and \cite{gibbsaverage} to estimate the behaviors distribution $\boldsymbol{\widehat{\theta}}_{test}$ of the record $\mathbf{r}^{-f}$. \par
+
+We have shown how each of the probabilistic models proceed to attribute likelihood to unobserved values from new records. Then, the predicted value $v$ given by those models is simply the value $v$ belonging to $f$ that has the biggest likelihood. In the next section, we discuss how matrix factorization models proceed to do the same task.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+
+\section{Space Projection}
+
+We recall that both $SVD$ and $LCBMF$ express the smartphone logs matrix as a product between matrixes. In both of the models, there is a resulting matrix that represents the behaviors expressed by the data ($\boldsymbol{U}$ for $SVD$, $\boldsymbol{A}$ for $LCBMF$) and another that expresses the concentration of behaviors in each record ($\boldsymbol{V}$ for $SVD$, $\boldsymbol{B}$ for $LCBMF$). Moreover, both $SVD$ and $LCBMF$ represent a record $\mathbf{r}$ as a vector of the size of the language (i.e number of possible realizations) where each dimension contains the number of times a given realization was observed. In this context, a record $\mathbf{r}$ from which all the realizations of the feature $f$ were removed is represented as a vector $\mathbf{r}^{-f}$ that contains $0$ for the realizations of feature $f$ and the same values as $\mathbf{r}$ elsewhere.
+\\When having a new record $\mathbf{r}^{-f}$, the idea for the two models is to map $\mathbf{r}^{-f}$ into the space of the transformation (to express the concentration of behaviors in  $\mathbf{r}^{-f}$) and then project it back to the original space (using the realizations importance in the different behaviors) to obtain an approximation $\mathbf{\widehat{r}}$ of $\mathbf{r}$. Intuitively, the values in $\mathbf{\widehat{r}}$ would represent the values that the model would have guessed for each of the possible realizations. Thus, Having $\mathbf{\widehat{r}}$, a natural choice to make is to guess the value $v$ belonging to the feature $f$ that has the highest estimation in the approximation $\mathbf{\widehat{r}}$ (i.e the value that the model would have attributed the maximum number of realizations from all the values of $f$). \par
+
+For $SVD$, we recall that it expresses the data $\boldsymbol{X}$ as $\boldsymbol{X}\simeq \boldsymbol{U}\boldsymbol{S}\boldsymbol{V}$. $\mathbf{\widehat{r}}$ is obtained from $\mathbf{r}^{(-f)}$ by doing the following:
+\begin{enumerate} 
+	\item compute the $tf\_idf$ of $\mathbf{r}^{(-f)}$, $\mathbf{r}_{tf\_idf}^{(-f)}=tf\_idf(\mathbf{r}^{(-f)})$.
+	\item map $\mathbf{r}_{tf\_idf}^{(-f)}$ into matrix $V$ $\boldsymbol{v}_{\boldsymbol{r}_{tf\_idf}}=\boldsymbol{U}^{-1}\boldsymbol{S}^{-1}\boldsymbol{r}_{tf\_idf}^{(-f)}=\boldsymbol{U}^{t}\boldsymbol{S}^{-1}\boldsymbol{r}_{tf\_idf}^{(-f)}		$. Here we use the fact that $\boldsymbol{U}$ is an orthogonal matrix and thus $\boldsymbol{U}^{-1}=\boldsymbol{U}^{t}$. $\boldsymbol{v}_{\boldsymbol{r}_{tf\_idf}}$ is a vector that contains the behaviors concentration of 			record $\mathbf{r}_{tf\_idf}$.
+	\item project back $\boldsymbol{v}_{\boldsymbol{r}_{tf\_idf}}$ to the original space to obtain an approximation of $\mathbf{r}_{tf\_idf}$, $\mathbf{\widehat{r}}_{tf\_idf} = \boldsymbol{U}\boldsymbol{S}\boldsymbol{v}_{\boldsymbol{r}_{tf		\_idf}}$.
+	\item do the inverse $tf\_idf$ transformation to obtain an approximation of $\mathbf{r}$, $\mathbf{\widehat{r}} = tf\_idf^{-1}(\mathbf{\widehat{r}}_{tf\_idf})$	
+\end{enumerate} \par
+
+Concerning $LCBMF$ it expresses the data $\boldsymbol{X}$ as $\boldsymbol{X}\simeq AB$. $\mathbf{\widehat{r}}$ is obtained from $\mathbf{r}^{-f}$ by doing the following:
+\begin{enumerate} 
+	\item map $\mathbf{r}$ into matrix $\boldsymbol{B}$ $\boldsymbol{b}_{\boldsymbol{r}}=\boldsymbol{A}^{-1}\boldsymbol{r}^{(-f)}$. Note that matrix $\boldsymbol{A}$ is not invertible by definiton, however there exists methods to 			compute the pseudo inverse at 	the right of a non invertible matrix. $\boldsymbol{b}_{\boldsymbol{r}}$ is a vector that contains the behaviors concentration of record $\mathbf{r}$.
+	\item project back $\boldsymbol{b}_{\boldsymbol{r}}$ to the original space to obtain an approximation of $\mathbf{\widehat{r}} = \boldsymbol{A}\boldsymbol{b}_{r}$.
+\end{enumerate}
+	
+

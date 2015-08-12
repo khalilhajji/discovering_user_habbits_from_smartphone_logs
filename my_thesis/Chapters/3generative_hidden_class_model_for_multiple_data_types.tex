@@ -15,14 +15,67 @@ We recall that our task is the following: by observing user logs, we want to dis
 
 \section{Hidden Class Model for Mixed Data Types (HCM-MDT)}
 The first model we introduce is the Hidden Class Model for Mixed Data Types (HCM-MDT). As the title imply it, this model is used to model hidden (i.e unobserved) classes for a data that contains mixed types. The smartphone logs is a mixed types dataset in the sense that it contains multiple features and the hidden classes that we want to model are the behaviors.
-\\This section is organized as follows. First, we describe the HCM-MDT model. Second, to better understand the utility and the intuitions that lead us to build the HCM-MDT model, we make a parallel between this model and the Probabilistic Latent Semantic Indexing (pLsi), which is a model that is widely used to model hidden classes in a corpus of documents. More generally, pLSI can be used to model hidden classes in any kind of dataset that contain a unique type feature (for document corpus dataset, the unique feature is words).
+\\This section is organized as follows. First, we describe the HCM-MDT model. Second, to better understand the utility and the intuitions that lead us to build the HCM-MDT model, we make a parallel between this model and the Probabilistic Latent Semantic Indexing (pLSI) \cite{plsi}, which is a model that is widely used to model hidden classes in a corpus of documents. More generally, pLSI can be used to model hidden classes in any kind of dataset that contain a unique type feature (for document corpus dataset, the unique feature is words).
+
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{HCM-MDT model}
 
 Let's consider the corpus representation of the smartphone logs. Smartphone logs are represented by a corpus  containing $\boldsymbol{R}$ containing $\mathit{M}$ records where each record $\mathbf{r}$ is a vector representing the realizations that occurred in a given time frame $\mathit{T}$ ($\mathit{T}$ could be 1 hour for example).
-\\HCM-MDT assumes that each record $\mathbf{r}$ in the corpus $\boldsymbol{R}$ was generated in the following way:
+\\The corpus defines a language containing features $F=\{1,...,J\}$ where each feature $f\in F$ defines a vocabulary$V_{f}$ of $I_{f}$ values, $V_{f}=\{1,...,I_{f}\}$. We assume that the corpus is described by $K$ behaviors for some integer $K$. We note these behaviors as $\{z1,...,z_{K}\}$. Let's suppose that we want to generate a record $\mathbf{r}$ of size $N$. Moreover, let's suppose that the record $\mathbf{r}$ we want to generate contains $N_{1}$ values form the vocabulary of feature $1$, $N_{2}$ values from the vocabulary of feature $2$, $N_{f}$ values from feature $f$ and $N_{J}$ values from feature $J$ ($\sum_{f=1}^{J}N_{f}=N$). For now, let's also assume that $\mathbf{r}$ contain al least one value from each feature (i.e $N_{f}\geq 1,\forall f\in F$).
+\\To generate $\mathbf{r}$, we do the follwing:
+\begin{enumerate} 
+	\item generate the values coming from the vocabulary of feature $1$ by doing the following:
+	 	\begin{enumerate}
+		 	\item generate the $1^{st}$ value $w_1$ by doing the following:
+	 		 	\begin{enumerate}
+		 			\item choose one behavior $z_{k},k\in [1,K]$ with probability $p(z_{k}|\mathbf{r})$, where $Z$ is a random variable that follows a multinomial distribution conditioned on the record $\mathbf{r}$
+		 			\item knowing the behavior $z_{k},k\in [1,K]$, select a value from the vocabulary of feature $1$, $w_{1} \in V_{1}$ with probability $p(V=w_{1}|Z=z_{k},F=1)$, where $V$ is a random variable that follows a 							multinomial distribution conditioned on the behavior and the feature.
+		 		\end{enumerate}
+			\item repeat the same process to generate the values $w_{2},...,w_{N_{1}}$
+		\end{enumerate} 
+	\item repeat the same process to generate the values of the features $2,...,J$. 
+\end{enumerate} \par
+This process assumes that the generation of realizations in a same record are independent from each other (and their order does not matter). Moreover, it assumes that a realization is independent from the record it appears in when it is conditioned in the behavior. For now, we note that we assume that the number of values coming from each feature in the record $\mathbf{r}$ are previously known $N_{f}\geq 1,\forall f\in F$. This assumption simplify the model and we will see that it does not impact it. \par
+
+In smartphone logs, there is two different kinds of features. On the one hand, there is features that take values during all the time range of the observation. Examples if these features are $"Location"$, $"Activity"$ or $"Day"$. In fact, a user is always in a location, doing some activity at a certain day. We call those features $permanent features$.
+\\In the other hand, there is features that take values only in certain points in the time range of the observation. Examples are $"Application launches"$, $"Notifications received"$ or $"Bluetooth paired"$. We call those features $temporary features$.
+\\In the generation process described so far, we impose to select at least one value for each feature. This is a good representation for permanent features because it requires each permanent feature to have at least one value in each record. However, it is a bad representation for temporary features. Indeed, a user is not always running an application, receiving a notification or pairing his smartphone with another Bluetooth device. To address this problem, we enrich the language of the corpus $R$ as follows: a value is added to the vocabulary of each temporary feature. This value indicates that the concerned temporary feature is absent. We modify the records $\mathbf{r}_{m}, m\in\{1,...,M\}$ pf the corpus $R$ accordingly by adding the realization $(f, v_{non\_present})$ to each record that does not have any realization for the temporary feature $f$. This transformation allows the the generation process described above to represent temporary features. Indeed, the value $v_{non\_present} \in V_{f}$ is selected with probability $p(V=v_{non\_present}|Z=z_{k},F=1)$ (when the behavior $z_{k}$ was selected). This models a record that do not contain the temporary feature $f$. \par
+
+Using this model, the probability of obtaining a sequence of realizations $[(y_{1},w_{1}),...,(y_{N},w_{N})]$ belonging to record $\mathbf{r}$ can be derived. It is expressed as the probability of obtaining the sequence $[(y_{1},w_{1}),...,(y_{N},w_{N})]$ knowing that the record $\mathbf{r}$ was selected. It is computed as follows:
+\begin{equation} \label{eqhcmmdt1}
+\begin{split}
+p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})=\prod_{n=1}^{N}p((y_{n},w_{n})|\mathbf{r})
+\\=\prod_{n=1}^{N}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
+\end{split}
+\end{equation}
+We can also express $p([(y_{1},w_{1}),...,(y_{N},w_{N})] , \mathbf{r})$ as:
+\begin{equation} \label{eqhcmmdt2}
+\begin{split}
+=p([(y_{1},w_{1}),...,(y_{N},w_{N})] , \mathbf{r})=p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})p(\mathbf{r})
+\\=\frac{1}{M}\prod_{n=1}^{N}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
+\end{split}
+\end{equation}
+Where $M$ represents the number of the records in the corpus.
+\\Using Eq. ~\eqref{eqhcmmdt1} and Eq. ~\eqref{eqhcmmdt2}, we can express the probability of a corpus $R=\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}$ as the product of the probabilities of each record $\mathbf{r}_{m}$:
+\begin{equation} \label{eqhcmmdt3}
+\begin{split}
+p(R)=p(\{\mathbf{r}_{1},...,\mathbf{r}_{M}\})=\prod_{m=1}^{M}p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})
+\end{split}
+\end{equation}
+Here note that $p(\mathbf{r}_{m})=\frac{1}{M}$ disappeared from the equation. Indeed, as the order of selecting the records does not matter, then summing up over all the possible orderings of $\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}$ cancels the factor $\frac{1}{M}$. We refer to the the probability of having a corpus $R$ as the likelihood $L$ of corpus $R$. The final expression of $L(R)$ can be derived using Eq. ~\eqref{eqhcmmdt1}:
+\begin{equation} \label{eqhcmmdt4}
+\begin{split}
+L(R)=p(R)=\prod_{m=1}^{M}\prod_{n=1}^{N_{m}}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
+\end{split}
+\end{equation} \par
+
+$HCM\_MDT$ assumes that the observed corpus was generated by the process described. However, the only thing known is the observed data.The distributions the generated the data  $p(Z|\mathbf{r}_{m}),\forall m \in [1,M]$ and $p(V|z_{k},f), \forall k \in [1,K]$ are unknown. Our problem becomes then finding these distributions. In that case, a good assumption is to say that good parameters are the parameters that maximize the likelihood $L(R)$ of the corpus we are observing. \par
+
+When we model user logs according to $HCM\_MDT$, we assume that in each time frame, a user has a mixture of behaviors. When he knows his behaviors, he selects realizations according to these behaviors. This is a model that fits the real life in the sense that in a given range of time, an individual may act following one or more behaviors. Moreover, a behavior is defined by a set of events (i.e realizations) that may occur more or less probably. For example, let's assume that Bob goes to his gym on Saturdays, uses his car only to go either to work or to the gym and loves listening to music from his smartphone when driving. Let's suppose that Bob generates a record in some Saturday morning according to the $HCM\_MDT$ process. From all of his possible behaviors, Bob first selects with high probability the behavior $z_{1}="do\_gym\_on\_Saturday\_Morning"$ or the behavior $z_{2}="listening\_to\_music\_in\_car"$. Then Bob chooses from the selected behavior a location. Here the most probable location is $"gym"$. Indeed location gym is the most probable in the behavior $"do gym on Saturday"$. In, the behavior $"listening to music in car"$, location $"gym"$ is equally probable with location $"work"$ as Bob uses his car only to go to $"work"$ or to $"gym"$. After selecting a location, Bob chooses again a behavior between $z_{1}$ and $z_{2}$. From this behavior he chooses one activity which should be with high probability either $"running"$ (if he selected $z_{2}$) or $"in_vehicle"$ (if he selected $z_{2}$). He does the same process to choose a day (which should be $"Saturday"$ with high probability) an application launch ect... Here we see that the record generated by Bob following the generation model of $HCM\_MDT$ describes well Bob's life in some Saturday morning. \par
+
+This example concludes the model description of $HCM\_MDT$. In the next part, we establish a relation between $HCM\_MDT$ and $pLSI$, which is a widely used algorithm to model hidden classes that describe a dataset. This allows us to expose a nice property of $HCM\_MDT$, that enables him to fit well the problem of modeling smartphone logs.
 
 
 %-----------------------------------
@@ -30,55 +83,264 @@ Let's consider the corpus representation of the smartphone logs. Smartphone logs
 %-----------------------------------
 \subsection{Relationship between HCM-MDT and Probabilistic Latent Semantic Indexing (pLSI)}
 
-Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
+$Probabilistic$ $Latent$ $Semantic$ $Indexing(pLSI)$ was introduced in 1991 by C. J. Hawthorn\cite{plsi}. It came as a good alternative to the problem of modeling a corpus of text documents. This model allowed research to make big jump in information retrieval and text document representation. It constituted a significant step forward in modeling text document as a probabilistic model. Noting that smartphone logs can be seen as a corpus of documents where documents are records and words realizations, we briefly introduce the $pLSI$ model applied to a corpus $R$ of smartphone logs. $pLSI$ assumes the following generation process.
+\\To generate a record $\mathbf{r}=[(y_{1},w_{1}),...,(y_{N},w_{N})]$, we do the following:
+\begin{enumerate} 
+	\item choose one behavior $z_{k},k\in [1,K]$ with probability $p(z_{k}|\mathbf{r})$, where $Z$ is a random variable that follows a multinomial distribution conditioned on the record $\mathbf{r}$
+	\item knowing the behavior $z_{k},k\in [1,K]$, select the realization $(y_{1},w_{1})$ where $y_{1}\in F$ and $w_{1}\in I_{f}$ with probability $p(V=(y_{1},w_{1})|Z=z_{k})$, where $V$ is a random variable that follows a 				multinomial distribution conditioned on the behavior and the feature.
+	\item repeat the same process to generate the realizations $(y_{2},w_{2}),...,(y_{N},w_{N})$. 
+\end{enumerate} 
+This generation process shows the similarity between $pLSI$ and $HCM\_MDT$. In both cases, we assume that a record is composed by a mixture of behaviors and each behavior is represented as a mixture of realizations. Moreover, a realizations are independent between each other, and a realization is independent from the record it appears in conditioned in the behavior.\par
+
+In each hidden class $z_{k}$, $HCM\_MDT$ imposes that the distribution of the values of feature $f_{i}$ is completely independent from the distribution of the values of feature $f_{j}$ ,$\forall f_{j}, f_{i}\in F , f_{j}\neq f_{i}$. In fact for each feature $f$, the the probabilities of its values in a given behavior $z_{k}$ sum to $1$ ($\sum_{v=1}^{I_{f}}p(v|z_{k},f)=1$).
+\\This requirement is one of the major strengths of $HCM\_MDT$. In fact, each feature represents a different type. Thus, there is no sense that two different types share the same distribution. For example, saying that location $"home"$ is selected with probability $0.5$ or day $"Monday"$ is selected with probability $0.5$ does not make sense. Indeed selecting the location and selecting the day are two $concurrent$ events and not $competing$ ones. This is because they belong to two different types (i.e features). However, it make sense to say that we select location $"home"$ (day $"monday"$) with probability 0.5 and location $"others"$ (day $"others"$) with probability 0.5. Indeed those two events are $competing$ because they belong to the same type (i.e feature). The fact that each feature has his own distribution over values allows $HCM\_MDT$ to model the concept of $concurrent$ and $competing$ events, which is an essential aspect for a dataset containing multiple types as the smartphone logs dataset.
+\\Actually, the main difference between $HCM\_MDT$ and $pLSI$ can be found here. In fact, $pLSI$ assumes a unique distribution for all the realizations for each class $z_{k}$. Thus, all the realizations share the same probability space and the representing the $concurrent$ concept is not possible. For this reason, $HCM\_MDT$ is a much more suited model that $pLSI$ in dealing with datasets containing mixed types of features.
+
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 
 \section{Generative HCM-MDT (GHCM-MDT) model}
-
-Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
-
-%----------------------------------------------------------------------------------------
-%	SECTION 3
-%----------------------------------------------------------------------------------------
-
-\section{GHCM-MDT inference and parameter estimation}
-
-Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
+While $HCM\_MDT$ has nice properties on mixed data types, it still has some imperfections. In this section, we introduce the Generative Hidden Class Model for Mixed Data Types ($GHCM\_MDT$) which is an improved version of $HCM\_MDT$ in the sense that it addresses the weaknesses of $HCM\_MDT$ that we are going to discuss.
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
-\subsection{Gibbs sampling}
+\subsection{Prior distributions}
+\label{3.1}
+To see how to proceed beyond $HCM\_MDT$, let's first have a look at some of it's weaknesses. First, it is important to note that $HCM\_MDT$ is incomplete in that it provides no probabilistic model at the level of records. In $HCM\_MDT$, each record is represented as a list of numbers (the mixing proportions of hidden classes), and there is no generative probabilistic model for these numbers. This leads to several problems: the number of parameters in the model ($KD+K\sum_{f=1}^{J}I_{f}$)grows linearly with the number of records and it is not clear how to assign a probability to a record outside the observed set. \par
 
-Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
+In $GHCM\_MDT$, we assume that the mixing proportions of hidden classes have a prior distribution. This means that a probability is assigned to each possible distribution of hidden classes. In other terms, each possible distribution of hidden classes $d_{i}$ has a probability $p_{d_{i}}$ to happen and the probabilities of all the possible distributions sum to 1, which means $\int_{d_{i}}p_{d{i}}=1$.
+\\Here, note that an integral was used to sum over the space of possible distributions. Indeed, the space of possible distributions over $K$ hidden classes is a continuous space defined as follows:
+\begin{equation}
+\left\{\begin{matrix}
+0\leqslant p(z_{k})\leqslant 1, \forall k \in \{1,...,K\}
+\\ 
+\sum_{k=1}^{K}p(z_{k})=1
+\end{matrix}\right.
+\end{equation}
+This is actually the $K-simplex$ space. \par
+
+Dirichlet distribution \cite{dirichlet_into} is a distribution that takes as input a vector $\mathbf{p}=[p_{1},...,p_{K}]$ of $K$ elements and assigns positive distribution to $\mathbf{p}$ if it belongs to the simplex space. If $\mathbf{p}$ does not belong to the simplex space, it gets a probability of $0$. In other terms, the Dirichlet distribution assigns positive probabilities to vectors that belong to the space of distributions and a $0$ probability otherwise.
+\\Dirichlet distribution depends on an hyperparameter vector $\boldsymbol{\alpha}=[\alpha _{1},...,\alpha _{K}] ,\alpha _{k}> 0, \forall k\in \{1,...,k\}$. It is the values of $\alpha _{k}, \forall k\in \{1,...,k\}$ that decide how the probabilities of Dirichlet are spread over the different possible distributions. For example with $\alpha _{k}=1, \forall k\in \{1,...,k\}$, Dirichlet distribution assigns equal probabilities to all the possible distributions $d_{x}$. For $\alpha _{k}\simeq 0, \forall k\in \{1,...,k\}$, Dirichlet assigns very low probabilities to equally distributed distributions and high probabilities to sparse distributions. In \cite{dirichlet_into}, J. Huang gives more detailed overview about the Dirichlet distribution. \par
+
+Because Dirichlet distribution have these nice properties, we use this distribution of parameters $\boldsymbol{\alpha}=[\alpha _{1},...,\alpha _{K}]$to model the prior distribution of hidden classes in a corpus of records (i.e assign probabilities to the possible distributions of behaviors in a corpus a corpus $R$).
+\\Simirarly, $GHCM\_MDT$ assumes a prior distribution over the mixture coefficients of realizations in a behavior $z_{k}$. This means that for each feature $f, \forall f \in F$ a Dirichlet distirbution of parameters $\boldsymbol{\beta }_{f}=[\beta _{f,1},...,\beta _{f,I_{f}}]$ assigns prior probabilities of the presence of of values of $f$ inside a behavior. Note that each feature $f$ has his own Dirichlet distribution and his own $\boldsymbol{\beta }_{f}$. \par
+
+Having explained the steps that lead to $GHCM\_MDT$, we are ready to describe the generative process of $GHCM\_MDT$.
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
+\subsection{Generation process}
+For now we assume that the Dirichlet parameters $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ are known. Let's suppose that we want to generate a record $\mathbf{r}_{1}$ of size $N$ belonging to a corpus $R=\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}$. Moreover, let's suppose that the record $\mathbf{r}_{1}$ we want to generate contains $N_{1}$ values form the vocabulary of feature $1$, $N_{2}$ values from the vocabulary of feature $2$, $N_{f}$ values from feature $f$ and $N_{J}$ values from feature $J$ ($\sum_{f=1}^{J}N_{f}=N$). For now, let's also assume that $\mathbf{r}_{1}$ contain al least one value from each feature (i.e $N_{f}\geq 1,\forall f\in F$).
+\\$GLMR$ assumes the following generation process:
+\begin{enumerate} 
+	\item for each hidden class $z_{k}, k\in[1,...,K]$:
+		\begin{enumerate}
+		 	\item for each feature $f\in F$:
+	 		 	\begin{enumerate}
+		 			\item select a distribution on the vocabulary of $f$ for hidden class $z_{k}$, $\boldsymbol{\phi _{f,k}}$ where $\boldsymbol{\phi _{f,k}}$ follows a Dirichlet distribution: $\boldsymbol{\phi _{f,k}}\sim 								Dir(\boldsymbol{\beta _{f}})$ \label{li2} 
+		 		\end{enumerate}
+		\end{enumerate}
+	\item generate $\mathbf{r}_{1}$ by doing the following: \label{li4}
+		\begin{enumerate}
+			\item choose a behavior proportions $\boldsymbol{\theta }$ for record $\mathbf{r}$ where $\boldsymbol{\theta }$ is a random variable vector following a Dirichlet distribution: $\boldsymbol{\theta }\sim 								Dir(\boldsymbol{\alpha })$ \label{li2} 
+			\item generate the values coming from the vocabulary of feature $1$ by doing the following: \label{li3}
+	 			\begin{enumerate}
+		 			\item generate the $1^{st}$ value $w_1$ by doing the following: \label{li3.1}
+	 		 			\begin{enumerate}
+		 					\item choose one behavior $z_{k},k\in [1,K]$ with probability $p(z_{k}|\boldsymbol{\theta })$, where $Z$ is a random variable that follows a multinomial distribution conditioned on the behavior 									distribution $\boldsymbol{\theta }$
+		 					\item knowing the behavior $z_{k},k\in [1,K]$, select a value from the vocabulary of feature $1$, $w_{1} \in V_{1}$ with probability $p(V=w_{1}|\boldsymbol{\phi _{1,k}})$, where $V$ is a random 								variable that follows a multinomial distribution conditioned on the behavior and the feature.
+		 				\end{enumerate}
+					\item repeat the process ~\ref{li3.1} to generate the values $w_{2},...,w_{N_{1}}$
+				\end{enumerate} 
+			\item repeat the process ~\ref{li3} to generate the values of the features $2,...,J$. 
+		\end{enumerate}
+	\item repeat the process ~\ref{li4} to generate the records $\mathbf{r}_{2},...,\mathbf{r}_{M}$. 
+\end{enumerate} \par
+
+The generation process described allows to fully generate a corpus of records. It provides ways to generate behaviors distribution for records and also vocabulary distributions for behaviors. Indeed $GLMR$ stars by generating $K$ sets of vocabularies distributions for all the corpus $R$ (i.e they are common to all the records). Each set of this $K$ sets contains $J$ distributions, meaning one distribution for the vocabulary of each feature. Actually, this $K$ sets of vocabulary distributions, named $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$, represents the $K$ behaviors describing the corpus $R$. After this, for each record $\mathbf{r}_{m}$, $GLMR$ generates a behavior distribution $\boldsymbol{\theta}_{m}$ for $\mathbf{r}_{m}$. Starting from that point, the generation process of $GLMR$ becomes exactly the same as the one of $LMR$. Actually, the difference between the two models can be expressed as follows. To be able to generates samples, $LMR$ needs to know a-priori $K$ sets of vocabulary distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ and behavior distributions $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ for each record $\mathbf{r}_{m}$. For $GLMR$, it only needs to know $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ and generates $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$  and $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ by his own. In this sense, we call it the $Generative$ $LMR$ ($GLMR$). \par
+
+Following the steps of the generative process, we iteratively derive the likelihood $L(R|\boldsymbol{\alpha}, \{\boldsymbol{\beta }_{f}\}_{\forall f\in F})$ of the corpus $R$. First, $L(R|\boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})$ is equal to the likelihood of the corpus $R$ knowing the vocabularies distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ summed over the probability of all possible vocabularies distributions.
+\begin{equation} \label{eqghcmmdtlik}
+\begin{split} 
+L(R|\boldsymbol{\alpha}, \{\boldsymbol{\beta }_{f}\}_{\forall f\in F})=p(R|\boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})
+\\=\prod_{k=1}^{K}\prod_{f=1}^{J}\int_{\boldsymbol{\phi}_{f,k}}p(\boldsymbol{\phi }_{f,k}|\boldsymbol{\beta }_{f})L(R|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\end{split} 
+\end{equation}
+Second, knowing the vocabularies distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$, the likelihood of the corpus is equal to the product of the likelihood of each record $\mathbf{r}_{m}$.
+\begin{equation}
+\begin{split} 
+L(R|\boldsymbol{\alpha}, \{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})=p(\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\\=\prod_{m=1}^{M}p(\mathbf{r}_{m}|\boldsymbol{\alpha}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\end{split} 
+\end{equation}
+Then, the likelihood of each record $\mathbf{r}_{m}$ can be expressed as the likelihood of the record $\mathbf{r}_{m}$ knowing its behavior distribution $\boldsymbol{\theta}_{m}$ summed over the probability of all possible behavior distributions.
+\begin{equation}
+\begin{split} 
+p(\mathbf{r}_{m}|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})=\int_{\boldsymbol{\theta}_{m} }p(\boldsymbol{\theta}_{m}|\boldsymbol{\alpha })p(\mathbf{r}_{m}|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\end{split} 
+\end{equation}
+Finally, the likelihood of a record $\mathbf{r}_{m}$ knowing its behavior distribution $\boldsymbol{\theta}_{m}$ and vocabularies distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ is expressed as the product of the likelihood of each realization. The latter quantity can then be computed similarly to $LMR$.
+\begin{equation}
+\begin{split} 
+p(\mathbf{r}_{m}|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})=\prod_{n=1}^{N_{m}}p((y_{n},w_{n})|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\\=\prod_{n=1}^{N_{m}}\sum_{k=1}^{K}p(w_{n}|\boldsymbol{\phi}_{y_{n},k})p(Z=z_{k}|\boldsymbol{\theta }_{m})
+\end{split} 
+\end{equation}
+ 
+This ends our definition of $GHCM\_MDT$ model. We assume that the smartphone logs we observe were generated by $GHCM\_MDT$. An for $HCM\_MDT$. Even if we assumed until now that $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ are known, in reality the parameters that generated this data are unknown and the only observable is the data. Here again, a good assumption is to say that good guesses of those parameters are parameters that maximize the likelihood (i.e the probability) of the observed corpus $L(R)$.
+\\In $GHCM\_MDT$, we note that the parameters that defines the model are the Dirichlet parameters $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$. Thus, the total number of parameters that needs to be estimated in $GHCM\_MDT$ is $K$ parameters for $\boldsymbol{\alpha}$ and $\sum_{f=1}^{J}I_{f}$ for $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$. We see that the number of parameters ($K+\sum_{f=1}^{J}I_{f}$ for $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$) to be estimated does not grow with the number of records (contrary to $HCM\_MDT$). \par
+
+We conclude this section by exposing other nice properties and advantages of $GHCM\_MDT$ compared to $HCM\_MDT$. The prior distribution on the mixture of behaviors allows to model some prior knowledge that one might have. For example by choosing $\alpha _{k}\simeq 0, \forall k\in \{1,...,k\}$, we can model the fact that a record should be composed by one or at most two behaviors (as $\alpha _{k}\simeq 0$ implies sparsity). This is a realistic assumption in the case where the time frame representing a record is small enough to assume that a user cannot have multiple behavior on that time frame.
+\\The prior distribution over the distribution of values in a behavior allows to smooth the model. Indeed, while $HCM\_MDT$ would attribute a $0$ probability to a new record containing a value never seen in observed records, $GHCM\_MDT$ would attribute a non null probability. This is thanks to the fact that the Dirichlet distribution do not include distributions that have $0$ elements. In \cite{dirinf}, H. M. Wallach, D. Mimno and A. McCallum explain in more detail the influence and the power of Dirichlet parameters in giving a valuable prior knowledge to a problem.\par
+
+Having explained $GHCM\_MDT$ model, the nice properties it comes with and the gain it brings with respect to $HCM\_MDT$, we close the circle n the next section by establishing relationships between $GHCM\_MDT$, $HCM\_MDT$, $pLSI$ and $LDA$ ($Latent$ $Dirichlet$ $Allocation$) \cite{lda}.
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+
+\section{Relationship between GHCM-MDT, HCMC-MDT, pLSI and Latent Dirichlet Allocation (LDA)} \label{relationshipghcmmdt}
+$Latent$ $Dirichlet$ $Allocation$ ($LDA$) was introduced by D. M. Blei, A. Y. Ng and M. I.Jordan \cite{lda} in 2003. It came as an improvement to $pLSI$, and following its publication in 2003, $LDA$\cite{lda} has made topic modeling one of the most popular and most successful paradigms for both supervised and unsupervised learning. LDA has several applications including in entity resolution  \cite{ldaex1}, fraud detection in telecommunication systems \cite{ldaex2}, and image processing \cite{ldaex3, daex4}, bioinformatics \cite{ldaex5} and political science \cite{ldaex6} in addition to the large number of applications in the field of text retrieval and computational linguistics \cite{ldaex7}. \par
+
+We briefly introduce $LDA$ applying it to the smartphone logs dataset.
+\\To generate a record $\mathbf{r}_{1}=[(y_{1},w_{1}),...,(y_{N},w_{N})]$ belonging to a corpus $R=\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}$, we do the following:
+\begin{enumerate} 
+	\item for each hidden class $z_{k}, k\in[1,...,K]$:
+		\begin{enumerate}
+		 	\item select a distribution $\boldsymbol{\phi _{k}}$ on the language of $R$ for hidden class $z_{k}$. The distribution $\boldsymbol{\phi _{k}}$ is of the size of the language and follows a Dirichlet distribution: $					\boldsymbol{\phi _{k}}\sim Dir(\boldsymbol{\beta})$ \label{li22}
+		\end{enumerate}
+	\item generate $\mathbf{r}_{1}$ by doing the following: \label{li4}
+		\begin{enumerate}
+			\item choose a behavior proportions $\boldsymbol{\theta }$ for record $\mathbf{r}$ where $\boldsymbol{\theta }$ is a random variable vector following a Dirichlet distribution: $\boldsymbol{\theta }\sim 								Dir(\boldsymbol{\alpha })$ \label{li22} 
+			\item generate $(y_{1},w_{1})$ by doing the following: \label{li23.1}
+	 			\begin{enumerate}
+		 			\item choose one behavior $z_{k},k\in [1,K]$ with probability $p(z_{k}|\boldsymbol{\theta })$, where $Z$ is a random variable that follows a multinomial distribution conditioned on the behavior distribution $						\boldsymbol{\theta }$
+		 			\item knowing the behavior $z_{k},k\in [1,K]$, select the realization $(y_{1},w_{1})$ where $y_{1}\in F$ and $w_{1}\in I_{f}$ with probability $p(V=(y_{1},w_{1})|\boldsymbol{\phi _{k}})$, where $V$ is a 							random variable that follows a multinomial distribution conditioned on the behavior
+				 \end{enumerate}
+			\item repeat the same process ~\ref{li23.1} to generate the values $(y_{2},w_{2}),...,(y_{N},w_{N})$ 
+		\end{enumerate}
+	\item repeat the process ~\ref{li4} to generate the records $\mathbf{r}_{2},...,\mathbf{r}_{M}$.
+\end{enumerate} \par
+
+As described by its generation process, $LDA$ is a fully generative graphical model for describing the latent behaviors of records. $LDA$ models every behavior as a distribution over the realizations of the language, and every record has a distribution over the behaviors. These distributions are sampled from Dirichlet distributions. The realizations of the records are drawn from the realization distribution of a behavior which was just drawn from the behavior distribution of the document. We note that $LDA$ brings the same advantages over $pLSI$ than $GHCM\_MDT$ over $HCM\_MDT$. Indeed, $LDA$ provides prior distributions that enable to input some prior knowledge about the problem, the number of its parameters does not grow with the number of records, it provides a probabilistic model at the level of records and at the level of hidden classes that enables to fully generate a corpus (and thus provides explicit way to assign a probability to a record outside the observed set) and handles realizations not seen in the observed logs.
+\\However, in $LDA$, the probability of values are spread over all the size of the language defined by corpus $R$. Thus, similarly to $pLSI$, $LDA$ fails in representing the $concurrent$ and $competing$ concepts. In $GHCM\_MDT$, the probabilities of values are spread only over the dictionary defined by their feature and the distributions of the different dictionaries are independent. As for $HCM\_MDT$, this enables $GHCM\_MDT$ to model the $concurrent$ and $competing$ concepts.
+\\In other terms, $GHCM\_MDT$ combines the advantages of $LDA$ over $pLSI$ and $HCM\_MDT$ over $pLSI$. It is a fully generative model that is suited for data containing mixed types.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 4
+%----------------------------------------------------------------------------------------
+
+\section{GHCM-MDT inference and parameter estimation}
+
+So far, we have described the motivation behind $GHCM\_MDT$, it's generation process and illustrated its conceptual advantages over other models.
+\\In this section, we turn our attention to procedures for inference and parameter estimation.
+
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+\subsection{Gibbs sampling} \label{gibbs_sampling}
+We recall that our main goal is to obtain $K$ behaviors expressed as a distribution over the vocabulary for each feature. However, after choosing the values of $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ in $GHCM\_MDT$, the exact distributions over behaviors $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ of the records $\{\mathbf{r}_{m}\}_{\forall m\in \{1,...,M\}}$ are not known. Moreover, the distribution of the vocabulary of each feature $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ in the behaviors $\{z_{k}\}_{ \forall k\in\{1,...,K\}}$ is also unknown. In fact, those distributions are needed because they are the ones that model the behaviors and the mixture of behaviors over the observed smartphone logs. In this section we suppose that the hyper-parameters ($\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$) that define the model are known and we describe a method that allows to estimate the distributions $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ and $\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$. \par
+
+We simplify the notations by setting $\boldsymbol{\Theta }=\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ and $\boldsymbol{\Phi }=\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$. Note that $\boldsymbol{\Theta }$ represents $M$ vectors of dimension $K$ and $\boldsymbol{\Phi }$ represents $K.J$ vectors each of dimension $I_{f}$, where $f$ refers to the feature the vector belongs to. Knowing the corpus and the hyper-parameters, we can express the posterior probability of having $\boldsymbol{\Theta }$ and $\boldsymbol{\Phi }$:
+\begin{equation}\label{eqghcmmdt4}
+\begin{split} 
+p(\boldsymbol{\Theta },\boldsymbol{\Phi }|R, \boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})=\frac{p(\boldsymbol{\Theta },\boldsymbol{\Phi },R| \boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})}{p(R| \boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})}
+\end{split} 
+\end{equation}
+Good estimates for $\boldsymbol{\Theta }$ and $\boldsymbol{\Phi }$ could be for example the estimates that maximize ~\eqref{eqghcmmdt4} or the expected value of ~\eqref{eqghcmmdt4}. In all the cases ~\eqref{eqghcmmdt4} needs to be computed. Unfortunately, because of the normalization over $L(R)$, ~\eqref{eqghcmmdt4} is intractable to compute. \par
+
+The same problem is encountered in $LDA$, and sophisticated approximations as variational inference \cite{varinf}, expectation propagation \cite{expprop} and Gibbs sampling \cite{gibbs} have been developed to estimate behaviors distributions in records and language distribution in behaviors. Our strategy for estimating  $\boldsymbol{\Theta }$ and $\boldsymbol{\Phi }$ is to use the latter approach (Gibbs sampling) because it is intuitive to understand, easy to implement and shows similar performances compared to the other estimation methods \cite{inferencecomp}.
+\\Gibbs sampling \cite{gibbsdef} is a commonly used technique for $LDA$ and is described in details in that context in \cite{gibbs}. We showed in ~\ref{relationshipghcmmdt} that $LDA$ and $GHCM\_MDT$ are very much related. This is also the case for the inference process using Gibbs sampling of both $LDA$ and $GHCM\_MDT$. For this reason, using references to works that used Gibbs sampling for $LDA$ allows us to make multiple shortcuts. We give below an overview of the Gibbs sampling method applied to $GHCM\_MDT$. \par
+
+In this section, let a corpus $R$ be represented as a vector $\mathbf{R}=\{(y_{1},w_{1}),...,(y_{S},w_{S})\}$ containing the realizations of all the records where each realization $(y_{s},w_{s}), s\in \{1,...,S\}$ belongs to some record $\{\mathbf{r}_{m}\}, m\in \{1,...,M\}$. Note that $S$ represents the total number of realizations present in the corpus (i.e $S=\sum_{m=1}^{M}N_{m}$).
+\\Let's imagine that we want to assign a class $z_{k}$ to each realization $(y_{s},w_{s}), s\in \{1,...,S\}$ in the corpus, meaning that the realization $(y_{s},w_{s}), s\in \{1,...,S\}$ was generated by behavior $z_{k}$. Let $\mathbf{c}=[c_{1},...,c_{s}]$ represents those assignments, where $c_{s}\in \{z_{1},...,z_{K}\}$ represents the class assigned to realization $(y_{s},w_{s})$.
+\\To guess $\boldsymbol{\Theta }$ and $\boldsymbol{\Phi }$, the idea is to estimate the  posterior distribution $p(\mathbf{c}|\mathbf{R})$ of the class assignments $\mathbf{c}$ knowing the observed realizations (In fact, in \cite{gibbs}, it is shown that $p(\mathbf{c}|\mathbf{R})$ cannot be computed, and thus need to be estimated). Intuitively, $p(c_{s}|(y_{s},w_{s}))$ represents the responsibility of $(y_{s},w_{s})$ in generating behavior $c_{s}$. Then, we can use the estimates of the responsibilities of realizations in generating the different classes ti estimate $\boldsymbol{\Theta }$ and $\boldsymbol{\Phi }$. \par
+
+To estimate the class assignments of each observed realization, we assume a Monte Carlo Markov chain \cite{montecarlo} where each state represents a possible class assignments vector $\mathbf{c}$, and transitions follow a simple rule. The next state is sampled sequentially by sampling all variables from their distribution when conditioned on the current values of all other variables and the data $p(c_{s}|\mathbf{c}_{-s},\mathbf{R})$ where $\mathbf{c}_{-s}$ the vector of assignments $\mathbf{c}$ from which we remove the $s^{th}$ assignment $c_{s}$.
+\\Simirarly to \cite{gibbs}, this probability can be computed and can be expressed as follows:
+\begin{equation}\label{gibbseq2}
+\begin{split} 
+p(c_{s}|\mathbf{c}_{-s},\mathbf{R})\sim \frac{n^{(y_{s},w_{s})}_{-s,k}+\beta _{y_{s},w_{s}}}{n^{(y_{s},.)}_{-s,k}+\sum_{v=1}^{I_{y_{s}}}\beta _{y_{s},v}}.\frac{n^{r_{m}}_{-s,k}+\alpha _{k}}{n^{r_{m}}_{-s,.}+\sum_{h=1}^{K}\alpha _{h}}
+\end{split} 
+\end{equation}
+where:
+\begin{itemize} 
+	\item $n^{(y_{s},w_{s})}_{-s,k}$ represents the number of values $v=w_{s}$ from the dictionary of feature $f=y_{s}$ that are assigned to behavior $z_{k}$ in the assignments vector $\mathbf{c}_{-s}$ (i.e without taking into 			account the assignment $c_{s}$).
+	\item $n^{(y_{s},.)}_{-s,k}$ represents the number of all values $\forall v \in V_{y_{s}}$ belonging to the dictionary of $f=y_{s}$ that are assigned to behavior $z_{k}$ in the assignments vector $\mathbf{c}_{-s}$.
+	\item  $n^{r_{m}}_{-s,k}$ represents the number of realizations from the record $\mathbf{r}_{m}$ that are assigned to behavior $z_{k}$ in the assignments vector $\mathbf{c}_{-s}$. Here, $\mathbf{r}_{m}$ represents the 		record to which belong the $s^th$ realization $(y_{s},w_{s})$
+	\item  $n^{r_{m}}_{-s,.}$ represents the number of realizations from the record $\mathbf{r}_{m}$ that have an assignment in the assignments vector $\mathbf{c}_{-s}$ (i.e $n^{r_{m}}_{-s,.}$=$N_{m}-1$).
+	\item  $\beta _{f,v}, f\in F, v \in V_{f}$ represents $v^{th}$ value of the prior vector of feature $f$, $\boldsymbol{\beta }_{f}$.
+\end{itemize}
+In comparison to the equivalent equation in $LDA$ \cite{gibbs}, $GHCM_MDT$ normalizes Eq. ~\eqref{gibbseq2} by summing only over the dictionary of the feature considered, whereas $LDA$ normalizes by summing over the whole language.
+\\Having obtained the full conditional distribution, the Monte Carlo algorithm is then straightforward. The $c_{s}$ variables are initialized to values in $\{z_{1},...,z_{K}\}$, determining the initial state of the Markov chain. Then we start moving from state to state following the rule described in Eq. ~\eqref{gibbseq2} until we reach a state where the Markov Chain has converged. The state $\mathbf{c}_{conv}$ we converge to is a good estimate of classes assignments of the corpus $\mathbf{R}$. In practice, we usually record multiple assignments $\mathbf{c}_{conv}$ and combine them to improve the approximation of the class assignments. In \cite{inferencecomp}, the effect of averaging multiple samples is discussed in more details.
+\\When having estimated $\mathbf{c}_{conv}$, approximations of $\boldsymbol{\Theta }$ can be exactly computed as for $LDA$ \cite{gibbs} (Indeed, $GHCM_MDT$ and $LDA$ assume exactly the same probabilistic model at the record level). For each record $\mathbf{r}_{m}$ and behavior $z_{k}$, we have:
+\begin{equation}\label{gibbseqtheta}
+\begin{split} 
+\widehat{\theta}_{m,k}= p(z_{k}|\mathbf{r}_{m})= \frac{n^{r_{m}}_{k}+\alpha _{k}}{n^{(.)}_{k}+\sum_{h=1}^{K}\alpha _{h}}
+\end{split} 
+\end{equation}
+
+$\boldsymbol{\Phi }$ can be derived in a similar manner that for $LDA$ \cite{gibbs}. The only difference is that in $GHCM_MDT$, the dictionaries of the different features is considered separately whereas in $LDA$ all the language is considered at the same time. The approximation $\widehat{\phi}_{f,k,v}$ of the probability to generate the value $v$ of the feature $f$ from the behavior $z_{k}$ is:
+\begin{equation}\label{gibbseqphi}
+\begin{split} 
+\widehat{\phi}_{f,k,v}= p(v|z_{k},f)= \frac{n^{(f,v)}_{k}+\beta _{f,v}}{n^{(f,.)}_{k}+\sum_{v=1}^{I_{f}}\beta _{f,v}}
+\end{split} 
+\end{equation}
+where $n$ in both Eq. ~\eqref{gibbseqtheta} and ~\eqref{gibbseqphi} is defined as in Eq. ~\eqref{gibbseq2}.
+
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 \subsection{Hyperparameters estimation}
 
-Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
+So far, we have considered that $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ are fixed. However, as we discussed in section \ref{3.1}, we suppose that the observed smartphone logs were generated by a $GHCM\_MDT$ model with parameters that maximize the likelihood $L(R)$ of the observed corpus $R$. This means that the optimal parameters $\boldsymbol{\widehat{\alpha}_{best}}$ and $\{\boldsymbol{\widehat{\beta }_{best}}_{f}\}_{\forall f\in F}$ are parameters that set the derivative of $L(R)$ to $0$. However, these equations are not solvable. Indeed, as many models based on latent variables, the result is a set of interlocking equations in which the solution to the parameters requires the values of the latent variables and vice versa, but substituting one set of equations into the other produces an unsolvable equation. In this section, we explain how $\boldsymbol{\widehat{\alpha}_{best}}$ and $\{\boldsymbol{\widehat{\beta }_{best}}_{f}\}_{\forall f\in F}$ can be estimated. \par
+
+We recall that the hyper-parameter $\boldsymbol{\alpha}$ ($\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$) is the concentration parameter to a Dirichlet distribution, from which the multinomial probability vectors $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ ($\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$) are generated. Thus, $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ ($\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$) are all conditionally independent given $\boldsymbol{\alpha}$($\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$), and $\boldsymbol{\alpha}$($\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$) is conditionally independent from all the other variables given $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$($\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$). This means that if $\{\boldsymbol{\theta}_{m}\}_{\forall m\in \{1,...,M\}}$ and $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ are known, then finding $\boldsymbol{\widehat{\alpha}_{best}}$ and $\{\boldsymbol{\widehat{\beta }_{best}}_{f}\}_{\forall f\in F}$ reduces to the problem of estimating a Dirichlet parameter from the observed multinomial distribution that it generated. \par
+
+In \cite{diring}, T. P. Minka shows different methods of inferring a Dirichlet parameter $\boldsymbol{\alpha}$ when samples generated from that Dirichlet are observed. In particular, if a Dirichlet distribution with an unknown parameter vector $\boldsymbol{\alpha}$ (of size $K$) has generated multinomial distributions $\{\boldsymbol{\theta}_{m}\}$, and if some discrete observable samples $\{z_{k}\}$ where drawn from $\{\boldsymbol{\theta}_{m}\}$, then the $\boldsymbol{\widehat{\alpha}_{best}}$ that generated those distributions can be found iteratively using the following equation:
+\begin{equation}\label{direst}
+\begin{split} 
+\alpha_{k}^{new}= \alpha_{k} \frac{\sum_{m=1}^{M}(\Psi (n^{m}_{k}+\alpha_{k}))-\Psi (\alpha_{k}))}{\sum_{m=1}^{M}(\Psi (n^{m}_{(.)}+\sum_{k=1}^{K}\alpha _{k})-\Psi (\sum_{k=1}^{K}\alpha _{k}))}
+\end{split} 
+\end{equation}
+where:
+\begin{itemize} 
+	\item $n^{m}_{k}$ represents the number of times the $k^{th}$ sample $z_{k}$ were observed during the samplings from the $m_{th}$ multinomial distribution   $\boldsymbol{\theta}_{m}$ generated by the Dirichlet distribution.
+	\item $n^{m}_{(.)}$ represents the number of observed samplings from the $m_{th}$ multinomial distribution   $\boldsymbol{\theta}_{m}$ generated by the Dirichlet distribution..
+	\item  $\Psi$ is the digamma function.
+\end{itemize}
+
+Using equation Eq. ~\eqref{direst}, finding the estimates $\boldsymbol{\widehat{\alpha}_{best}}$ and $\{\boldsymbol{\widehat{\beta }_{best}}_{f}\}_{\forall f\in F}$ becomes straightforward. First, we initialize  $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ with some random values, then we compute new values for $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ after each Gibbs sampling cycle until convergence using the following equations:
+\begin{equation}\label{alphaest}
+\begin{split} 
+\alpha_{k}^{new}= \alpha_{k} \frac{\sum_{m=1}^{M}(\Psi (n^{r_{m}}_{k})-\Psi (\alpha_{k}))}{\sum_{m=1}^{M}(\Psi (n^{r_{m}}_{(.)}+\sum_{k=1}^{K}\alpha _{k})-\Psi (\sum_{k=1}^{K}\alpha _{k}))}
+\end{split} 
+\end{equation}
+\begin{itemize} 
+	\item  $n^{r_{m}}_{k}$ represents the number of realizations from the record $\mathbf{r}_{m}$ that are assigned to behavior $z_{k}$ in the assignments vector $\mathbf{c}$ (resulted from Gibbs sampling). Here, $\mathbf{r}_{m}$
+	\item  $n^{r_{m}}_{(.)}$ represents the number of realizations from the record $\mathbf{r}_{m}$ that have an assignment in the assignments vector $\mathbf{c}$ (i.e $n^{r_{m}}_{.}$=$N_{m}$).
+\end{itemize}
+
+\begin{equation}\label{betaest}
+\begin{split} 
+\beta_{f,v}^{new}= \beta_{f,v} \frac{\sum_{k=1}^{K}(\Psi (n^{(f,v)}_{k}+\beta _{f,v})-\Psi (\beta_{f,v}))}{\sum_{k=1}^{K}(\Psi (n^{(f,.)}_{(k)}+\sum_{u=1}^{I_{f}}\beta _{f,u})-\Psi (\sum_{u=1}^{I_{f}}\beta _{f,u}))}
+\end{split} 
+\end{equation}
+\begin{itemize} 
+	\item $n^{(f,v)}_{k}$ represents the number of values $v$ from the dictionary of feature $f$ that are assigned to behavior $z_{k}$ in the assignments vector $\mathbf{c}$
+	\item $n^{(f,.)}_{-k}$ represents the number of all values $\forall v \in V_{f}$ belonging to the dictionary of $f$ that are assigned to behavior $z_{k}$ in the assignments vector $\mathbf{c}$
+\end{itemize} \par
+
+This ends our discussion about $GHCM_MDT$. In this chapter, we exposed a model that was specifically built to answer our needs. It is a fully generative process, resists to overfitting thanks to a number of parameters that does not grow with the size of the corpus and learns prior knowledge about the problem that enables it to deal with new coming data (new records and new realizations). Moreover, it is able to treat different types separately by representing them on different distributions and in the same time combine them to represent hidden classes that are commonly described by the different types. We also showed efficient methods to estimate the parameters and the hidden variables from the observed data.
 
 
-%----------------------------------------------------------------------------------------
-%	SECTION 4
-%----------------------------------------------------------------------------------------
-
-\section{Handling unseen data with GHCM-MDT}
-
-Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
 
 
-
-%----------------------------------------------------------------------------------------
-%	SECTION 5
-%----------------------------------------------------------------------------------------
-
-\section{Relationship between GHCM-MDT and Latent Dirichlet Allocation (LDA)}
-
-Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
 
 

@@ -10,9 +10,46 @@
 
 \section{Definitions and notations}
 
+In this work, we take an interest on datasets containing smartphone log of a use. We refer to those datasets as $data$, $smartphone logs$, $user logs$ or $dataset$.
+
+The particularity of those logs is that they contain different information sources and types. They contain for example information about the location of the user, the activities he is doing, the applications he uses, the settings he puts in the phone, the notifications he receives, the bluetooth devices he connects to and the external devices that he connects to the phone (headset, powerplug).
+We refer to these different types as $features$ or $types$.
+
+Smartphone logs contains multiple features ($Location$, $Notification$) where each feature can take multiple values. For example, feature $Location$ can take values $Home$, $Work$, the feature $Activity$ can take values as $on\_foot$, $on\_bicycle$, $in\_vehicle$ and $still$. We refer to the values of a feature $frame$ as the $values$ of feature $frame$ or the $vocabulary$ of feature $frame$.
+
+We note the set $F= \left \{ 1,.., J \right \}$ as the set representing a user logs containing J different features. Here, we refer to features as ids and no longer as names. We nite $f \in F$ as the feature number $f$.
+
+Similarly, we note the set $V_f = \left \{ 1,.., I_f \right \} $ as the set representing the $I_f$ different values that can be taken by $f, f \in F$. We refer to values as ids and no longer as names. Note that $I_f$ represents the vocabulary size of feature $f$. $v \in V_f$ indicates the value number $v$ of the feature $f$.
+
+Thus, the complete values space of the dataset is completely defined by the sets $F$ and $v_1,...,v_f$. We refer to this $complete values space$ as the $language$ defined by the dataset. Note that the size of the language is just the sum of the vocabulary sizes of all the features ($\sum_{f=1}^{F} I_f$).
+
+A $data point$, also called a $realization$ is then represented as the pair $(f,v)$ which means the $v^{th}$ value of the $f^{th}$ feature.
+
+The user logs is nothing than a set of multiple realizations where each data point $(f,v)$ is linked with a time stamp indicating it s time of occurence.
+
+Let the $record$ be the set of realizations that occured during a certain time frame. Thus a record containing n realizations $\left \{ (y_1,w_1),..., (y_N,w_N) \right \}$ that all occured in the same time frame can be represented as vector $\mathbf{r} = [(y_1,w_1),..., (y_N,w_N)]$. Here $y \in F$ denotes the feature of the $n^{th}$ realization and $w_n$ the values of the $n^{th}$ realization (i.e the value taken by the feature $y_n$).
+
+Using the record definition, smartphone logs can be represented as a set of records where each record contains the data points that occured during a certain period in the time. A period could be for example 1 hour. In this case, each record represents 1 hour of the period of observation of a user.
+
+Using this representation a smartphone logs can be represented as a set $R = \left \{ \mathbf{r_1},...,\mathbf{r_M} \right \} $, of $M$ records, where each record $\mathbf{r_m}$ has a size $N_m$, for $m \in \left \{ (1,...,M \right \}$.
+
+We call $R$ a corpus and when considering about this representation, we may refer to smartphone logs as a $corpus$.
+
 %----------------------------------------------------------------------------------------
 \section{Problem Statement}
+The goal that drives our work is to extract the behaviors and habits of a user from his smartphone logs data.
+In fact, all individuals have their own behaviors and habbits that they repeat periodically over the time. For example, an individual generally use to work during the week days, to sleep at home during the night. He might also be playing sport once a week, listening to music while driving or reading news when he is in the bus.
 
+The question is, without previously knowing any behavior of the use, how well can we discover and extract the behaviors by analyzing a user logs.
+We can note that each of the examples of behaviors given above can be represented by the smatphone logs as a set containing a specific types of realizations. For example, the behavior working on the week days can be represented by the set $\{$ $(day: monday),$ $(day: tuesday),$$...,$$(day: friday),$$(hour: 8am-6pm),$ $(location: work) \}$.  The behavior listening to music while driving could be represented by the set $\{ (Activity: in\- vehicle),$ $(Application Launch: music)\}$.
+
+More generally, most of humans behaviors that can be expressed by smartphone logs that one think of can be represented as a group containing some realizations. For this reason and starting from this observations, the approach that we decide to take in our work is to consider a behavior as a set of data logs realizations.
+
+We define a behavior z as a set of data realizations.  By considering smartphone logs as a data showing a subsample of a user s life, then the task of finding the behaviors that are the most representative of his life is equivalent to find the groups of realizations that are the most descriptive of the smartphone dat. The terms $habbits$, $class$ or $cluster$ are also used to refer to a behavior.
+
+Formulating our problem differently, we aim to find a set of $K$ classes $\{ z_1,...,z_K \} $, where each class is a group of realizations. This means that those classes represents short descriptions of the dataset while preserving the essential statistical relationships of the data. It is this requirement that imposes the classes to represent real user s behaviors.
+
+In section 8, we discuss in more details what does this requirement mean, what does it imply and how it can be measured.
 %----------------------------------------------------------------------------------------
 
 
