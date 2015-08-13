@@ -12,38 +12,33 @@
 \contentsline {section}{\numberline {2.1}Definitions and notations}{4}{section.14}
 \contentsline {section}{\numberline {2.2}Problem Statement}{5}{section.15}
 \contentsline {section}{\numberline {2.3}Related work}{6}{section.16}
-\contentsline {subsection}{\numberline {2.3.1}Problems addressed}{6}{subsection.17}
-\contentsline {subsection}{\numberline {2.3.2}Methods used}{6}{subsection.18}
-\contentsline {subsection}{\numberline {2.3.3}Evaluation methods}{6}{subsection.19}
-\contentsline {subsection}{\numberline {2.3.4}Critics}{6}{subsection.20}
-\contentsline {chapter}{\numberline {3}Generative Hidden Class Model for Mixed Data Types (GHCM-MDT)}{7}{chapter.21}
-\contentsline {section}{\numberline {3.1}Hidden Class Model for Mixed Data Types (HCM-MDT)}{7}{section.22}
-\contentsline {subsection}{\numberline {3.1.1}HCM-MDT model}{8}{subsection.23}
-\contentsline {subsection}{\numberline {3.1.2}Relationship between HCM-MDT and Probabilistic Latent Semantic Indexing (pLSI)}{11}{subsection.34}
-\contentsline {section}{\numberline {3.2}Generative HCM-MDT (GHCM-MDT) model}{12}{section.38}
-\contentsline {subsection}{\numberline {3.2.1}Prior distributions}{12}{subsection.39}
-\contentsline {subsection}{\numberline {3.2.2}Generation process}{14}{subsection.41}
-\contentsline {section}{\numberline {3.3}Relationship between GHCM-MDT, HCMC-MDT, pLSI and Latent Dirichlet Allocation (LDA)}{16}{section.58}
-\contentsline {section}{\numberline {3.4}GHCM-MDT inference and parameter estimation}{18}{section.68}
-\contentsline {subsection}{\numberline {3.4.1}Gibbs sampling}{18}{subsection.69}
-\contentsline {subsection}{\numberline {3.4.2}Hyperparameters estimation}{21}{subsection.74}
-\contentsline {chapter}{\numberline {4}Baseline Models}{23}{chapter.78}
-\contentsline {section}{\numberline {4.1}Singular Value Decomposition (SVD)}{23}{section.79}
-\contentsline {subsection}{\numberline {4.1.1}matrix representation of the smartphone logs}{23}{subsection.80}
-\contentsline {subsection}{\numberline {4.1.2}TF-IDF transformation}{23}{subsection.81}
-\contentsline {section}{\numberline {4.2}Linearly Constrained Bayesian Matrix Factorization (LCBMF)}{24}{section.82}
-\contentsline {subsection}{\numberline {4.2.1}The LCBMF model}{24}{subsection.83}
-\contentsline {subsection}{\numberline {4.2.2}Linear constrains for smartphone logs matrix}{24}{subsection.84}
-\contentsline {chapter}{\numberline {5}Evaluation metrics}{25}{chapter.85}
-\contentsline {section}{\numberline {5.1}Features prediction}{25}{section.86}
-\contentsline {section}{\numberline {5.2}Maximum Likelihood}{27}{section.89}
-\contentsline {section}{\numberline {5.3}Space Projection}{29}{section.93}
-\contentsline {chapter}{\numberline {6}Results and Discussion}{31}{chapter.100}
-\contentsline {section}{\numberline {6.1}Presenting the Dataset}{31}{section.101}
-\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{31}{subsection.102}
-\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{31}{subsection.103}
-\contentsline {section}{\numberline {6.2}Experimental results}{31}{section.104}
-\contentsline {chapter}{\numberline {7}Conclusion}{32}{chapter.105}
+\contentsline {chapter}{\numberline {3}Generative Hidden Class Model for Mixed Data Types (GHCM-MDT)}{8}{chapter.17}
+\contentsline {section}{\numberline {3.1}Hidden Class Model for Mixed Data Types (HCM-MDT)}{8}{section.18}
+\contentsline {subsection}{\numberline {3.1.1}HCM-MDT model}{9}{subsection.19}
+\contentsline {subsection}{\numberline {3.1.2}Relationship between HCM-MDT and Probabilistic Latent Semantic Indexing (pLSI)}{12}{subsection.30}
+\contentsline {section}{\numberline {3.2}Generative HCM-MDT (GHCM-MDT) model}{13}{section.34}
+\contentsline {subsection}{\numberline {3.2.1}Prior distributions}{13}{subsection.35}
+\contentsline {subsection}{\numberline {3.2.2}Generation process}{15}{subsection.37}
+\contentsline {section}{\numberline {3.3}Relationship between GHCM-MDT, HCMC-MDT, pLSI and Latent Dirichlet Allocation (LDA)}{17}{section.54}
+\contentsline {section}{\numberline {3.4}GHCM-MDT inference and parameter estimation}{19}{section.64}
+\contentsline {subsection}{\numberline {3.4.1}Gibbs sampling}{19}{subsection.65}
+\contentsline {subsection}{\numberline {3.4.2}Hyperparameters estimation}{22}{subsection.70}
+\contentsline {chapter}{\numberline {4}Matrix Factorization Models}{24}{chapter.74}
+\contentsline {section}{\numberline {4.1}Singular Value Decomposition (SVD)}{24}{section.75}
+\contentsline {subsection}{\numberline {4.1.1}matrix representation of the smartphone logs}{24}{subsection.76}
+\contentsline {subsection}{\numberline {4.1.2}TF-IDF transformation}{25}{subsection.77}
+\contentsline {section}{\numberline {4.2}Linearly Constrained Bayesian Matrix Factorization (LCBMF)}{26}{section.78}
+\contentsline {subsection}{\numberline {4.2.1}LCBMF applications and examples}{26}{subsection.79}
+\contentsline {subsection}{\numberline {4.2.2}Linear constrains for smartphone logs matrix}{27}{subsection.80}
+\contentsline {chapter}{\numberline {5}Evaluation metrics}{29}{chapter.81}
+\contentsline {section}{\numberline {5.1}Features prediction}{29}{section.82}
+\contentsline {section}{\numberline {5.2}Maximum Likelihood}{31}{section.85}
+\contentsline {section}{\numberline {5.3}Space Projection}{33}{section.89}
+\contentsline {chapter}{\numberline {6}Results and Discussion}{35}{chapter.96}
+\contentsline {section}{\numberline {6.1}Presenting the Dataset}{35}{section.97}
+\contentsline {section}{\numberline {6.2}Feature prediction results}{36}{section.106}
+\contentsline {section}{\numberline {6.3}Feature prediction results}{39}{section.109}
+\contentsline {chapter}{\numberline {7}Conclusion}{41}{chapter.110}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{33}{appendix.106}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{42}{appendix.111}
 \vspace {2em}
