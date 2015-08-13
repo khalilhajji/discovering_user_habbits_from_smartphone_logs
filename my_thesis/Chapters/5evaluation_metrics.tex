@@ -36,8 +36,7 @@ where
 \end{itemize}
 Note that naive classifier described above would have a score of $Average\_Accuracy_{naive}=\frac{1}{3}(Accuracy_{Home}+Accuracy_{Work}+Accuracy_{Others})=0.33$, which represents a low score. To evaluate the generalization performances of a model, one should always look at the scores of both$Accuracy$ and $Average\_Accuracy$.\par
 
-To make the guesses $v_{m}^{pred}=\mathfrak{M}(\mathbf{r}_{m}^{-f})$, probabilistic models use maximum likelihood while matrix factorization models use projection space techniques. In the next sections, we explain each of the two techniques. We conclude this section by the following observation: in the process described above a value $v^{pred}$ is guessed from a record and then we check if this value belongs to the right category. Note that this is different from guessing a category from a record and then verifying if it is the right category. Guessing a category would require combining the guesses of all the values belonging to the same category. While combining guesses of different values is possible in probabilistic models, it is not clear how this can be done in matrix factorization models. Thus, to have a fair test that applies the same conditions for all the models, we decide to use the described approach.
-
+To make the guesses $v_{m}^{pred}=\mathfrak{M}(\mathbf{r}_{m}^{-f})$, probabilistic models use maximum likelihood while matrix factorization models use projection space techniques. In the next sections, we explain each of the two techniques. 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------

@@ -5,40 +5,35 @@
 \contentsline {chapter}{Contents}{iii}{dummy.3}
 \contentsline {chapter}{List of Figures}{v}{dummy.5}
 \contentsline {chapter}{List of Tables}{vi}{dummy.7}
-\contentsline {chapter}{Symbols}{vii}{dummy.9}
-\vspace {2em}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}
-\contentsline {chapter}{\numberline {2}Preliminaries}{4}{chapter.13}
-\contentsline {section}{\numberline {2.1}Definitions and notations}{4}{section.14}
-\contentsline {section}{\numberline {2.2}Problem Statement}{5}{section.15}
-\contentsline {section}{\numberline {2.3}Related work}{6}{section.16}
-\contentsline {chapter}{\numberline {3}Generative Hidden Class Model for Mixed Data Types (GHCM-MDT)}{8}{chapter.17}
-\contentsline {section}{\numberline {3.1}Hidden Class Model for Mixed Data Types (HCM-MDT)}{8}{section.18}
-\contentsline {subsection}{\numberline {3.1.1}HCM-MDT model}{9}{subsection.19}
-\contentsline {subsection}{\numberline {3.1.2}Relationship between HCM-MDT and Probabilistic Latent Semantic Indexing (pLSI)}{12}{subsection.30}
-\contentsline {section}{\numberline {3.2}Generative HCM-MDT (GHCM-MDT) model}{13}{section.34}
-\contentsline {subsection}{\numberline {3.2.1}Prior distributions}{13}{subsection.35}
-\contentsline {subsection}{\numberline {3.2.2}Generation process}{15}{subsection.37}
-\contentsline {section}{\numberline {3.3}Relationship between GHCM-MDT, HCMC-MDT, pLSI and Latent Dirichlet Allocation (LDA)}{17}{section.54}
-\contentsline {section}{\numberline {3.4}GHCM-MDT inference and parameter estimation}{19}{section.64}
-\contentsline {subsection}{\numberline {3.4.1}Gibbs sampling}{19}{subsection.65}
-\contentsline {subsection}{\numberline {3.4.2}Hyperparameters estimation}{22}{subsection.70}
-\contentsline {chapter}{\numberline {4}Matrix Factorization Models}{24}{chapter.74}
-\contentsline {section}{\numberline {4.1}Singular Value Decomposition (SVD)}{24}{section.75}
-\contentsline {subsection}{\numberline {4.1.1}matrix representation of the smartphone logs}{24}{subsection.76}
-\contentsline {subsection}{\numberline {4.1.2}TF-IDF transformation}{25}{subsection.77}
-\contentsline {section}{\numberline {4.2}Linearly Constrained Bayesian Matrix Factorization (LCBMF)}{26}{section.78}
-\contentsline {subsection}{\numberline {4.2.1}LCBMF applications and examples}{26}{subsection.79}
-\contentsline {subsection}{\numberline {4.2.2}Linear constrains for smartphone logs matrix}{27}{subsection.80}
-\contentsline {chapter}{\numberline {5}Evaluation metrics}{29}{chapter.81}
-\contentsline {section}{\numberline {5.1}Features prediction}{29}{section.82}
-\contentsline {section}{\numberline {5.2}Maximum Likelihood}{31}{section.85}
-\contentsline {section}{\numberline {5.3}Space Projection}{33}{section.89}
-\contentsline {chapter}{\numberline {6}Results and Discussion}{35}{chapter.96}
-\contentsline {section}{\numberline {6.1}Presenting the Dataset}{35}{section.97}
-\contentsline {section}{\numberline {6.2}Feature prediction results}{36}{section.106}
-\contentsline {section}{\numberline {6.3}Feature prediction results}{39}{section.109}
-\contentsline {chapter}{\numberline {7}Conclusion}{41}{chapter.110}
-\vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{43}{appendix.111}
-\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.9}
+\contentsline {chapter}{\numberline {2}Preliminaries}{4}{chapter.10}
+\contentsline {section}{\numberline {2.1}Definitions and notations}{4}{section.11}
+\contentsline {section}{\numberline {2.2}Problem Statement}{5}{section.12}
+\contentsline {section}{\numberline {2.3}Related work}{6}{section.13}
+\contentsline {chapter}{\numberline {3}Generative Hidden Class Model for Mixed Data Types (GHCM-MDT)}{8}{chapter.14}
+\contentsline {section}{\numberline {3.1}Hidden Class Model for Mixed Data Types (HCM-MDT)}{8}{section.15}
+\contentsline {subsection}{\numberline {3.1.1}HCM-MDT model}{9}{subsection.16}
+\contentsline {subsection}{\numberline {3.1.2}Relationship between HCM-MDT and Probabilistic Latent Semantic Indexing (pLSI)}{12}{subsection.27}
+\contentsline {section}{\numberline {3.2}Generative HCM-MDT (GHCM-MDT) model}{13}{section.31}
+\contentsline {subsection}{\numberline {3.2.1}Prior distributions}{13}{subsection.32}
+\contentsline {subsection}{\numberline {3.2.2}Generation process}{15}{subsection.34}
+\contentsline {section}{\numberline {3.3}Relationship between GHCM-MDT, HCMC-MDT, pLSI and Latent Dirichlet Allocation (LDA)}{17}{section.51}
+\contentsline {section}{\numberline {3.4}GHCM-MDT inference and parameter estimation}{19}{section.61}
+\contentsline {subsection}{\numberline {3.4.1}Gibbs sampling}{19}{subsection.62}
+\contentsline {subsection}{\numberline {3.4.2}Hyperparameters estimation}{22}{subsection.67}
+\contentsline {chapter}{\numberline {4}Matrix Factorization Models}{24}{chapter.71}
+\contentsline {section}{\numberline {4.1}Singular Value Decomposition (SVD)}{24}{section.72}
+\contentsline {subsection}{\numberline {4.1.1}matrix representation of the smartphone logs}{24}{subsection.73}
+\contentsline {subsection}{\numberline {4.1.2}TF-IDF transformation}{25}{subsection.74}
+\contentsline {section}{\numberline {4.2}Linearly Constrained Bayesian Matrix Factorization (LCBMF)}{26}{section.75}
+\contentsline {subsection}{\numberline {4.2.1}LCBMF applications and examples}{26}{subsection.76}
+\contentsline {subsection}{\numberline {4.2.2}Linear constrains for smartphone logs matrix}{27}{subsection.77}
+\contentsline {chapter}{\numberline {5}Evaluation metrics}{29}{chapter.78}
+\contentsline {section}{\numberline {5.1}Features prediction}{29}{section.79}
+\contentsline {section}{\numberline {5.2}Maximum Likelihood}{31}{section.82}
+\contentsline {section}{\numberline {5.3}Space Projection}{32}{section.86}
+\contentsline {chapter}{\numberline {6}Results and Discussion}{34}{chapter.93}
+\contentsline {section}{\numberline {6.1}Presenting the Dataset}{34}{section.94}
+\contentsline {section}{\numberline {6.2}Feature prediction results}{35}{section.103}
+\contentsline {section}{\numberline {6.3}Feature prediction results}{38}{section.106}
+\contentsline {chapter}{\numberline {7}Conclusion}{40}{chapter.107}
