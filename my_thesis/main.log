@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 AUG 2015 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 AUG 2015 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1260,14 +1260,14 @@ Chapter 7.
 ------------------------------------------------------------------------------
  7 Conclusion
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [41
+[41
 
-]
+]) (./Appendices/AppendixA.tex [42]
 Appendix A.
 ------------------------------------------------------------------------------
  A Appendix Title Here
 ------------------------------------------------------------------------------
-) [42
+) [43
 
 ]
 ------------------------------------------------------------------------------
@@ -1294,8 +1294,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 13329 strings out of 493089
- 186847 string characters out of 6134842
+ 13330 strings out of 493089
+ 186854 string characters out of 6134842
  263643 words of memory out of 5000000
  16424 multiletter control sequences out of 15000+600000
  17786 words of font info for 63 fonts, out of 8000000 for 9000
@@ -1322,10 +1322,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (51 pages, 574920 bytes).
+Output written on main.pdf (52 pages, 577256 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 571 compressed objects within 6 object streams
- 163 named destinations out of 1000 (max. 500000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 164 named destinations out of 1000 (max. 500000)
  323 words of extra memory for PDF output out of 10000 (max. 10000000)
 
