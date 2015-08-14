@@ -1,0 +1,132 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[V~Etter(2013)]{wheretogo}
+E.~Kazemi M. Grossglauser P.~Thiran V~Etter, M.~Kafsi.
+\newblock Where to go from here? mobility prediction from instantaneous
+  information.
+\newblock 2013.
+
+\bibitem[H.~Zhu(2012)]{mobapp}
+E.~Chen H. Xiong J.~Tian H.~Zhu, H.~Cao.
+\newblock Exploiting enriched contextual information for mobile app
+  classification.
+\newblock 2012.
+
+\bibitem[H.~Cao(2010)]{interaction}
+Q.~Yang E. Chen J.~Tian H.~Cao, T.~Bao.
+\newblock An effective approach for mining mobile user habits.
+\newblock 2010.
+\newblock URL
+  \url{http://staff.ustc.edu.cn/~cheneh/paper_pdf/2010/p1677-cao.pdf}.
+
+\bibitem[H.~Ma(2012)]{superbehaviors}
+Q~Yang E. Chen J.~Tian H.~Ma, H~Cao.
+\newblock A habit mining approach for discovering similar mobile users.
+\newblock 2012.
+
+\bibitem[Hawthorn(1999)]{plsi}
+C.~J. Hawthorn.
+\newblock Probabilistic latent semantic indexing.
+\newblock \emph{Proceeding of the Twenty-Second Annual International SIGIR
+  Conference on Research and Development in Information Retrieval}, 1999.
+\newblock URL \url{http://cs.brown.edu/~th/papers/Hofmann-SIGIR99.pdf}.
+
+\bibitem[Huang(2005)]{dirichlet_into}
+J.~Huang.
+\newblock Maximum likelihood estimation of dirichlet distribution.
+\newblock 2005.
+\newblock URL \url{http://jonathan-huang.org/research/dirichlet/dirichlet.pdf}.
+
+\bibitem[H.~M.~Wallach(2009)]{dirinf}
+A.~McCallum H.~M.~Wallach, D.~Mimno.
+\newblock Rethinking lda: Why priors matter.
+\newblock 2009.
+\newblock URL
+  \url{http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2009_0929.pdf}.
+
+\bibitem[D.~M.Blei(2003)]{lda}
+M.~I.Jordan D.~M.Blei, A.~Y.Ng.
+\newblock Latent dirichlet allocation.
+\newblock \emph{Journal of Machine Learning Research 3 (2003)}, 2003.
+\newblock URL
+  \url{https://www.cs.princeton.edu/~blei/papers/BleiNgJordan2003.pdf}.
+
+\bibitem[T.Minka(2002)]{expprop}
+J.~Lafferty T.Minka.
+\newblock Expectation-propagation for the generative aspect model.
+\newblock \emph{In Proceedings of the 18th Conference on Uncertainty in
+  Artificial Intelligence}, 2002.
+
+\bibitem[T.~L.~Griffiths(2004)]{gibbs}
+M.~Steyvers T.~L.~Griffiths.
+\newblock Finding scientific topics.
+\newblock 2004.
+\newblock URL \url{http://psiexp.ss.uci.edu/research/papers/sciencetopics.pdf}.
+
+\bibitem[A.~Asuncion(2009)]{inferencecomp}
+P.~Smyth A.~Asuncion, M.~Welling.
+\newblock On smoothing and inference for topic models.
+\newblock 2009.
+\newblock URL \url{http://arxiv.org/pdf/1205.2662.pdf}.
+
+\bibitem[S.~Geman(1984)]{gibbsdef}
+D.~Geman S.~Geman.
+\newblock \emph{Pattern Anal. Machine Intelligence}, volume~6.
+\newblock 1984.
+
+\bibitem[Liu(2001)]{montecarlo}
+J.~S. Liu.
+\newblock \emph{Monte Carlo Strategies In Scientific Computing}.
+\newblock Monte Carlo 2001.
+
+\bibitem[Minka(2000)]{diring}
+T.~P. Minka.
+\newblock Estimating a dirichlet distribution.
+\newblock 2000.
+\newblock URL
+  \url{http://www.msr-waypoint.com/en-us/um/people/minka/papers/dirichlet/minka-dirichlet.pdf}.
+
+\bibitem[svd()]{svd}
+Singular value decomposition.
+\newblock URL \url{https://en.wikipedia.org/wiki/Singular_value_decomposition}.
+
+\bibitem[Schmidt(2009)]{lcbmf}
+M.~N. Schmidt.
+\newblock Linearly constrained bayesian matrix factorization for blind source
+  separation.
+\newblock 2009.
+\newblock URL \url{http://people.ee.duke.edu/~lcarin/NIPS2009_0352.pdf}.
+
+\bibitem[Dumais(1995)]{lsi}
+S.~T. Dumais.
+\newblock Latent semantic indexing.
+\newblock 1995.
+\newblock URL
+  \url{http://wortschatz.uni-leipzig.de/~sbordag/aalw05/Referate/05_Aehnlichkeit/Dumais95-latent-semantic-indexing-lsi.pdf}.
+
+\bibitem[M.~N.~Schmidt(2009)]{bnmf}
+L.~K.~Hansen M.~N.~Schmidt, O.~Winther.
+\newblock Bayesian non-negative matrix factorization.
+\newblock 2009.
+\newblock URL \url{http://mikkelschmidt.dk/papers/schmidt2009ica.pdf}.
+
+\bibitem[V.~Nguyen(2014)]{gibbsaverage}
+P.~Resnik V.~Nguyen, J. Boyd-Graber.
+\newblock Sometimes average is best: The importance of averaging for prediction
+  using mcmc inference in topic modeling.
+\newblock 2014.
+\newblock URL \url{http://emnlp2014.org/papers/pdf/EMNLP2014182.pdf}.
+
+\bibitem[Y.~Papanikolaou(2015)]{gibbsunseen}
+G.~Tsoumakas Y.~Papanikolaou, T. N.~Rubin.
+\newblock Improving gibbs sampling predictions on unseen data for latent
+  dirichlet allocation.
+\newblock 2015.
+\newblock URL \url{http://arxiv.org/pdf/1505.02065v1.pdf}.
+
+\end{thebibliography}

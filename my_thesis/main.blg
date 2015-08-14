@@ -1,0 +1,122 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: ./Bibliography.bib.bib
+Warning--I didn't find a database entry for "tfidf"
+Too many commas in name 1 of "V Etter, M. Kafsi, E. Kazemi, M. Grossglauser, P. Thiran" for entry wheretogo
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "V Etter, M. Kafsi, E. Kazemi, M. Grossglauser, P. Thiran" for entry wheretogo
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "H. Zhu, H. Cao, E. Chen, H. Xiong, J. Tian" for entry mobapp
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "H. Zhu, H. Cao, E. Chen, H. Xiong, J. Tian" for entry mobapp
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "H. Cao, T. Bao, Q. Yang, E. Chen, J. Tian" for entry interaction
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "H. Cao, T. Bao, Q. Yang, E. Chen, J. Tian" for entry interaction
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "H. Ma, H Cao, Q Yang, E. Chen, J. Tian" for entry superbehaviors
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "H. Ma, H Cao, Q Yang, E. Chen, J. Tian" for entry superbehaviors
+while executing---line 1233 of file unsrtnat.bst
+Name 1 in "S. T. Dumais," has a comma at the end for entry lsi
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "V Etter, M. Kafsi, E. Kazemi, M. Grossglauser, P. Thiran" for entry wheretogo
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "V Etter, M. Kafsi, E. Kazemi, M. Grossglauser, P. Thiran" for entry wheretogo
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "V Etter, M. Kafsi, E. Kazemi, M. Grossglauser, P. Thiran" for entry wheretogo
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "V Etter, M. Kafsi, E. Kazemi, M. Grossglauser, P. Thiran" for entry wheretogo
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty journal in wheretogo
+Too many commas in name 1 of "H. Zhu, H. Cao, E. Chen, H. Xiong, J. Tian" for entry mobapp
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Zhu, H. Cao, E. Chen, H. Xiong, J. Tian" for entry mobapp
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Zhu, H. Cao, E. Chen, H. Xiong, J. Tian" for entry mobapp
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Zhu, H. Cao, E. Chen, H. Xiong, J. Tian" for entry mobapp
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty journal in mobapp
+Too many commas in name 1 of "H. Cao, T. Bao, Q. Yang, E. Chen, J. Tian" for entry interaction
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Cao, T. Bao, Q. Yang, E. Chen, J. Tian" for entry interaction
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Cao, T. Bao, Q. Yang, E. Chen, J. Tian" for entry interaction
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Cao, T. Bao, Q. Yang, E. Chen, J. Tian" for entry interaction
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty journal in interaction
+Too many commas in name 1 of "H. Ma, H Cao, Q Yang, E. Chen, J. Tian" for entry superbehaviors
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Ma, H Cao, Q Yang, E. Chen, J. Tian" for entry superbehaviors
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Ma, H Cao, Q Yang, E. Chen, J. Tian" for entry superbehaviors
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "H. Ma, H Cao, Q Yang, E. Chen, J. Tian" for entry superbehaviors
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty journal in superbehaviors
+Warning--empty journal in dirichlet_into
+Warning--empty journal in dirinf
+Warning--empty journal in gibbs
+Warning--empty journal in inferencecomp
+Warning--empty publisher in gibbsdef
+Warning--empty publisher in montecarlo
+Warning--empty journal in diring
+Warning--empty author in svd
+Warning--empty journal in svd
+Warning--empty year in svd
+Warning--empty year in svd
+Warning--empty journal in lcbmf
+Name 1 in "S. T. Dumais," has a comma at the end for entry lsi
+while executing---line 1315 of file unsrtnat.bst
+Name 1 in "S. T. Dumais," has a comma at the end for entry lsi
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty journal in lsi
+Warning--empty journal in bnmf
+Warning--empty journal in gibbsaverage
+Warning--empty journal in gibbsunseen
+You've used 20 entries,
+            2481 wiz_defined-function locations,
+            645 strings with 7283 characters,
+and the built_in function-call counts, 5352 in all, are:
+= -- 458
+> -- 133
+< -- 20
++ -- 78
+- -- 38
+* -- 267
+:= -- 875
+add.period$ -- 72
+call.type$ -- 20
+change.case$ -- 38
+chr.to.int$ -- 20
+cite$ -- 41
+duplicate$ -- 362
+empty$ -- 567
+format.name$ -- 57
+if$ -- 1124
+int.to.chr$ -- 1
+int.to.str$ -- 21
+missing$ -- 22
+newline$ -- 120
+num.names$ -- 57
+pop$ -- 207
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 217
+stack$ -- 0
+substring$ -- 41
+swap$ -- 27
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 134
+warning$ -- 20
+while$ -- 38
+width$ -- 0
+write$ -- 255
+(There were 27 error messages)
