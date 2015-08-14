@@ -3,8 +3,8 @@
 \contentsline {chapter}{Acknowledgements}{ii}{dummy.2}
 \vspace {1em}
 \contentsline {chapter}{Contents}{iii}{dummy.3}
-\contentsline {chapter}{List of Figures}{iv}{dummy.5}
-\contentsline {chapter}{List of Tables}{v}{dummy.7}
+\contentsline {chapter}{List of Figures}{v}{dummy.5}
+\contentsline {chapter}{List of Tables}{vi}{dummy.7}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.9}
 \contentsline {chapter}{\numberline {2}Preliminaries}{4}{chapter.10}
 \contentsline {section}{\numberline {2.1}Definitions and notations}{4}{section.11}
@@ -36,4 +36,4 @@
 \contentsline {section}{\numberline {6.1}Presenting the Dataset}{34}{section.94}
 \contentsline {section}{\numberline {6.2}Feature prediction results}{35}{section.103}
 \contentsline {section}{\numberline {6.3}Feature prediction results}{38}{section.106}
-\contentsline {chapter}{\numberline {7}Conclusion}{40}{chapter.107}
+\contentsline {chapter}{\numberline {7}Conclusion}{42}{chapter.109}

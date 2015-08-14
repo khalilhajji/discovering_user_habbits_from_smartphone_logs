@@ -45,17 +45,18 @@ In smartphone logs, there is two different kinds of features. On the one hand, t
 
 Using this model, the probability of obtaining a sequence of realizations $[(y_{1},w_{1}),...,(y_{N},w_{N})]$ belonging to record $\mathbf{r}$ can be derived. It is expressed as the probability of obtaining the sequence $[(y_{1},w_{1}),...,(y_{N},w_{N})]$ knowing that the record $\mathbf{r}$ was selected. It is computed as follows:
 \begin{equation} \label{eqhcmmdt1}
-\begin{split}
-p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})=\prod_{n=1}^{N}p((y_{n},w_{n})|\mathbf{r})
-\\=\prod_{n=1}^{N}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
-\end{split}
+\begin{aligned}
+p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})&=\prod_{n=1}^{N}p((y_{n},w_{n})|\mathbf{r})\\
+&=\prod_{n=1}^{N}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
+\end{aligned}
 \end{equation}
+
 We can also express $p([(y_{1},w_{1}),...,(y_{N},w_{N})] , \mathbf{r})$ as:
 \begin{equation} \label{eqhcmmdt2}
-\begin{split}
-=p([(y_{1},w_{1}),...,(y_{N},w_{N})] , \mathbf{r})=p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})p(\mathbf{r})
-\\=\frac{1}{M}\prod_{n=1}^{N}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
-\end{split}
+\begin{aligned}
+p([(y_{1},w_{1}),...,(y_{N},w_{N})] , \mathbf{r})&=p([(y_{1},w_{1}),...,(y_{N},w_{N})]|\mathbf{r})p(\mathbf{r})\\
+&=\frac{1}{M}\prod_{n=1}^{N}\sum_{k=1}^{K}p(w_{n}|Z=z_{k}, F=y_{n})p(Z=z_{k}|\mathbf{r})
+\end{aligned}
 \end{equation}
 Where $M$ represents the number of the records in the corpus.
 \\Using Eq. ~\eqref{eqhcmmdt1} and Eq. ~\eqref{eqhcmmdt2}, we can express the probability of a corpus $R=\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}$ as the product of the probabilities of each record $\mathbf{r}_{m}$:
@@ -167,17 +168,17 @@ The generation process described allows to fully generate a corpus of records. I
 
 Following the steps of the generative process, we iteratively derive the likelihood $L(R|\boldsymbol{\alpha}, \{\boldsymbol{\beta }_{f}\}_{\forall f\in F})$ of the corpus $R$. First, $L(R|\boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})$ is equal to the likelihood of the corpus $R$ knowing the vocabularies distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ summed over the probability of all possible vocabularies distributions.
 \begin{equation} \label{eqghcmmdtlik}
-\begin{split} 
-L(R|\boldsymbol{\alpha}, \{\boldsymbol{\beta }_{f}\}_{\forall f\in F})=p(R|\boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})
-\\=\prod_{k=1}^{K}\prod_{f=1}^{J}\int_{\boldsymbol{\phi}_{f,k}}p(\boldsymbol{\phi }_{f,k}|\boldsymbol{\beta }_{f})L(R|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
-\end{split} 
+\begin{aligned} 
+L(R|\boldsymbol{\alpha}, \{\boldsymbol{\beta }_{f}\}_{\forall f\in F})&=p(R|\boldsymbol{\alpha},\{\boldsymbol{\beta }_{f}\}_{\forall f\in F})\\
+&=\prod_{k=1}^{K}\prod_{f=1}^{J}\int_{\boldsymbol{\phi}_{f,k}}p(\boldsymbol{\phi }_{f,k}|\boldsymbol{\beta }_{f})L(R|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\end{aligned} 
 \end{equation}
 Second, knowing the vocabularies distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$, the likelihood of the corpus is equal to the product of the likelihood of each record $\mathbf{r}_{m}$.
 \begin{equation}
-\begin{split} 
-L(R|\boldsymbol{\alpha}, \{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})=p(\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
-\\=\prod_{m=1}^{M}p(\mathbf{r}_{m}|\boldsymbol{\alpha}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
-\end{split} 
+\begin{aligned} 
+L(R|\boldsymbol{\alpha}, \{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})&=p(\{\mathbf{r}_{1},...,\mathbf{r}_{M}\}|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})\\
+&=\prod_{m=1}^{M}p(\mathbf{r}_{m}|\boldsymbol{\alpha}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
+\end{aligned} 
 \end{equation}
 Then, the likelihood of each record $\mathbf{r}_{m}$ can be expressed as the likelihood of the record $\mathbf{r}_{m}$ knowing its behavior distribution $\boldsymbol{\theta}_{m}$ summed over the probability of all possible behavior distributions.
 \begin{equation}
@@ -187,10 +188,10 @@ p(\mathbf{r}_{m}|\boldsymbol{\alpha}, \{\{\boldsymbol{\phi }_{f,k}\}_{\forall f 
 \end{equation}
 Finally, the likelihood of a record $\mathbf{r}_{m}$ knowing its behavior distribution $\boldsymbol{\theta}_{m}$ and vocabularies distributions $\{\{\boldsymbol{\phi }_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}}$ is expressed as the product of the likelihood of each realization. The latter quantity can then be computed similarly to $LMR$.
 \begin{equation}
-\begin{split} 
-p(\mathbf{r}_{m}|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})=\prod_{n=1}^{N_{m}}p((y_{n},w_{n})|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})
-\\=\prod_{n=1}^{N_{m}}\sum_{k=1}^{K}p(w_{n}|\boldsymbol{\phi}_{y_{n},k})p(Z=z_{k}|\boldsymbol{\theta }_{m})
-\end{split} 
+\begin{aligned} 
+p(\mathbf{r}_{m}|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})&=\prod_{n=1}^{N_{m}}p((y_{n},w_{n})|\boldsymbol{\theta }_{m}, \{\boldsymbol{\phi}_{f,k}\}_{\forall f \in F, \forall k\in\{1,...,K\}})\\
+&=\prod_{n=1}^{N_{m}}\sum_{k=1}^{K}p(w_{n}|\boldsymbol{\phi}_{y_{n},k})p(Z=z_{k}|\boldsymbol{\theta }_{m})
+\end{aligned} 
 \end{equation}
  
 This ends our definition of $GHCM\_MDT$ model. We assume that the smartphone logs we observe were generated by $GHCM\_MDT$. An for $HCM\_MDT$. Even if we assumed until now that $\boldsymbol{\alpha}$ and $\{\boldsymbol{\beta }_{f}\}_{\forall f\in F}$ are known, in reality the parameters that generated this data are unknown and the only observable is the data. Here again, a good assumption is to say that good guesses of those parameters are parameters that maximize the likelihood (i.e the probability) of the observed corpus $L(R)$.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.21)  14 AUG 2015 00:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.21)  14 AUG 2015 03:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,41 +679,58 @@ LaTeX Info: Redefining \cite on input line 694.
 (/usr/local/texlive/2013/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
 Package: luainputenc 2010/11/19 v0.973 inputenc package for LuaTeX
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count134
+\c@subtable=\count135
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count134
+\c@float@type=\count136
 \float@exts=\toks32
 \float@box=\box35
 \@float@everytoks=\toks33
 \@floatcapt=\box36
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+ (./main.aux
 
-No file main.aux.
+LaTeX Warning: Label `li2' multiply defined.
+
+
+LaTeX Warning: Label `li4' multiply defined.
+
+
+LaTeX Warning: Label `li22' multiply defined.
+
+
+LaTeX Warning: Label `4.1.1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/ltcaption.sty
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -721,19 +738,19 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
+\scratchcounter=\count137
 \scratchdimen=\dimen148
 \scratchbox=\box37
-\nofMPsegments=\count136
-\nofMParguments=\count137
+\nofMPsegments=\count138
+\nofMParguments=\count139
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count138
+\MPscratchCnt=\count140
 \MPscratchDim=\dimen149
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks35
 )
-\c@lstlisting=\count141
+\c@lstlisting=\count143
 \AtBeginShipoutBox=\box38
  (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -743,7 +760,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 39.
+Package hyperref Info: Link coloring ON on input line 41.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -751,20 +768,22 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
+
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -786,33 +805,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
-\tf@toc=\write4
-\openout4 = `main.toc'.
+(./main.toc
+Overfull \hbox (7.4928pt too wide) in paragraph at lines 20--20
+ [][] [][][]\OT1/cmr/m/n/10.95 Relationship be-tween GHCM-MDT, HCMC-MDT, pLSI a
+nd La-tent Dirich- 
+ []
 
 [3
 
 
-]
+])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [4]
 ------------------------------------------------------------------------------
  List of Figures
 ------------------------------------------------------------------------------
+(./main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
-[4
+ [5
 
 
 ]
 ------------------------------------------------------------------------------
  List of Tables
 ------------------------------------------------------------------------------
+(./main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
-[5
+ [6
 
 
 ] (./Chapters/1introduction.tex
@@ -898,22 +923,12 @@ L/cmm/m/it/10.95 ; :::; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y[]; w[]\OT1/cm
 r/m/n/10.95 )]$
  []
 
+[10] [11]
 
-LaTeX Warning: Reference `eqhcmmdt1' on page 10 undefined on input line 61.
-
-
-LaTeX Warning: Reference `eqhcmmdt2' on page 10 undefined on input line 61.
-
-[10]
-
-LaTeX Warning: Reference `eqhcmmdt1' on page 11 undefined on input line 67.
-
-[11]
-
-Package natbib Warning: Citation `plsi' on page 12 undefined on input line 86.
+Package natbib Warning: Citation `plsi' on page 12 undefined on input line 87.
 
 
-Overfull \hbox (18.87091pt too wide) in paragraph at lines 86--88
+Overfull \hbox (18.87091pt too wide) in paragraph at lines 87--89
 $\OML/cmm/m/it/10.95 Probabilistic$ $Latent$ $Semantic$ $Indexing\OT1/cmr/m/n/1
 0.95 (\OML/cmm/m/it/10.95 pLSI\OT1/cmr/m/n/10.95 )$ was in-tro-duced in 1991 by
  C. J. Hawthorn[\OT1/cmr/bx/n/10.95 ?
@@ -922,24 +937,14 @@ $\OML/cmm/m/it/10.95 Probabilistic$ $Latent$ $Semantic$ $Indexing\OT1/cmr/m/n/1
 [12] [13]
 
 Package natbib Warning: Citation `dirichlet_into' on page 14 undefined on input
- line 128.
+ line 129.
 
 
 Package natbib Warning: Citation `dirichlet_into' on page 14 undefined on input
- line 129.
+ line 130.
 
-[14]
-
-LaTeX Warning: Reference `li3.1' on page 15 undefined on input line 159.
-
-
-LaTeX Warning: Reference `li3' on page 15 undefined on input line 161.
-
-
-LaTeX Warning: Reference `li4' on page 15 undefined on input line 163.
-
-[15]
-Overfull \hbox (44.74791pt too wide) in paragraph at lines 168--169
+[14] [15]
+Overfull \hbox (44.74791pt too wide) in paragraph at lines 169--170
 []\OT1/cmr/m/n/10.95 Following the steps of the gen-er-a-tive pro-cess, we it-e
 r-a-tively de-rive the like-li-hood $\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\
 OML/cmm/m/it/10.95 R\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/
@@ -949,65 +954,58 @@ OML/cmm/m/it/10.95 R\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/
 [16]
 
 Package natbib Warning: Citation `dirinf' on page 17 undefined on input line 20
-0.
+1.
 
 
-Overfull \hbox (14.5238pt too wide) in paragraph at lines 199--200
+Overfull \hbox (14.5238pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/n/10.95 We con-clude this sec-tion by ex-pos-ing other nice prop-e
 r-ties and ad-van-tages of $\OML/cmm/m/it/10.95 GHCM[]MDT$
  []
 
 
-Package natbib Warning: Citation `lda' on page 17 undefined on input line 202.
+Package natbib Warning: Citation `lda' on page 17 undefined on input line 203.
 
 
-Overfull \hbox (15.75821pt too wide) in paragraph at lines 207--207
+Overfull \hbox (15.75821pt too wide) in paragraph at lines 208--208
 []\OT1/cmr/bx/n/14.4 Relationship be-tween GHCM-MDT, HCMC-MDT, pLSI
  []
 
 
-Package natbib Warning: Citation `lda' on page 17 undefined on input line 208.
+Package natbib Warning: Citation `lda' on page 17 undefined on input line 209.
 
 
-Package natbib Warning: Citation `lda' on page 17 undefined on input line 208.
+Package natbib Warning: Citation `lda' on page 17 undefined on input line 209.
 
 
 Package natbib Warning: Citation `ldaex1' on page 17 undefined on input line 20
-8.
+9.
 
 
 Package natbib Warning: Citation `ldaex2' on page 17 undefined on input line 20
-8.
+9.
 
 
 Package natbib Warning: Citation `ldaex3' on page 17 undefined on input line 20
-8.
+9.
 
 
-Package natbib Warning: Citation `daex4' on page 17 undefined on input line 208
+Package natbib Warning: Citation `daex4' on page 17 undefined on input line 209
 .
 
 
 Package natbib Warning: Citation `ldaex5' on page 17 undefined on input line 20
-8.
+9.
 
 
 Package natbib Warning: Citation `ldaex6' on page 17 undefined on input line 20
-8.
+9.
 
 
 Package natbib Warning: Citation `ldaex7' on page 17 undefined on input line 20
-8.
+9.
 
 [17]
-
-LaTeX Warning: Reference `li23.1' on page 18 undefined on input line 225.
-
-
-LaTeX Warning: Reference `li4' on page 18 undefined on input line 227.
-
-
-Overfull \hbox (20.84264pt too wide) in paragraph at lines 230--233
+Overfull \hbox (20.84264pt too wide) in paragraph at lines 231--234
 \OT1/cmr/m/n/10.95 In other terms, $\OML/cmm/m/it/10.95 GHCM[]MDT$ \OT1/cmr/m/n
 /10.95 com-bines the ad-van-tages of $\OML/cmm/m/it/10.95 LDA$ \OT1/cmr/m/n/10.
 95 over $\OML/cmm/m/it/10.95 pLSI$ \OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 
@@ -1015,119 +1013,80 @@ HCM[]MDT$
  []
 
 [18]
-Overfull \hbox (12.10709pt too wide) in paragraph at lines 249--250
+Overfull \hbox (12.10709pt too wide) in paragraph at lines 250--251
 []\OT1/cmr/m/n/10.95 We sim-plify the no-ta-tions by set-ting $[] = \OMS/cmsy/m
 /n/10.95 f[][]g[]$ \OT1/cmr/m/n/10.95 and $[] = \OMS/cmsy/m/n/10.95 ff[][]g[]$\
 OT1/cmr/m/n/10.95 .
  []
 
-
-LaTeX Warning: Reference `eqghcmmdt4' on page 19 undefined on input line 255.
-
-
-LaTeX Warning: Reference `eqghcmmdt4' on page 19 undefined on input line 255.
-
-
-LaTeX Warning: Reference `eqghcmmdt4' on page 19 undefined on input line 255.
-
-
-LaTeX Warning: Reference `eqghcmmdt4' on page 19 undefined on input line 255.
-
 [19]
 
 Package natbib Warning: Citation `varinf' on page 20 undefined on input line 25
-7.
+8.
 
 
 Package natbib Warning: Citation `expprop' on page 20 undefined on input line 2
-57.
-
-
-Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 257
-.
-
-
-Package natbib Warning: Citation `inferencecomp' on page 20 undefined on input 
-line 257.
-
-
-Package natbib Warning: Citation `gibbsdef' on page 20 undefined on input line 
-258.
+58.
 
 
 Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 258
 .
 
 
-LaTeX Warning: Reference `relationshipghcmmdt' on page 20 undefined on input li
-ne 258.
+Package natbib Warning: Citation `inferencecomp' on page 20 undefined on input 
+line 258.
 
 
-Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 262
+Package natbib Warning: Citation `gibbsdef' on page 20 undefined on input line 
+259.
+
+
+Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 259
+.
+
+
+Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 263
 .
 
 
 Package natbib Warning: Citation `montecarlo' on page 20 undefined on input lin
-e 264.
+e 265.
 
 
-Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 265
+Package natbib Warning: Citation `gibbs' on page 20 undefined on input line 266
 .
 
 [20]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 273.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 274.
 
  (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 274.
 
 
-Package natbib Warning: Citation `gibbs' on page 21 undefined on input line 279
+Package natbib Warning: Citation `gibbs' on page 21 undefined on input line 280
 .
-
-
-LaTeX Warning: Reference `gibbseq2' on page 21 undefined on input line 279.
-
-
-LaTeX Warning: Reference `gibbseq2' on page 21 undefined on input line 280.
 
 
 Package natbib Warning: Citation `inferencecomp' on page 21 undefined on input 
-line 280.
+line 281.
 
 
-Package natbib Warning: Citation `gibbs' on page 21 undefined on input line 281
+Package natbib Warning: Citation `gibbs' on page 21 undefined on input line 282
 .
 
 
-Package natbib Warning: Citation `gibbs' on page 21 undefined on input line 288
+Package natbib Warning: Citation `gibbs' on page 21 undefined on input line 289
 .
 
 [21]
 
-LaTeX Warning: Reference `gibbseqtheta' on page 22 undefined on input line 294.
-
-
-
-LaTeX Warning: Reference `gibbseqphi' on page 22 undefined on input line 294.
-
-
-LaTeX Warning: Reference `gibbseq2' on page 22 undefined on input line 294.
-
-
-LaTeX Warning: Reference `3.1' on page 22 undefined on input line 302.
-
-
 Package natbib Warning: Citation `diring' on page 22 undefined on input line 30
-6.
+7.
 
-[22]
-
-LaTeX Warning: Reference `direst' on page 23 undefined on input line 319.
-
-) (./Chapters/4baseline_models.tex [23]
+[22]) (./Chapters/4baseline_models.tex [23]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Matrix Factorization Models
@@ -1153,15 +1112,6 @@ m-ple used in $\OML/cmm/m/it/10.95 LatentSemanticIndexing$
 [24
 
 ]
-
-LaTeX Warning: Reference `4.1.1' on page 25 undefined on input line 33.
-
-
-Overfull \hbox (10.0551pt too wide) in paragraph at lines 33--33
-\OT1/cmr/m/n/10.95 As de-scribed in [] $\OML/cmm/m/it/10.95 SVD$ \OT1/cmr/m/n/1
-0.95 ob-jec-tive func-tion is to min-i-mize the ab-so-lute dis-tance $[][]$.
- []
-
 
 Package natbib Warning: Citation `tfidf' on page 25 undefined on input line 35.
 
@@ -1227,14 +1177,6 @@ Package natbib Warning: Citation `plsi' on page 31 undefined on input line 51.
 
 [31]
 
-LaTeX Warning: Reference `gibbs_sampling' on page 32 undefined on input line 57
-.
-
-
-LaTeX Warning: Reference `gibbs_sampling' on page 32 undefined on input line 57
-.
-
-
 Package natbib Warning: Citation `gibbsunseen' on page 32 undefined on input li
 ne 57.
 
@@ -1264,24 +1206,22 @@ Chapter 6.
  6 Results and Discussion
 ------------------------------------------------------------------------------
 
+Package caption Warning: \label without proper \caption on input line 32.
+See the caption package documentation for explanation.
+
+
 LaTeX Warning: Reference `duration' on page 34 undefined on input line 28.
 
 [34
 
 ]
-Overfull \hbox (0.56506pt too wide) in paragraph at lines 45--46
+Overfull \hbox (0.56506pt too wide) in paragraph at lines 46--47
 []$\OML/cmm/m/it/10.95 Activity$ \OT1/cmr/m/n/10.95 that rep-re-sents the ac-ti
 v-ity the user is do-ing. It takes the val-ues $\OML/cmm/m/it/10.95 in[]bicycle
 $\OT1/cmr/m/n/10.95 ,
  []
 
-
-LaTeX Warning: Reference `acc' on page 35 undefined on input line 62.
-
-
-LaTeX Warning: Reference `avacc' on page 35 undefined on input line 62.
-
-[35] <Figures/location_accuracy.png, id=305, 1517.67pt x 768.2301pt>
+[35] <Figures/location_accuracy.png, id=492, 1517.67pt x 768.2301pt>
 File: Figures/location_accuracy.png Graphic file (type png)
 
 <use Figures/location_accuracy.png>
@@ -1289,30 +1229,64 @@ Package pdftex.def Info: Figures/location_accuracy.png used on input line 67.
 (pdftex.def)             Requested size: 455.30452pt x 230.47081pt.
 
 Overfull \hbox (37.83145pt too wide) in paragraph at lines 67--68
-[][] 
+ [][] 
  []
 
-<Figures/location_average_accuracy.png, id=307, 1517.67pt x 768.2301pt>
+<Figures/location_average_accuracy.png, id=494, 1517.67pt x 768.2301pt>
 File: Figures/location_average_accuracy.png Graphic file (type png)
 
 <use Figures/location_average_accuracy.png>
 Package pdftex.def Info: Figures/location_average_accuracy.png used on input li
-ne 73.
+ne 74.
 (pdftex.def)             Requested size: 455.30452pt x 230.47081pt.
 
-Overfull \hbox (37.83145pt too wide) in paragraph at lines 73--74
-[][] 
+Overfull \hbox (37.83145pt too wide) in paragraph at lines 74--75
+ [][] 
  []
 
 [36 <./Figures/location_accuracy.png> <./Figures/location_average_accuracy.png>
-] [37]
-Overfull \hbox (1.9322pt too wide) in paragraph at lines 98--100
-\OT1/cmr/m/n/10.95 that $\OML/cmm/m/it/10.95 user\OT1/cmr/m/n/10.95 1$ likes to
- do some read-ings on Sun-days night. In-deed, $\OML/cmm/m/it/10.95 sony:drbd:r
-eader:other:jp$
- []
+] [37] [38] <Figures/Home.png, id=522, 257.96375pt x 734.745pt>
+File: Figures/Home.png Graphic file (type png)
 
-[38]) (./Chapters/7conclusion.tex [39]
+<use Figures/Home.png>
+Package pdftex.def Info: Figures/Home.png used on input line 113.
+(pdftex.def)             Requested size: 128.98155pt x 367.3716pt.
+ <Figures/Work.png, id=523, 259.97125pt x 736.7525pt>
+File: Figures/Work.png Graphic file (type png)
+
+<use Figures/Work.png>
+Package pdftex.def Info: Figures/Work.png used on input line 118.
+(pdftex.def)             Requested size: 129.9853pt x 368.37535pt.
+
+<Figures/Homeweekend.png, id=524, 254.9525pt x 718.685pt>
+File: Figures/Homeweekend.png Graphic file (type png)
+
+<use Figures/Homeweekend.png>
+Package pdftex.def Info: Figures/Homeweekend.png used on input line 123.
+(pdftex.def)             Requested size: 131.30005pt x 370.12143pt.
+
+<Figures/Ingress.png, id=525, 258.9675pt x 713.66624pt>
+File: Figures/Ingress.png Graphic file (type png)
+
+<use Figures/Ingress.png>
+Package pdftex.def Info: Figures/Ingress.png used on input line 136.
+(pdftex.def)             Requested size: 132.07166pt x 363.96497pt.
+
+<Figures/News.png, id=526, 259.97125pt x 713.66624pt>
+File: Figures/News.png Graphic file (type png)
+ <use Figures/News.png>
+Package pdftex.def Info: Figures/News.png used on input line 142.
+(pdftex.def)             Requested size: 132.58357pt x 363.96497pt.
+
+<Figures/sundayReading.png, id=527, 252.945pt x 728.7225pt>
+File: Figures/sundayReading.png Graphic file (type png)
+
+<use Figures/sundayReading.png>
+Package pdftex.def Info: Figures/sundayReading.png used on input line 148.
+(pdftex.def)             Requested size: 126.47218pt x 364.36035pt.
+) (./Chapters/7conclusion.tex [39] [40 <./Figures/Home.png> <./Figures/Work.png
+> <./Figures/Homeweekend.png>] [41 <./Figures/Ingress.png> <./Figures/News.png>
+ <./Figures/sundayReading.png>]
 Chapter 7.
 ------------------------------------------------------------------------------
  7 Conclusion
@@ -1324,44 +1298,38 @@ let$ $Latent$ $Multimodal$ $Representation$ \OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/
 10.95 DLMR$\OT1/cmr/m/n/10.95 ),
  []
 
-[40
+[42
 
 ])
 No file main.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
-[41]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
+[43]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: CA7D2B16C6066A2823198360E6DF1CFC;8070.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  647030D8D584C9D3B77D9CDEAB18D0E8;8070.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 13263 strings out of 493315
- 186061 string characters out of 6137904
- 260354 words of memory out of 5000000
- 16350 multiletter control sequences out of 15000+600000
- 17434 words of font info for 62 fonts, out of 8000000 for 9000
+ 13407 strings out of 493315
+ 188281 string characters out of 6137904
+ 264477 words of memory out of 5000000
+ 16469 multiletter control sequences out of 15000+600000
+ 17087 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,20n,45p,2032b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,20n,45p,2032b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1382,10 +1350,10 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
 e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (47 pages, 552624 bytes).
+Output written on main.pdf (50 pages, 722232 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 155 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 563 compressed objects within 6 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

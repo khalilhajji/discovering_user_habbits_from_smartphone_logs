@@ -187,7 +187,7 @@
 %-------------------------------------------------   
 \examiner{Prof. Patrick \textsc{Thiran}} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
-\degree{Master of Science in Communication Systems} % Your degree name - this is currently used in the title page and abstract
+%\degree{Master of Science in Communication Systems} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
 \authors{Khalil \textsc{Hajji}} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
@@ -201,13 +201,13 @@
                 {Ecole Polytechnique Federale de Lausanne}} % Your university's name - this is currently used in the title page
                 {EPFL}}
 %-------------------------------------------------   
-\UNIVERSITY{\texorpdfstring{\href{University Web Site URL Here (include http://)} % Your university's URL
-                {EPFL}} % Your university's name in capitals - this is currently used in the abstract page
-                {EPFL}}
+%UNIVERSITY{\texorpdfstring{\href{University Web Site URL Here (include http://)} % Your university's URL
+                %{EPFL}} % Your university's name in capitals - this is currently used in the abstract page
+                %{EPFL}}
 %-------------------------------------------------                
-\department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {Communication Systems Faculty}} % Your department's name - used in the title page and abstract
-                {Communication Systems Faculty}}
+%\department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
+              %  {Communication Systems Faculty}} % Your department's name - used in the title page and abstract
+                %{Communication Systems Faculty}}
 %-------------------------------------------------                
 \DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
                 {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
@@ -295,18 +295,18 @@
   \null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par} % University name in capitals
+   % {\normalsize \UNIVNAME \par} % University name in capitals
     \bigskip
     {\huge{\textit{Abstract}} \par}
     \bigskip
-    {\normalsize \facname \par} % Faculty name
-    {\normalsize \deptname \par} % Department name
+    %{\normalsize \facname \par} % Faculty name
+    %{\normalsize \deptname \par} % Department name
     \bigskip
-    {\normalsize \degreename\par} % Degree name
+    %{\normalsize \degreename\par} % Degree name
     \bigskip
-    {\normalsize\bf \@title \par} % Thesis title
+  %  {\normalsize\bf \@title \par} % Thesis title
     \medskip
-    {\normalsize by \authornames \par} % Author name
+    %{\normalsize by \authornames \par} % Author name
     \bigskip
   \end{center}
 }
