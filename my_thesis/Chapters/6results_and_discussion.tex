@@ -28,7 +28,7 @@ We test our models on the smartphone logs of five different users. Those smartph
 Those logs contain the records of the users during several months of observation (seven months for the newest user and ten months for the oldest). The table~\ref{duration} presents the duration of the observation period of the different users. Each record represents one hour of the period of the observation.
 
 \begin{table}[H] 
-\caption {Period of observation for each user in days.} 
+\centering
 \label{duration}
 \begin{tabular}{|l|c|c|c|c|c|}
   \hline
@@ -37,6 +37,7 @@ Those logs contain the records of the users during several months of observation
   Period & 300 & 231 & 229 & 249 &  224 \\
  \hline
 \end{tabular}
+\caption {Period of observation for each user in days.} 
 \end{table}
 
 Those logs contain the following features :
@@ -62,15 +63,17 @@ Note that for most of the users, either $Home$ is the most frequent location and
 Figures ~\ref{acc} and ~\ref{avacc} shows, respectively, the accuracy and average accuracy prediction results of the five models ($GLMR$, $LMR$, $LDA$, $LCBMF$ and $SVD$) tested for different number of behaviors (i.e hidden classes).
 
 \begin{figure} [!ht]
+\centering
+\includegraphics[scale=0.3]{Figures/location_accuracy.png}
 \caption{Accuracy results of the prediction of the five models.}
 \label{acc}
-\includegraphics[scale=0.3]{Figures/location_accuracy.png}
 \end{figure}
 
 \begin{figure} [!ht]
+\centering
+\includegraphics[scale=0.3]{Figures/location_average_accuracy.png}
 \caption{Average accuracy results of the prediction of the five models.}
 \label{avacc}
-\includegraphics[scale=0.3]{Figures/location_average_accuracy.png}
 \end{figure}
 
 First, we can see that the three probabilistic models, $GLMR$, $LDA$ and $LMR$ perform widely better than the matrix factorization models $LCBMF$ and $SVD$.
@@ -92,13 +95,62 @@ As a sum up, the results show that the probabilistic models developed perform be
 \section{Feature prediction results}
 We recall that the final goal that drives our work is to discover the particular behaviors of a user from his smartphone logs. In this concluding section, we close the circle by showing examples of behaviors of the $5$ users discovered by $DLMR$. \par
 
-First of all, and as one might expect, the $5$ users exhibit behavior that are similar. Indeed, there is at least one behavior for each user representing the fact that the user works in the week days during the day. There also others expressing the fact that the users are more often at home during the week ends, and others indicating that the users are almost always at home during the night (for all the days). An example of each of these $3$ behaviors is shown for one of the users in Figure . 
+First of all, and as one might expect, the $5$ users exhibit behavior that are similar. Indeed, there is at least one behavior for each user representing the fact that the user works in the week days during the day. There also others expressing the fact that the users are more often at home during the week ends, and others indicating that the users are almost always at home during the night (for all the days). An example of each of these $3$ behaviors is shown for one of the users in figure~\ref{commonBehavior} . 
 \\However, one could have supposed those behaviors without analyzing smartphone logs. For this reason, they are not the most interesting habits that we aim to discover. We present them here for two reasons. First, it is a way to verify that $DLMR$ was able to discover some a-priori expected behaviors (as if we label users with some behaviors and then check that $DLMR$ is able to discover them). Second, we present them to give an intuition on how exactly the behaviors are represented in $DLMR$. \par
 
-Now, we pay attention to examples of behaviors that are more interesting in the sense that they describe a specific user's habit. For example, the behavior in Figure () shows that $user1$ likes to do some readings on Sundays night. Indeed, $sony.drbd.reader.other.jp$ (link) is the package name of a Japanese smartphone application for purchasing and reading books. Alternatively, $user1$ would play $monster$ $strike$ (link) or browse in the web using his smartphone ($boatbrowser.free$ is the package name of a web browser (link)). 
-\\The behavior in Figue () shows that when the $user4$ is not at work during the day (in the week days), he would probably reads some news or watch some TV program. Indeed $gocro.smartnews.android$ (link), $sony.nfx.app.sfrc$ (link) and $gunsosy.android$ (link) are all news applications while $tsvsdeview.phone$ (link) is a smartphone TV app.
-\\Finally, we end our example review with the behavior in Figure (). It shows that $user2$ is often playing ingress while being in $other$ $places$ during the week ends (during the day). In fact, ingress ($nianticproject.ingress$ (link)) is an augmented reality playing location based game. In other terms, ingress is a game that transforms the real world in a game map, where players go from one place to the other trying to solve challenges. That's what explains the behavior of $user2$. \par
+Now, we pay attention to examples of behaviors that are more interesting in the sense that they describe a specific user's habit. For example, the behavior in figure~\ref{readSunday} shows that $user1$ likes to do some readings on Sundays night. Indeed, $Reader$ (\href{https://play.google.com/store/apps/details?id=com.sony.drbd.reader.ext.pictorial.ja&hl=fr}{link}) is the package name of a Japanese smartphone application for purchasing and reading books. Alternatively, $user1$ would play $monster$ $strike$ (\href{https://play.google.com/store/apps/details?id=jp.co.mixi.monsterstrikeUS&hl=fr}{link}) or browse in the web using his smartphone ($boatbrowser.free$ is the package name of a web browser (\href{https://play.google.com/store/apps/details?id=com.boatbrowser.free&hl=fr}{link})). 
+\\The behavior in figure~\ref{news} shows that when the $user4$ is not at work during the day (in the week days), he would probably reads some news or watch some TV program. Indeed $SmartNews$ (\href{https://play.google.com/store/apps/details?id=jp.gocro.smartnews.android}{link}), $Socialife News$ (\href{https://play.google.com/store/apps/details?id=com.sony.nfx.app.sfrc&hl=fr}{link}) and $Gunosy$ (\href{https://play.google.com/store/apps/details?id=com.gunosy.android.world}{link}) are all news applications while $TV SideView Sony$ (\href{https://play.google.com/store/apps/details?id=com.sony.tvsideview.phone&hl=fr}{link}) is a smartphone TV app.
+\\Finally, we end our example review with the behavior in figure~\ref{ing} . It shows that $user2$ is often playing ingress while being in $other$ $places$ during the week ends (during the day). In fact, ingress ($ingress$ (l\href{https://play.google.com/store/apps/details?id=com.nianticproject.ingress&hl=fr}{link}) is an augmented reality playing location based game. In other terms, ingress is a game that transforms the real world in a game map, where players go from one place to the other trying to solve challenges. That's what explains the behavior of $user2$. \par
 
 All these examples show that $DLMR$ is able to discover user's behaviors from his smartphone logs. In other terms, it is able to decompose a user's life (smartphone logs are a subsample of user's life) as a set of behaviors that are driving his life. Moreover, it is able to do thus by extracting both general behaviors (as sleeping at home, working in the day) and by more specific habits (reading on Sundays night, playing ingress on the week end). \par
 
 Let's take a step back and recall the initial wish that led us to try to discover users' habbits. We wanted to enable smartphones to build a personal relationship with their owner by learning to know their habits and reacting to their specific needs. Thus we conclude this part by showing how the examples discussed above could be turned out to that end. For example, the smartphone of $user1$ could suggests to him new trendy books to read on Sundays night (even if $user1$ was not planning to read, maybe because he is bored with the books he is currently reading), or even proposes new games that he could play. Concerning $user2$, if his smartphone knows that it will be rainy next Sunday, then it could alert it's owner and suggests him to schedule his ingress session in another day if he is planning to play. Those are only few examples of possible applications and are far from being exhaustive. The work developed in this thesis does not already enable smartphones to act as described (smartphones need to be able to interpret the behaviors they extracted to do so), but allowing them to catch users' behaviors is a necessary and important step towards that direction.
+
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{Figures/Home.png}
+        \caption{Home\_night.}
+    \end{subfigure}%
+    \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{Figures/Work.png}
+        \caption{Working\_week\_days.}
+    \end{subfigure}%
+  \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[scale=0.515]{Figures/Homeweekend.png}
+        \caption{Home\_weekend.}
+    \end{subfigure}
+
+    \caption{Examples of common behaviors.}
+\label{commonBehavior}
+\end{figure*}
+
+
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[scale=0.51]{Figures/Ingress.png}
+        \caption{play\_ingress\_weekend.}
+\label{ing}
+    \end{subfigure}%
+    \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[scale=0.51]{Figures/News.png}
+        \caption{Reading\_news\_mornings.}
+\label{news}
+    \end{subfigure}%
+  \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{Figures/sundayReading.png}
+        \caption{reading\_sunday\_night.}
+\label{readSunday}
+    \end{subfigure}
+    \caption{Examples of special behaviors.}
+\label{specialBehavior}
+
+\end{figure*}
+
