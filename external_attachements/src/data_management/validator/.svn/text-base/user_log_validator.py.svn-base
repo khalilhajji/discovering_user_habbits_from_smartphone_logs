@@ -1,0 +1,283 @@
+#!/user/bin/env python
+
+import logging
+import glob
+import json
+import sys,os
+import re
+import time
+import datetime as dt
+from validator import Validator
+from collections import defaultdict
+
+class UserLogValidator(Validator):
+    """
+    User Log Validator.
+    
+    Criteria:
+    - a user has logs with the following conditions, 
+    1. #1{day_bin > 0}/#{day_bin} * 100 > threshold
+    2. a log exists within n days from today (deleted)
+    3. #{total number of logs} > threshold
+
+    now 1 AND 3.
+    """
+    
+    ##############################################################
+    # directory components of users_log_path are as follows
+    # ${user_id}: uuid or imei
+    # all: direcotry containing a file in which all logs for a user
+    # ${all_in_one_log}: a file in which all logs for a user
+    ##############################################################
+    # users_log_path = "/${pathto}/${user_id}/all/${all_in_one_log}"
+    users_log_path = "/data/mixs_logs/json/usrs/*/all/all_in_one_log.json"
+
+    # db_key_uuid is UUID.random()-based uid, db_key_device_id is imei-based uid
+    uid = "db_key_device_id"
+    IDX = 5
+
+    # threshold
+    bin_percent = 90
+    total_n_logs = 10
+
+    # user black list
+    user_black_list = {
+        "351680064713724", 1
+        }
+        
+    
+    def __init__(self, users_log_path = users_log_path):
+        """
+        """
+        # logger
+        logger = logging.getLogger("UserLogValidator")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+
+        self.logger.info("init starts")
+        # init base class 
+        super(Validator, self).__init__()
+
+        self.users_log_path = users_log_path
+        self.logger.info("init finished")
+
+        pass
+
+    def validate(self, ):
+        """
+
+        """
+        st = time.time()
+        self.logger.info("validate starts")
+        
+        # logs
+        log_paths = glob.glob(self.users_log_path)
+        num_users = len(log_paths)
+        
+        # valid users
+        valid_users = []
+        valid_uid_index = defaultdict(str)
+        
+        # for each user
+        for path in log_paths:
+            # data
+            fp = open(path, "r")
+            data = json.load(fp)
+
+            # file-added idx
+            index = path.split("/")[self.IDX]
+
+            # validate a user
+            if self.validate_user(data):
+                user_id = self._extract_user(data["baseInfo"])
+                valid_users.append(user_id)
+                valid_uid_index[user_id] = index
+                pass        
+            pass
+        
+        # show
+        self._show_valid_users(valid_uid_index, valid_users, num_users)
+
+        et = time.time()
+        self.logger.info("%f [s]" % (et - st))
+        self.logger.info("validate finished")
+        
+        return valid_users
+
+    def block_users(self, user_black_list):
+        """
+        block users appearing in the user blak list
+        """
+        pass
+
+    def _show_valid_users(self, valid_uid_index, valid_users, num_users):
+        """
+        
+        Arguments:
+        - `valid_uid_index`: valid uid index map
+        - `valid_users`: valid uid index map
+        - `num_users`: number of user
+        """
+        
+        self.logger.debug("valid user list")
+        #for (vu, idx) in valid_uid_index.items():
+        #    self.logger.debug("valid: %s %s", vu, idx)
+        #    pass
+
+        #for vu in valid_users:
+        #    self.logger.debug("valid: %s", vu)
+        #    pass
+        self.logger.info("number of valid user is %d/%d based on user list", len(valid_users), num_users)
+        #self.logger.debug("number of valid user is %d/%d based on uid-index map", len(valid_uid_index), num_users)
+        
+    def validate_user(self, data):
+        """
+        
+        Arguments:
+        - `data`: time-ascending order json log
+        """
+
+        # user id
+        base_info = data["baseInfo"]
+        user_id = self._extract_user(base_info)
+
+        # block black list user
+        if user_id in self.user_black_list:
+            return False
+        
+        # flag
+        bin_percent_flag = False
+        #within_n_days_flag = False
+        total_n_logs_flag = False
+        
+        # time seq
+        time_seq = data["logInfo"].keys()
+        time_seq.sort()
+
+        # start datetime/end datetime
+        start_datetime_obj = self._get_start_datetmtime(dt.datetime.fromtimestamp(float(time_seq[0]) / 1000.0))
+        end_datetime_obj = self._get_end_datetmtime(dt.datetime.fromtimestamp(float(time_seq[-1]) / 1000.0))
+        
+        # count for each bin
+        hist = self._init_histgram(start_datetime_obj, end_datetime_obj)
+
+        for t in time_seq:
+            datetime_obj = dt.datetime.fromtimestamp(float(t)/1000.0)
+            replaced_datetime_obj = datetime_obj.replace(hour=0, minute=0, second = 0, microsecond=0)
+            hist[replaced_datetime_obj.strftime("%s")] += 1
+            pass
+
+        #self.logger.debug(self._convert_hist_to_date(hist))
+
+        # validate
+        # bin threshold
+        cnt = 0
+        for v in hist.values():
+            if v > 0:
+                cnt += 1
+            pass
+        
+        self.logger.debug("cnt:%d, len(hist): %d, rate: %f", cnt, len(hist), 100.0 * cnt/len(hist))
+        if (100.0 * cnt / len(hist)) > self.bin_percent:
+            bin_percent_flag = True
+            pass
+        
+        # total number of logs
+        cnt = 0
+        for v in hist.values():
+            cnt += v
+            pass
+        
+        if cnt > self.total_n_logs:
+            total_n_logs_flag = True
+            pass
+        
+        # logical AND operatoin for conditons
+        self.logger.debug("flag1:%d, flag3:%d", bin_percent_flag, total_n_logs_flag)
+        if bin_percent_flag and total_n_logs_flag:
+            return True
+        
+        return False
+
+    def _convert_hist_to_date(self, hist):
+        """
+        
+        Arguments:
+        - `hist`:
+        """
+        
+        time_seq = hist.keys()
+        time_seq.sort()
+
+        date_hist = {}
+
+        for t in time_seq:
+            date = dt.datetime.fromtimestamp(float(t)).strftime("%Y%m%d")
+            date_hist[date] = hist[t]
+            
+            pass
+        
+        return date_hist
+    
+    def _init_histgram(self, start_datetime_obj, end_datetime_obj):
+        """
+        
+        Arguments:
+        - `start_datetime_obj`:
+        - `end_datetime_obj`:
+        """
+
+        bin_container = {}
+        datetime_obj = start_datetime_obj
+        while (datetime_obj <= end_datetime_obj):
+            bin_container[datetime_obj.strftime("%s")] = 0
+            datetime_obj = datetime_obj + dt.timedelta(days = 1)
+            pass
+        
+        return bin_container
+    
+    def _get_start_datetmtime(self, datetime_obj):
+        """
+        
+        Arguments:
+        - `datetime_obj`:
+        """
+        
+        return datetime_obj.replace(hour=0, minute=0, second = 0, microsecond=0)
+    
+    def _get_end_datetmtime(self, datetime_obj):
+        """
+        
+        Arguments:
+        - `datetime_obj`:
+        """
+        
+        return datetime_obj.replace(hour=0, minute=0, second = 0, microsecond=0)# + dt.timedelta(days=1)
+    
+    def _extract_user(self, base_info):
+        """
+        
+        Arguments:
+        - `base_info`: 
+        """
+        
+        user_id = ""
+        for data in base_info:
+            if data["key"] == self.uid:
+                user_id = data["value"]
+                break
+            pass
+
+        return user_id
+    
+    
+def main():
+    validator = UserLogValidator()
+    users = validator.validate()
+    print users
+    print len(users)
+    
+if __name__ == '__main__':
+    main()
+    

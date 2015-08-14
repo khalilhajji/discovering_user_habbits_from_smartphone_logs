@@ -1,0 +1,4 @@
+#!/bin/sh
+
+python evaluation_on_location_prediction_all_users.py
+python evaluation_on_day_prediction_all_users.py

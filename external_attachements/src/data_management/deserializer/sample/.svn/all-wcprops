@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn_l/repos/!svn/ver/34126/mixs/mixs_scripts/python/lib/deserializer/sample
+END
+sample.py
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn_l/repos/!svn/ver/34126/mixs/mixs_scripts/python/lib/deserializer/sample/sample.py
+END
+sample_to_dict_to_json.py
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn_l/repos/!svn/ver/34126/mixs/mixs_scripts/python/lib/deserializer/sample/sample_to_dict_to_json.py
+END
+sample_to_dict_dir.py
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn_l/repos/!svn/ver/34126/mixs/mixs_scripts/python/lib/deserializer/sample/sample_to_dict_dir.py
+END
+sample_to_dict.py
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn_l/repos/!svn/ver/34126/mixs/mixs_scripts/python/lib/deserializer/sample/sample_to_dict.py
+END

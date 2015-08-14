@@ -1,0 +1,1 @@
+contains code that helps exploring the data, as guetting some statistics about the dataset and also having some preleminary results about it

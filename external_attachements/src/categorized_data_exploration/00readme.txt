@@ -1,0 +1,1 @@
+All the code contained in this folder explores the categorized version of the data

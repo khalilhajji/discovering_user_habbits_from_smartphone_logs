@@ -1,0 +1,2 @@
+contains the code that runs the GHCM_MDT Model on the data (Generative Hidden Class Model for Multiple Data Types) Referred in the thesis as Dirichlet Latent Multimodal Representation (DLMR)
+input is rfv_data (record_feature_value_data)

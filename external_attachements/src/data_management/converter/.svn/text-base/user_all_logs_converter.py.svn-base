@@ -1,0 +1,174 @@
+#!/usr/bin/env python
+from all_logs_converter import AllLogsConverter
+import logging
+import glob
+import json
+import sys,os
+import re
+import time
+from collections import defaultdict
+
+class UserAllLogsConverter(AllLogsConverter):
+    """
+    Convert all json file for each user to one coordinated file for each user.
+    """
+
+    def __init__(self, json_usrs_log_path = AllLogsConverter.json_usrs_log_path):
+        """
+        init
+
+        - `filename`: filname created unser
+        """
+        super(AllLogsConverter, self).__init__()
+
+        logger = logging.getLogger("UserAllLogsConverter")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+
+        pass
+    
+    def convert(self, ):
+        """
+        convert all logs of a user to {seq: {log:content}}
+        e.g., 
+        {
+        "1": {"appLaunch":{}, ..., "location":{} ...},
+        "2": {"appLaunch":{}, ..., "location":{} ...}, 
+        ...
+        } 
+        
+        Arguments:
+        """
+
+        self.logger.info("convert starts")
+        st = time.time()
+        all_users_path = self._get_all_users_path(self.json_usrs_log_path)
+        
+        # not used
+        #self._save_usrs(all_users_path)
+
+        usr_stats_map = defaultdict()
+        
+        for user_path in all_users_path:
+            self.logger.info("processing: %s", user_path)
+            logs = self._get_all_logs(user_path)
+            converted_logs = json.loads("{}")
+            converted_logs[self.BASE_INFO] = json.loads("{}")
+            converted_logs[self.LOG_INFO] = json.loads("{}")
+            cnt = 0
+            for log in logs:
+                cnt += 1
+                converted_logs[self.BASE_INFO] = log[self.BASE_INFO]
+                for loginfo in log[self.LOG_INFO]:
+                    #converted_logs[loginfo[self.LOG_INFO][self.EVENT][self.SEQ]] = loginfo
+                    converted_logs[self.LOG_INFO][loginfo[self.EVENT][self.TIME]] = loginfo
+                    pass
+                pass
+            usr = user_path.split("/")[-1]
+            usr_stats_map[usr] = cnt
+
+            all_in_one_log_dir_path = "%s/%s" % (user_path, self.all_in_one_log_dir)
+            if not os.path.exists(all_in_one_log_dir_path):
+                os.mkdir(all_in_one_log_dir_path)
+                pass
+            all_in_one_json_path = "%s/%s" % (all_in_one_log_dir_path, self.all_in_one_json_file)
+            self._save_converted_logs(converted_logs, all_in_one_json_path)
+            pass
+
+        # move to AllUsersAllLogsSummaryConverter
+        # self._save_usr_stats(usr_stats_map)
+
+        et = time.time()
+        self.logger.info("total time: %f[s]" % (et-st))
+        self.logger.info("convert finished")
+        
+        pass
+    
+    def _save_usr_stats(self, usr_stats):
+        """
+        
+        Arguments:
+        - `usr_stats`:
+        """
+        path = "%s/%s" % (AllLogsConverter.stats_log_path, AllLogsConverter.usr_stas)
+        fpout = open(path, "w")
+        fpout.write(json.dumps(usr_stats))
+        fpout.close()
+        pass
+        
+    def _save_converted_logs(self, converted_logs, filepath):
+        """
+        write logs converted logs to filepath
+        Arguments:
+        - `converted_logs`:
+        - `filepath`:
+        """
+        self.logger.info("_write starts")
+        fpout = open(filepath, "w")
+        fpout.write(json.dumps(converted_logs, sort_keys=True))
+        fpout.close()
+        self.logger.info("_write finished")
+        pass
+
+    def _get_all_users_path(self, json_usrs_log_path):
+        """
+        get all users path
+        Arguments:
+        - `json_usrs_log_path`: path to users dir
+        """
+        self.logger.info("_get_all_users_path starts")
+        all_users_path = []
+        for u in glob.glob("%s/*" % (json_usrs_log_path)):
+            all_users_path.append(u)
+            pass
+        self.logger.info("_get_all_users_path finished")
+        return all_users_path
+
+    def _get_all_logs(self, user_path):
+        """
+        get all logs from a user
+
+        Arguments:
+        - `user_path`:
+        """
+        self.logger.info("_get_all_logs starts")
+        logs = []
+        
+        log_files = glob.glob("%s/*.json" % (user_path))
+        log_files.sort()
+        for f in log_files:
+            fpin = open(f, "r")
+            log = json.load(fpin)
+            logs.append(log)
+            pass
+        self.logger.info("_get_all_logs finished")
+        return logs
+
+    def _save_usrs(self, all_users_path):
+        """
+        
+        Arguments:
+        - `all_users_path`:
+        """
+        fpout = open("%s/%s.json" % (AllLogsConverter.stats_log_path, AllLogsConverter.usrs), "w")
+        
+        users = json.loads("[]")
+        for user_path in all_users_path:
+            sl = user_path.split("/")
+            users.append(sl[-1])
+            pass
+
+        fpout.write(json.dumps(users))
+        fpout.close()
+        pass
+        
+def main():
+    converter = UserAllLogsConverter()
+    converter.convert()
+    
+    pass
+
+if __name__ == '__main__':
+    main()
+

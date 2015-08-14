@@ -1,0 +1,100 @@
+#!/usr/bin/env python
+
+from all_logs_converter import AllLogsConverter
+import logging
+import glob
+import json
+import sys,os
+import re
+import time
+from collections import defaultdict
+
+class AllAppsAllLogsSummaryConverter(AllLogsConverter):
+    """
+    Convert all json file, or all_in_one_json_log for each user to one coordinated file for each user.
+    """
+
+    # base direcotry and pathes
+    all_in_one_gvc_tljs_log_path = "/data/mixs_logs/%s/apps/*/%s/%s" % (AllLogsConverter.json_log_dir, AllLogsConverter.all_in_one_log_dir, AllLogsConverter.all_in_one_gvc_tljs_file)
+    apps_stats_path = "%s/%s" % (AllLogsConverter.stats_log_path, AllLogsConverter.app_stats)
+
+    def __init__(self, json_apps_log_path = AllLogsConverter.json_apps_log_path):
+        """
+        init
+
+        - `filename`: filname created unser
+        """
+        super(AllAppsAllLogsSummaryConverter, self).__init__()
+        
+        logger = logging.getLogger("AllAppsAllLogsSummaryConverter")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+        logger.info("init starts")
+        logger.info("init finished")
+        pass
+    
+    def convert(self, ):
+        """
+        convert all of all-in-one log for each apps to app log for each app
+        Arguments:
+        """
+
+        self.logger.info("convert starts")
+        st = time.time()
+        app_stats = json.loads("{}")
+        
+        # all files i.e., for all app
+        for fin in glob.glob(self.all_in_one_gvc_tljs_log_path):
+            app_summary_log = json.load(open(fin, "r"))
+            appname = app_summary_log[self.APP_NAME]
+            app_stats[appname] = json.loads("{}")
+
+            self._init_app_stats_log(app_stats[appname])
+            
+            # all loginfo for each app
+            log_info = app_summary_log[self.LOG_INFO]
+            for t in log_info:
+                
+                app_stats[appname][self.BASE_INFO] += 1 if self.BASE_INFO in log_info[t] else 0
+                app_stats[appname][self.LOCATION] += 1 if self.LOCATION in log_info[t] else 0
+                
+                stats = log_info[t][self.STATS]
+                for info in stats:
+                    app_stats[appname][info] += stats[info]
+                    pass
+                pass
+            pass
+        fpout = open(self.apps_stats_path, "w")
+        fpout.write(json.dumps(app_stats))
+        fpout.close()
+
+        et = time.time()
+        self.logger.info("%f [s]" % (et - st))
+        self.logger.info("convert finished")
+
+        pass
+
+    def _init_app_stats_log(self, app_stats):
+        app_stats[self.BASE_INFO] = 0
+        app_stats[self.LOCATION] = 0
+        app_stats[self.WIFI_APS] = 0
+        app_stats[self.WIFI_CONNECTED_AP] = 0
+        app_stats[self.SENSOR] = 0
+        app_stats[self.BLUETOOTH] = 0
+        app_stats[self.BATTERY] = 0
+        app_stats[self.HEADSET_PLUG] = 0
+        app_stats[self.NETWORK_INFO] = 0
+        app_stats[self.TELEPHONY] = 0
+        app_stats[self.NEIGHBORING_CELL_INFO] = 0
+        pass
+
+def main():
+    converter = AllAppsAllLogsSummaryConverter()
+    converter.convert()
+    
+    pass
+
+if __name__ == '__main__':
+    main()
+

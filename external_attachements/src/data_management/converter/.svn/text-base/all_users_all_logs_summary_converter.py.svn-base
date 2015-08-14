@@ -1,0 +1,98 @@
+from all_logs_converter import AllLogsConverter
+import logging
+import glob
+import json
+import sys,os
+import re
+import datetime
+import time
+
+class AllUsersAllLogsSummaryConverter(AllLogsConverter):
+    """
+    Convert a converted file by UsersAllLogsSummaryConverter for table usage format.
+    """
+
+    # base direcotry and pathes
+    all_in_one_gvc_tljs_log_path = "/data/mixs_logs/%s/usrs/*/%s/%s" % (AllLogsConverter.json_log_dir, AllLogsConverter.all_in_one_log_dir, AllLogsConverter.all_in_one_gvc_tljs_file)
+    users_stats_path = "%s/%s" % (AllLogsConverter.stats_log_path, AllLogsConverter.usr_stats)
+
+    # user id
+    # self.UUID is UUID.random()-based user id, self.IMEI is imei-based user id
+    uid = AllLogsConverter.IMEI
+        
+    def __init__(self, ):
+        """
+        init
+
+        """
+        super(AllUsersAllLogsSummaryConverter, self).__init__()
+        
+        logger = logging.getLogger("AllUsersAllLogsSummaryConverter")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+        logger.info("init starts")
+
+        logger.info("init finished")
+        pass
+
+    def convert(self, ):
+        """
+        """
+
+        self.logger.info("convert starts")
+        st = time.time()
+        user_stats = json.loads("{}")
+        
+        # all files i.e., for all user
+        for fin in glob.glob(self.all_in_one_gvc_tljs_log_path):
+            user_summary_log = json.load(open(fin, "r"))
+            uuid = user_summary_log[self.BASE_INFO][self.uid][self.VALUE]
+            user_stats[uuid] = json.loads("{}")
+
+            self._init_user_stats_log(user_stats[uuid])
+            
+            # all loginfo for each user
+            log_info = user_summary_log[self.LOG_INFO]
+            for t in log_info:
+                
+                user_stats[uuid][self.APP_LAUNCH] += 1 if self.APP_LAUNCH in log_info[t] else 0
+                user_stats[uuid][self.LOCATION] += 1 if self.LOCATION in log_info[t] else 0
+                
+                stats = log_info[t][self.STATS]
+                for info in stats:
+                    user_stats[uuid][info] += stats[info]
+                    pass
+                pass
+            pass
+        fout = open(self.users_stats_path, "w")
+        fout.write(json.dumps(user_stats))
+        fout.close()
+
+        et = time.time()
+        self.logger.info("%f [s]" % (et - st))
+        self.logger.info("convert finished")
+    
+    def _init_user_stats_log(self, user_stats):
+        user_stats[self.APP_LAUNCH] = 0
+        user_stats[self.LOCATION] = 0
+        user_stats[self.WIFI_APS] = 0
+        user_stats[self.WIFI_CONNECTED_AP] = 0
+        user_stats[self.SENSOR] = 0
+        user_stats[self.BLUETOOTH] = 0
+        user_stats[self.BATTERY] = 0
+        user_stats[self.HEADSET_PLUG] = 0
+        user_stats[self.NETWORK_INFO] = 0
+        user_stats[self.TELEPHONY] = 0
+        user_stats[self.NEIGHBORING_CELL_INFO] = 0
+        pass
+
+
+def main():
+    converter = AllUsersAllLogsSummaryConverter()
+    converter.convert()
+
+if __name__ == '__main__':
+    main()
+
+

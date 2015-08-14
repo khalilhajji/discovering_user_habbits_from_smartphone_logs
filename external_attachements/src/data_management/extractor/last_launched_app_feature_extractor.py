@@ -1,0 +1,216 @@
+#!/usr/bin/env python
+
+import json
+import numpy as np
+import time
+import logging
+import glob
+import shutil
+import os
+from basic_feature_extractor import BasicFeatureExtractor
+
+class LastLaunchedAppFeatureExtractor(BasicFeatureExtractor):
+    """
+    Last launched app feature extractor extracts time, loc, and last launched app from a validated json user log as csv format.
+    """
+
+    # output of i/o
+    dst_dir = "/data/mixs_logs/csv/usrslog/last_launched_app"
+
+    def __init__(self, src_paths = BasicFeatureExtractor.src_paths, dst_dir = dst_dir):
+        
+        """
+        Arguments:
+        - `src_paths`: source paths in which logs of a user are assembled to one file.
+        - `dst_dir`: distination directory
+        """
+
+        super(LastLaunchedAppFeatureExtractor, self).__init__(src_paths, dst_dir)
+
+        logger = logging.getLogger("LastLaunchedAppFeatureExtractor")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+
+        pass
+
+    def extract(self, ):
+        """
+        extract from json data
+        """
+        self.logger.info("extract starts")
+        st = time.time()
+
+        self._delete_old_data()
+        user_log_paths = glob.glob(self.src_paths)
+        for user_log_path in user_log_paths: # for each user
+            self._extract_usr_log(user_log_path)
+            pass
+    
+        et = time.time()
+
+        self.logger.info("%f [s]" % (et - st))
+        self.logger.info("extract finished")
+        pass
+        
+    def _extract_usr_log(self, src_path):
+        """
+        Arguments:
+        - `src_path`: source path
+        """
+        
+        # read
+        fpin = open(src_path)
+        json_logs = json.load(fpin)
+        fpin.close()
+        
+        # lognfo
+        log_info = json_logs["logInfo"]
+        time_seq = log_info.keys()
+        time_seq.sort()
+        
+        # uid
+        uid = self._extract_uid(json_logs)
+
+        # appname list/map
+        launch_app_list = []
+        appname_map = {}
+        
+        # extract data
+        self.logger.info("extracting %s" % uid)
+        data = ""
+
+        # header
+        data += self._create_header()
+        
+        # data
+        for t in time_seq:
+            l = self._create_line(log_info, t)
+            data += l
+            appname = self._extract_appname(log_info[t])
+            launch_app_list.append(appname)
+            appname_map[appname] = 1
+            data += "\n"
+            pass
+        
+        # create index
+        appname_index = self._create_index_for_appname(appname_map)
+        
+        # add prev apps feature attributes
+        data = self._add_prev_app_feature_attributes(data.strip(), appname_index, launch_app_list)
+        
+        # save
+        self._save(data, uid)
+
+        pass
+
+    def _add_prev_app_feature_attributes(self, data, appname_index, launch_app_list):
+        """
+        Arguments:
+        - `data`: extracted data
+        """
+        _data = ""
+        num_apps = len(appname_index)
+        
+        sdata = data.split("\n")
+
+        # header
+        _data += (sdata[0] + "," + self._create_last_app_header(num_apps))
+        _data += "\n"
+
+        # add feature 
+        # first launched app case
+        fv = ["0"] * num_apps
+        _data += (sdata[1] + "," + ",".join(fv))
+        _data += "\n"
+
+        cnt = 0
+        for l in sdata[2:]:
+            _data += l
+            
+            # add prev app feature
+            fv = ["0"] * num_apps
+            self.logger.debug(cnt)
+            self.logger.debug(launch_app_list[cnt])
+            self.logger.debug(appname_index[launch_app_list[cnt]])
+            fv[appname_index[launch_app_list[cnt]]] = "1"
+            _data += ","
+            _data += ",".join(fv)
+            _data += "\n"
+            
+            # increment index
+            cnt += 1
+            pass
+
+        return _data.strip()
+
+
+    def _create_last_app_header(self, num_apps):
+        """
+        return last app as header
+        """
+        header = []
+        for i in xrange(num_apps):
+            header.append("last_app_%d" % (i))
+            pass
+        
+        return ",".join(header)
+    
+    def _create_index_for_appname(self, appname_map):
+        """
+        """
+        
+        appname_index = {}
+        idx = 0
+        for appname in appname_map.keys():
+            appname_index[appname] = idx
+            idx += 1
+            pass
+
+        return appname_index
+    
+        
+    def _create_line(self, log_info, t):
+        """
+        Arguments:
+        - `src_path`: source path
+        """
+        l = ""
+        appname = log_info[t]["appLaunch"]["appName"]
+        l += appname + ","
+        l += self._extract_location_xyz(log_info[t]) + ","
+        l += self._convert_timestamp_2_periodic_time(t)
+
+        return l
+
+    def _extract_location_xyz(self, log):
+        """
+        extract location info.
+        if location field does not exist, (x,y,x) = (0,0,0)
+
+        Arguments:
+        - `log`: log at t
+        """
+
+        if "location" in log:
+            x = log["location"]["latitude"]
+            y = log["location"]["longitude"]
+            z = log["location"]["altitude"]
+        else:
+            self.logger.debug("NaN case")
+            x = 0
+            y = 0
+            z = 0
+            pass
+        return str(x) + "," + str(y) + "," + str(z)
+
+def main():
+    # i/o 
+    src_paths = "/data/mixs_logs/json/usrs/*/all/all_in_one_validated_log.json"
+    dst_dir = "/data/mixs_logs/csv/usrslog/basic"
+
+    extractor = LastLaunchedAppFeatureExtractor(src_paths = src_paths, dst_dir = dst_dir)
+    extractor.extract()
+
+if __name__ == '__main__':
+    main()

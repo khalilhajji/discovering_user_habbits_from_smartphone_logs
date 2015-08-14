@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Circles</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+// This example creates circles on the map, representing
+// populations in North America.
+
+// First, create an object containing LatLng and population for each city.
+var citymap = {};
+citymap['u1'] = {
+  center: new google.maps.LatLng(35.6107757585, 139.73175734),
+  population: 2084
+};
+citymap['u2'] = {
+  center: new google.maps.LatLng(35.62091922035, 139.729079313),
+  population: 562
+};
+citymap['u3'] = {
+  center: new google.maps.LatLng(35.6180661265, 139.729326798),
+  population: 63
+};
+citymap['u4'] = {
+  center: new google.maps.LatLng(35.622968217, 139.733843257),
+  population: 1143
+};
+
+citymap['u5'] = {
+  center: new google.maps.LatLng(35.6179981051, 139.729224256),
+  population: 90
+};
+
+citymap['u6'] = {
+  center: new google.maps.LatLng(35.62222296144, 139.735874174),
+  population: 808
+};
+
+var cityCircle;
+
+function initialize() {
+  // Create the map.
+  var mapOptions = {
+    zoom: 14,
+    center: new google.maps.LatLng(35.616615, 139.738695),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+
+  // Construct the circle for each value in citymap.
+  // Note: We scale the area of the circle based on the population.
+  for (var city in citymap) {
+    var populationOptions = {
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.1,
+      map: map,
+      center: citymap[city].center,
+      radius: citymap[city].population
+    };
+    // Add the circle for this city to the map.
+    cityCircle = new google.maps.Circle(populationOptions);
+  }
+  
+  var researchCenter = {
+      strokeColor: '#0000FF',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#0000FF',
+      fillOpacity: 0.8,
+      map: map,
+      center: new google.maps.LatLng(35.617450, 139.728322),
+      radius: 100
+    };
+    // Add the circle for this city to the map.
+    cityCircle = new google.maps.Circle(researchCenter);
+	
+	
+	
+	var headQuarter = {
+      strokeColor: '#0000FF',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#0000FF',
+      fillOpacity: 0.8,
+      map: map,
+      center: new google.maps.LatLng(35.629094, 139.743954),
+      radius: 200
+    };
+    // Add the circle for this city to the map.
+    cityCircle = new google.maps.Circle(headQuarter);
+  
+	
+  
+ 
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>

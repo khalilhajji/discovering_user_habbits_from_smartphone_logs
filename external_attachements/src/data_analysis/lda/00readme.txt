@@ -1,0 +1,1 @@
+this folder contains a full implementation for lda using gibbs sampling and parameter estimation method for hyper parameters vectors alpha and beta.

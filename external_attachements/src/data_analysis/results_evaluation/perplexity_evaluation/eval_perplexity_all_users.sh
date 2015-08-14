@@ -1,0 +1,6 @@
+#!/bin/sh
+
+python evaluation_perplexity_all_users.py
+python evaluation_perplexity_all_users.py
+python evaluation_perplexity_all_users.py
+python evaluation_perplexity_all_users.py

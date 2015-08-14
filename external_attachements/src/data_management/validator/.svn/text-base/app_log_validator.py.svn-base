@@ -1,0 +1,61 @@
+#!/user/bin/env python
+
+import logging
+import glob
+import json
+import sys,os
+import re
+import time
+import datetime as dt
+from validator import Validator
+from collections import defaultdict
+
+class AppLogValidator(Validator):
+    """
+    Applicaiton Log Validator.
+    
+    """
+
+    # block apps
+    block_apps = {
+        "com.google.android.googlequicksearchbox": 1,
+        "com.coverscreen.cover": 1,
+        "ginlemon.flowerfree": 1,
+        "com.gau.go.launcherex": 1,
+        "com.buzzpia.aqua.launcher.buzzhome": 1,
+        "com.jiubang.goscreenlock": 1,
+        #"com.sony.activityengine.app.fusedvehicledetectorapp": 1,
+        }
+
+    
+    def __init__(self, ):
+        """
+        """
+        # logger
+        logger = logging.getLogger("AppLogValidator")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+
+        self.logger.info("init starts")
+        # init base class 
+        super(Validator, self).__init__()
+
+        self.logger.info("init finished")
+
+        pass
+        
+
+    def validate_app(self, appname):
+        """
+        validate application
+
+        Arguments:
+        - `appname`: applicaiton name
+        """
+        
+        # TODO: this basic blocking process is not appropriate for lock screen application.
+        if appname in self.block_apps:
+            return False
+        
+        return True

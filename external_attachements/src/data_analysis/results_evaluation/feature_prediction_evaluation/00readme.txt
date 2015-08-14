@@ -1,0 +1,2 @@
+contains code that evaluates the performances of the different algorithms by hiding a feature in the test set and then predicting it.
+The algorithm that predicts the best the missing features is the "winner" with respect to this evaluation

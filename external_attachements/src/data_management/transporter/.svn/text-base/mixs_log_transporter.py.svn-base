@@ -1,0 +1,109 @@
+#!/usr/bin/env python
+
+import logging
+import glob
+import json
+import sys,os
+import re
+import time
+import datetime as dt
+import os
+import zipfile
+from transporter import Transporter
+from collections import defaultdict
+from ftplib import FTP
+
+class MixsLogTransporter(Transporter):
+    """
+    """
+    
+    host = "43.196.176.103"
+    user = "stcssg"
+    passwd = "0p1eh1sG"
+    remote_path = "/stc-ftp/SSG/HCDM/WP2/"
+    local_path = "/data/mixs_logs"
+    tmp_path = "/tmp"
+    
+
+    def __init__(self, ):
+        """
+        """
+        
+        # logger
+        logger = logging.getLogger("MixsLogTransporter")
+        logger.setLevel(logging.INFO)
+        logging.basicConfig()
+        self.logger = logger
+        
+        self.logger.info("init starts")
+
+        # init base class 
+        super(Transporter, self).__init__()
+        
+        self.logger.info("init finished")
+
+        pass
+
+
+    def transport(self, ):
+        """
+        """
+        
+        self.logger.info("transport starts")
+        st = time.time()
+
+        # archive
+        self._archive()
+
+        
+        # transport
+        self._transport()
+
+        et = time.time()
+        self.logger.info("%f [s]" % (et - st))
+        self.logger.info("transport finshed")
+
+        pass
+
+    def _transport(self, ):
+        """
+        """
+        
+        ftp = FTP(host = self.host,  user = self.user, passwd = self.passwd)
+        ftp.cwd(self.remote_path)
+        fpin = open(self.save_path, "rb")
+        os.chdir(self.tmp_path)
+        ftp.storbinary("STOR %s" % (self.save_file), fpin)
+        fpin.close()
+        ftp.quit()
+        
+        pass
+
+    def _archive(self,):
+        """
+        """
+        save_file = "mixs_logs_%s.zip" % (dt.datetime.fromtimestamp(time.time()).strftime("%Y%m%d"))
+        save_path = "%s/%s" % (self.tmp_path, save_file)
+        self.save_path = save_path
+        self.save_file = save_file
+        if os.path.exists(save_path):
+            os.remove(save_path)
+            pass
+        
+        zf = zipfile.ZipFile(save_path, "w")
+        self._zipdir(self.local_path, zf)
+        
+        pass
+        
+    def _zipdir(self, target_path, zf):
+        for root, dirs, files in os.walk(target_path):
+            for fin in files:
+                zf.write(os.path.join(root, fin))
+
+
+def main():
+    tranporter = MixsLogTransporter()
+    tranporter.transport()
+
+if __name__ == '__main__':
+    main()

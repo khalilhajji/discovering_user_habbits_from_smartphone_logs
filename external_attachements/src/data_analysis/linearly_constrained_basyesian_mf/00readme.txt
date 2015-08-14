@@ -1,0 +1,1 @@
+contains code that runs some the linearly constrained bayesian matrix factorization (lcbmf)
